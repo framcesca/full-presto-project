@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
     @livewireStyles
-    <title>Document</title>
+    <title>{{$title ?? ''}}</title>
 </head>
 <body>
     <x-navbar/>
