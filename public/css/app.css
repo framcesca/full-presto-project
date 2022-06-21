@@ -11337,5 +11337,53 @@ textarea.form-control-lg {
 
 
 
+:root{
+    --primaryColor: rgb(249, 212, 1);
+    --black: rgb(31, 31, 31);
+    --white: rgb(252, 252, 255);
+    --radius: 8px;
+    --shadow: 10px 24px 54px rgba(32, 30, 52, 0.16);
+    --fs-h1: 48px;
+}
+
+#searchBtn, #searchBar{
+    color: var(--black);
+    font-weight: 400;
+    background-color: transparent;
+    border-radius: 0px;
+    border: 0px;
+    border-bottom: 1px solid var(--black);
+}
+
+#searchBar::-moz-placeholder{
+    color: var(--black);
+}
+
+#searchBar:-ms-input-placeholder{
+    color: var(--black);
+}
+
+#searchBar::placeholder{
+    color: var(--black);
+}
+
+#searchBar:focus{
+    box-shadow: none;
+}
+
+.padding{
+    padding-top: 100px;
+}
+.card{
+    position: relative;
+    text-decoration: none;
+}
+.card-cat{
+    position: absolute;
+    top: 20px;
+}
+
+
+
 /* import styles bundle */
 /* @import '~swiper/swiper-bundle.css'; */
