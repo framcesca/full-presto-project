@@ -10,32 +10,39 @@
   </div>   
   @endif
 
-    <div class="container-fluid">
+
+    <div class="container-fluid bg-register min-vh-100 ">
       <div class="row">
-        <div class="col-12 col-md-6 offeset-md-3">
-          <h1>Registrati</h1>           
+        <div class="col-12 text-center">
+          <h1 class="mt-150 mb-4 fw-bold">Registrati</h1>           
           </div>
-            <div class="col-12 col-md-6 offset-md-3">
+            <div class="col-12 col-md-4 col-lg-4 offset-md-4 bg-register-form d-flex justify-content-center pt-4 pb-5">
+              <div class="register-form-container">
                 <form action="{{route('register')}}" method="POST">
                     @csrf
-                        <div class="mb-3">
-                          <label class="form-label">Inserisci username</label>
-                          <input type="text" class="form-control"  aria-describedby="emailHelp" name="name" >
+                        <h5 class="mt-3 fw-bold">Nome e Cognome</h5>
+                        <div class="form-floating mb-3">
+                          <input type="text" id="registerTitle" class="form-control input-register"  aria-describedby="emailHelp" name="name" placeholder="Nome e Cognome">
+                          <label for="registerTitle" class="form-label text-black-50">Nome e Cognome</label>
                         </div>
-                        <div class="mb-3">
-                          <label  class="form-label">Inserisci la mail</label>
-                          <input type="email" class="form-control" name="email">
+                        <h5 class="mt-3 fw-bold">Email</h5>
+                        <div class="form-floating mb-3">
+                          <input type="email" id="registerEmail"  class="form-control input-register" name="email" placeholder="name@example.com">
+                          <label for="registerEmail" class="form-label text-black-50">Email</label>
                         </div>
-                        <div class="mb-3">
-                            <label  class="form-label">Inserisci la password</label>
-                            <input type="password" class="form-control" name="password" >
-                          </div>
-                          <div class="mb-3">
-                            <label  class="form-label">Conferma password</label>
-                            <input type="password" class="form-control" name="password_confirmation" >
-                          </div>
-                        <button type="submit" class="btn btn-primary">Registrati</button>
+                        <h5 class="mt-3 fw-bold">Password</h5>
+                        <div class="form-floating mb-3">
+                          <input type="password" id="registerPassword" class="form-control input-register" name="password" placeholder="exemple">
+                          <label  for="registerPassword" class="form-label text-black-50">Password</label>
+                        </div>
+                        <h5 class="mt-3 fw-bold">Conferma Password</h5>
+                        <div class="form-floating mb-3">
+                          <input type="password" id="registerPasswordConf" class="form-control input-register" name="password_confirmation" placeholder="exemple">
+                          <label for="registerPasswordConf" class="form-label text-black-50" >Conferma password</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Registrati</button>
                 </form>
+              </div>
             </div>
         </div>
     </div>

@@ -11346,6 +11346,7 @@ textarea.form-control-lg {
     --fs-h1: 48px;
 }
 
+<<<<<<< HEAD
 #searchBtn, #searchBar{
     color: var(--black);
     font-weight: 400;
@@ -11385,5 +11386,50 @@ textarea.form-control-lg {
 
 
 
+=======
+.bg-register{
+    background-image: url('/../media/bgRegistrati.png');
+    background-size: cover;
+    height: 900px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    top: auto;
+    padding-bottom: 200px;
+}
+
+.bg-register-form{
+    background-color: var(--white);
+    border-radius: var(--radius);
+}
+
+.register-form-container{
+    width: 80%;
+}
+
+.mt-150{
+    margin-top: 150px;
+}
+.pb-150{
+    padding-bottom: 200px;
+}
+
+.input-register{
+    border-radius: var(--radius);
+    border-color: var(--black);
+    height: 50px;
+}
+
+.bg-login{
+    background-image: url('/../media/bgLogin.png');
+    background-size: cover;
+    height: 900px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    top: auto;
+    padding-bottom: 200px;
+}
+>>>>>>> 0175010ddba3caa23d5d7cc71169be0d9421f601
 /* import styles bundle */
 /* @import '~swiper/swiper-bundle.css'; */

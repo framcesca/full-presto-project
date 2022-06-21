@@ -1,6 +1,10 @@
 @import'~bootstrap/dist/css/bootstrap';
 @import './style';
+<<<<<<< HEAD
 @import'./indexAds'
+=======
+@import './auth.css';
+>>>>>>> 0175010ddba3caa23d5d7cc71169be0d9421f601
 
 /* import styles bundle */
 /* @import '~swiper/swiper-bundle.css'; */
