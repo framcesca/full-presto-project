@@ -25,4 +25,8 @@ class PublicController extends Controller
 
         return view('ads.categoryAds',compact('category'));
     }
+
+    function toDetailsPage(Ad $ad) {
+        return view("ads.details", compact("ad"));
+    }
 }

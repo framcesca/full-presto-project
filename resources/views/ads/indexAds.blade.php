@@ -25,7 +25,7 @@
         <div class="row mt-5">
             @foreach ($ads as $ad)
             <div class="col-12 col-md-3 ">
-                <a href="" class="card">
+                <a href="{{route("detailsAd", $ad)}}" class="card">
                     <img src="https://picsum.photos/180/180" class="card-img" alt="">
                     <span class="card-cat">{{$ad->category->category}}</span>
                     <div class="card-item d-flex justify-content-between">
