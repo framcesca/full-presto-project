@@ -14,21 +14,51 @@ class AdForm extends Component
     public $price;
     public $category;
 
+    protected $rules = [
+        'title' => 'required|min:1|max:20',
+        'description' => 'required|min:1|max:255',
+        'price' => 'required|min:1|max:10',
+        'category' => 'required|min:1'
+    ];
+
+    protected $messages = [
+        'title.required' => 'Campo obbligatorio.',
+        'title.max' => 'Hai raggiunto il numero massimo di caratteri.',
+        'description.required' => 'Campo obbligatorio.',
+        'description.max' => 'Hai raggiunto il numero massimo di caratteri.',
+        'price.required' => 'Campo obbligatorio.',
+        'price.max' => 'Hai raggiunto il numero massimo di caratteri.',
+        'category.required' => 'Selezione obbligatoria.',
+    ];
+
+    public function updated($propertyName)
+    {
+        $this->validateOnly($propertyName);
+    }
+
     public function submitAd() {
-        $category = Category::find($this->category);
+        $validatedData = $this->validate();
+        $category = Category::find($validatedData["category"]);
             $ads = $category->ads()->create([
             "title"=>$this->title,
             "description"=>$this->description,
-            "price"=>$this->price,
-            // "category"=>$this->category
+            "price"=>$this->price
         ]);
-        // dd($ads);
         Auth::user()->ads()->save($ads);
         session()->flash('message','Grazie per aver inserito il nuo annuncio');
+        $this->formCleaner();
+    }
+
+    public function formCleaner() {
+        $this->title = "";
+        $this->description = "";
+        $this->price = "";
+        $this->category = "";
     }
 
     public function render()
     {
         return view('livewire.ad-form');
     }
+
 }
