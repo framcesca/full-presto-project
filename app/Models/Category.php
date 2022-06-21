@@ -8,9 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Category extends Model
 {
     use HasFactory;
-
-    public function ad()
+    
+    public function ads()
     {
-        return $this->belongsTo(Ad::class);
+        return $this->hasMany(Ad::class);
     }
 }
