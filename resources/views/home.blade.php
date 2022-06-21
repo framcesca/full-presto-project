@@ -8,4 +8,5 @@
             </div>
         </div>
     </div>
+    <livewire:ad-form> </livewire:ad-form>
 </x-layout>

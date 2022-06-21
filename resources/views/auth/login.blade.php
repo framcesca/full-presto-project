@@ -1,5 +1,14 @@
 <x-layout>
-    <x-slot name='title'>Login</x-slot>
+  <x-slot name='title'> Login</x-slot>
+  @if($errors->any())
+  <div class="alert alert-danger">
+      <ul>
+          @foreach ($errors->all() as $error)
+              <li>{{ $error }}</li>
+          @endforeach
+      </ul>
+  </div>   
+  @endif
     
     <div class="container">
         <h1>Accedi</h1>
@@ -9,7 +18,7 @@
                     @csrf
                     
                     <div class="mb-3">
-                      <label  class="form-label">Insersci la mail</label>
+                      <label  class="form-label">Inserisci la mail</label>
                       <input type="email" class="form-control" name="email">
                     </div>
                     <div class="mb-3">

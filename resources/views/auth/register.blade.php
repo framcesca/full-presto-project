@@ -1,5 +1,14 @@
 <x-layout>
-    <x-slot name='title'>Register</x-slot>
+  <x-slot name='title'>Registrati</x-slot>
+  @if ($errors->any())
+  <div class="alert alert-danger">
+      <ul>
+          @foreach ($errors->all() as $error)
+              <li>{{ $error }}</li>
+          @endforeach
+      </ul>
+  </div>   
+  @endif
 
     <div class="container-fluid">
         <h1>Registrati</h1>
@@ -12,7 +21,7 @@
                           <input type="text" class="form-control"  aria-describedby="emailHelp" name="name" >
                         </div>
                         <div class="mb-3">
-                          <label  class="form-label">Insersci la mail</label>
+                          <label  class="form-label">Inserisci la mail</label>
                           <input type="email" class="form-control" name="email">
                         </div>
                         <div class="mb-3">

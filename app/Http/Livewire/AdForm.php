@@ -4,6 +4,7 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use App\Models\Category;
+use Illuminate\Support\Facades\Auth;
 
 class AdForm extends Component
 {
@@ -19,10 +20,11 @@ class AdForm extends Component
             "title"=>$this->title,
             "description"=>$this->description,
             "price"=>$this->price,
-            "category"=>$this->category
+            // "category"=>$this->category
         ]);
+        // dd($ads);
         Auth::user()->ads()->save($ads);
-        dd($ads);
+        session()->flash('message','Grazie per aver inserito il nuo annuncio');
     }
 
     public function render()
