@@ -5370,6 +5370,9 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.esm.js");
 
+__webpack_require__(/*! ./script */ "./resources/js/script.js"); // import Swiper bundle with all modules installed
+// import Swiper from 'swiper/bundle';
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
@@ -5409,6 +5412,43 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     forceTLS: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/script.js":
+/*!********************************!*\
+  !*** ./resources/js/script.js ***!
+  \********************************/
+/***/ (() => {
+
+// import Swiper from 'https://unpkg.com/swiper@8/swiper-bundle.esm.browser.min.js'
+var swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  slidesPerView: 1,
+  spaceBetween: 10,
+  loop: true,
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    dynamicBullets: true
+  },
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
+  },
+  breakpoints: {
+    920: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 75
+    }
+  }
+});
 
 /***/ }),
 

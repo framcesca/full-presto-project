@@ -28,9 +28,11 @@
             <input type="password" class="form-control" name="password" >
           </div>
           
-          
-          
           <button type="submit" class="btn btn-primary">Accedi</button>
+
+          <div class="col-12 col-md-6 offset-md-3">
+            <p>Nuovo su Presto? <a href="{{route('register')}}">Registrati!</a> </p>
+          </div>
         </form>
       </div>
     </div>

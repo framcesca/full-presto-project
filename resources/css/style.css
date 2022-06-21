@@ -1,0 +1,54 @@
+
+
+/* navbar */
+.presto-nav{
+    background-color: rgba(39, 22, 51, 0.35);
+    backdrop-filter: blur(8px);
+}    
+
+.presto-nav .nav-link, .presto-nav .nav-link.active{
+    color: var(--white);
+}    
+
+.presto-nav .nav-link:hover, .presto-nav .nav-link.active:hover{
+    color: var(--black);
+}    
+
+.presto-nav .nav-link{
+    text-align: end;
+}    
+
+
+.hero-welcome{
+    background: url('/../media/bgHeroHomepage.png');
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top:auto;
+}    
+
+
+/* carousel */
+.swiper-slide{
+    display: flex;
+    justify-content: center;
+}
+
+
+/* card annuncio */
+.ad-card{  
+    position: relative;
+}
+
+.ad-card .card-cat{  
+    position: absolute;
+    
+}
+
+.card-hover{
+    display: none;
+}
+
+
+
