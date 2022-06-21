@@ -1,5 +1,7 @@
 @import'~bootstrap/dist/css/bootstrap';
 @import './style';
+@import './detailAds';
+@import './swiper';
 
 /* import styles bundle */
 /* @import '~swiper/swiper-bundle.css'; */
