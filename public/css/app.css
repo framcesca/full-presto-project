@@ -11337,5 +11337,66 @@ textarea.form-control-lg {
 
 
 
+:root{
+    --primaryColor: rgb(249, 212, 1);
+    --black: rgb(31, 31, 31);
+    --white: rgb(252, 252, 255);
+    --radius: 8px;
+    --shadow: 10px 24px 54px rgba(32, 30, 52, 0.16);
+    --fs-h1: 48px;
+}
+
+.container-ad-form{
+    padding-top: 12vh;
+}
+
+.form-box{
+    margin: 250px auto;
+    background-color: white;
+    border: 1px solid grey;
+    border-radius: var(--radius);
+}
+
+.form-btn{
+    padding: 10px 0px;
+    width: 100%;
+    border: none;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    background-color: var(--primaryColor);
+    transition: 0.3s;
+}
+
+.form-btn:hover{
+    box-shadow: none;
+}
+
+.input-title{
+    margin-bottom: 5px;
+    font-weight: 900px;
+}
+
+.form-control, .form-select{
+    border: 1px solid black;
+    border-radius: var(--radius);
+}
+
+.form-control:focus, .form-select:focus{
+    box-shadow: none;
+    border: 1px solid black;
+}
+
+.bg-container-fluid{
+    background-image: url("/../media/bgCreaAnnuncio.png");
+    height: 950px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: auto;
+}
+
+.floatingDescription{
+    height: 50px;
+}
 /* import styles bundle */
 /* @import '~swiper/swiper-bundle.css'; */
