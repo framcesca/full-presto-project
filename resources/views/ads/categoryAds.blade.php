@@ -6,7 +6,7 @@
             <h1>{{$category->category}}</h1>
             @forelse ($category->ads as $ad)
             <div class="col-12 col-md-3 ">
-                <a href="" class="card">
+                <a href="{{route("detailsAd", $ad)}}" class="card">
                     <img src="https://picsum.photos/180/180" class="card-img" alt="">
                     <span class="card-cat">{{$category->category}}</span>
                     <div class="card-item d-flex justify-content-between">

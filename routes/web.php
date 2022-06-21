@@ -18,3 +18,4 @@ Route::get('/',[PublicController::class,'home'])->name('home');
 Route::get('/indexAds',[PublicController::class,'toIndexAds'])->name('indexAds');
 Route::get('/indexAds/{category}',[PublicController::class,'toCategoryAds'])->name('categoryAds');
 Route::get('/createAd',[PublicController::class,'toCreateAd'])->middleware('auth')->name('createAd');
+Route::get('/detailsAd/{ad}', [PublicController::class, "toDetailsPage"])->name("detailsAd");
