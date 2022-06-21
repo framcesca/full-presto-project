@@ -24,7 +24,7 @@
         <div class="row">
             @foreach ($categories as $category)               
             <div class="col-12 col-md-6 col-lg-3 p-0">
-                <a href="">
+                <a href="{{route('categoryAds',compact('category'))}}">
                     <div class="category-card">
                         <img src="media/categoryLibri.png" alt="">
                     </div>
