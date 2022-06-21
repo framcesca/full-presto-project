@@ -7,7 +7,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Annunci</a>
+                    <a class="nav-link" href="{{route('indexAds')}}">Annunci</a>
                 </li>
             </ul>
         </div>
@@ -22,7 +22,7 @@
                 </li>
                 @else
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Nuovo annuncio</a>
+                    <a class="nav-link" href="{{route('createAd')}}">Nuovo annuncio</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
