@@ -10,32 +10,46 @@
   </div>   
   @endif
   
-  <div class="container">
-    <div class="row">
-      <div class="col-12 col-md-6 offeset-md-3">
-        <h1>Accedi</h1>
+  <x-layout>
+    <x-slot name='title'>Registrati</x-slot>
+    @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>   
+    @endif
+  
+  
+      <div class="container-fluid bg-login min-vh-100 ">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h1 class="mt-150 mb-4 fw-bold">Log-in</h1>           
+            </div>
+              <div class="col-12 col-md-4 col-lg-4 offset-md-4 bg-register-form d-flex justify-content-center pt-4 pb-5">
+                <div class="register-form-container">
+                  <form action="{{route('login')}}" method="POST">
+                      @csrf
+                          <h5 class="mt-3 fw-bold">Email</h5>
+                          <div class="form-floating mb-3">
+                            <input type="email" id="registerEmail"  class="form-control input-register" name="email" placeholder="name@example.com">
+                            <label for="registerEmail" class="form-label text-black-50">Email</label>
+                          </div>
+                          <h5 class="mt-3 fw-bold">Password</h5>
+                          <div class="form-floating mb-3">
+                            <input type="password" id="registerPassword" class="form-control input-register" name="password" placeholder="exemple">
+                            <label  for="registerPassword" class="form-label text-black-50">Password</label>
+                          </div>
+                          <button type="submit" class="btn btn-primary w-100">Accedi</button>
+                  </form>
+                </div>
+              </div>
+          </div>
       </div>
-      <div class="col-12 col-md-6 offset-md-3">
-        <form method="POST" action="{{route('login')}}">
-          @csrf
-          
-          <div class="mb-3">
-            <label  class="form-label">Inserisci la mail</label>
-            <input type="email" class="form-control" name="email">
-          </div>
-          <div class="mb-3">
-            <label  class="form-label">Inserisci la password</label>
-            <input type="password" class="form-control" name="password" >
-          </div>
-          
-          <button type="submit" class="btn btn-primary">Accedi</button>
+  </x-layout>
 
-          <div class="col-12 col-md-6 offset-md-3">
-            <p>Nuovo su Presto? <a href="{{route('register')}}">Registrati!</a> </p>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
+
 
 </x-layout>

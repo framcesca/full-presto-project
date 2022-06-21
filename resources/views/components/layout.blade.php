@@ -15,7 +15,10 @@
     <div class="min-vh-100">
         {{$slot}}
     </div>
+    @if (Request::routeIs('register')||Request::routeIs('login'))
+    @else
     <x-footer/>
+    @endif
     {{-- swiper --}}
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="{{asset('js/app.js')}}"></script>
