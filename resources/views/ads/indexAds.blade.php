@@ -22,17 +22,26 @@
 
 
         {{-- da qui va il foreach con dentro questa struttura --}}
-        <div class="row">
-            <div class="col-12 col-md-3">
-                <a href="" class="ad-card">
-                    <img src="" class="ad-card-img" alt="">
-                    <span>categoria</span>
-                    <div class="ad-card-body">
-                        <h4 class="ad-card-title">titolo <span class="ms-auto">prezzo</span></h4>
-                        <h5 class="ad-card-title">autore </h5>                        
+        <div class="row mt-5">
+            @foreach ($ads as $ad)
+            <div class="col-12 col-md-3 ">
+                <a href="" class="card">
+                    <img src="https://picsum.photos/180/180" class="card-img" alt="">
+                    <span class="card-cat">{{$ad->category->category}}</span>
+                    <div class="card-item d-flex justify-content-between">
+                        <h4 class="ad-card-title">{{$ad->title}}</h4> 
+                        <p class="text-end">{{$ad->price}}</p>
+                    </div>
+                    <div class="card-item">
+                        <h5 class="">{{$ad->user->name}} </h5>                        
+                    </div>
+                    <div class="card-item">
+                        <h5 class="">{{$ad->created_at}} </h5>                        
                     </div>
                 </a>
             </div>
+            @endforeach
+            {{$ads->links()}}
         </div>
     </div>
 </x-layout>

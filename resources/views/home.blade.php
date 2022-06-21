@@ -47,7 +47,7 @@
                 <!-- Slides -->
                 <div class="swiper-slide">
                     <div class="col-12 ">
-                        <a href="" class="card ad-card">
+                        <a href="" class="card">
                             <img src="https://picsum.photos/180/180" class="card-img" alt="">
                             <span class="card-cat">categoria</span>
                             <div class="card-item d-flex justify-content-between">
