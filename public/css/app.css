@@ -11337,6 +11337,7 @@ textarea.form-control-lg {
 
 
 
+<<<<<<< HEAD
 .background{
     background: linear-gradient(rgba(255, 255, 255, 0.75),rgba(255, 255, 255, 0.75)), url("https://picsum.photos/500/500") ;
     background-size: cover;
@@ -11367,5 +11368,101 @@ textarea.form-control-lg {
     margin-left: 110px;
 }
 
+=======
+:root{
+    --primaryColor: rgb(249, 212, 1);
+    --black: rgb(31, 31, 31);
+    --white: rgb(252, 252, 255);
+    --radius: 8px;
+    --shadow: 10px 24px 54px rgba(32, 30, 52, 0.16);
+    --fs-h1: 48px;
+}
+
+<<<<<<< HEAD
+#searchBtn, #searchBar{
+    color: var(--black);
+    font-weight: 400;
+    background-color: transparent;
+    border-radius: 0px;
+    border: 0px;
+    border-bottom: 1px solid var(--black);
+}
+
+#searchBar::-moz-placeholder{
+    color: var(--black);
+}
+
+#searchBar:-ms-input-placeholder{
+    color: var(--black);
+}
+
+#searchBar::placeholder{
+    color: var(--black);
+}
+
+#searchBar:focus{
+    box-shadow: none;
+}
+
+.padding{
+    padding-top: 100px;
+}
+.card{
+    position: relative;
+    text-decoration: none;
+}
+.card-cat{
+    position: absolute;
+    top: 20px;
+}
+
+
+
+=======
+.bg-register{
+    background-image: url('/../media/bgRegistrati.png');
+    background-size: cover;
+    height: 900px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    top: auto;
+    padding-bottom: 200px;
+}
+
+.bg-register-form{
+    background-color: var(--white);
+    border-radius: var(--radius);
+}
+
+.register-form-container{
+    width: 80%;
+}
+
+.mt-150{
+    margin-top: 150px;
+}
+.pb-150{
+    padding-bottom: 200px;
+}
+
+.input-register{
+    border-radius: var(--radius);
+    border-color: var(--black);
+    height: 50px;
+}
+
+.bg-login{
+    background-image: url('/../media/bgLogin.png');
+    background-size: cover;
+    height: 900px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    top: auto;
+    padding-bottom: 200px;
+}
+>>>>>>> 0175010ddba3caa23d5d7cc71169be0d9421f601
+>>>>>>> fe5e8769aad6dc762e5108194f19c3b16a9ca5a7
 /* import styles bundle */
 /* @import '~swiper/swiper-bundle.css'; */
