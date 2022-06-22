@@ -11281,28 +11281,47 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+:root{
+    --primaryColor: rgb(249, 212, 1);
+    --black: rgb(31, 31, 31);
+    --white: rgb(252, 252, 255);
+    --radius: 8px;
+    --shadow: 10px 24px 54px rgba(32, 30, 52, 0.16);
+    --fs-h1: 48px;
+}
+
 
 
 /* navbar */
 .presto-nav{
-    background-color: rgba(39, 22, 51, 0.35);
-    -webkit-backdrop-filter: blur(8px);
-            backdrop-filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.3);
+    -webkit-backdrop-filter: blur(24px);
+            backdrop-filter: blur(24px);
 }    
 
 .presto-nav .nav-link, .presto-nav .nav-link.active{
-    color: var(--white);
+    color: var(--black) !important;
 }    
 
 .presto-nav .nav-link:hover, .presto-nav .nav-link.active:hover{
-    color: var(--black);
+    color: var(--black) !important;
 }    
 
 .presto-nav .nav-link{
     text-align: end;
-}    
+}   
+
+.presto-nav ul .dropdown-menu{
+    background-color: rgba(255, 255, 255, 0.3);
+    -webkit-backdrop-filter: blur(24px);
+            backdrop-filter: blur(24px);
+}
 
 
+
+
+/* HOME */
+/* hero */
 .hero-welcome{
     background: url('/../media/bgHeroHomepage.png');
     height: 100vh;
@@ -11312,30 +11331,107 @@ textarea.form-control-lg {
     top:auto;
 }    
 
+.hero-btn{
+    background-color: var(--white);
+    border-radius: var(--radius);
+    border: 1px solid var(--radius);
+    box-shadow: var(--shadow);
+}
 
-/* carousel */
-.swiper-slide{
+.hero-btn:hover{
+    box-shadow: none;
+}
+
+/* categorie */
+
+.cat-card1 {
+    position: relative;
+    height: 350px;
+    transition: .6s;
+    background: url("/../media/categoryLibri.png");
+    overflow: hidden;
+
+}
+.cat-card1:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url("/../media/categoryLibri.png");
+}
+
+.cat-card2{
+    position: absolute;
+    width: 100%;
+    bottom: -150px;
+    transition: .6s;
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.cat-card1:hover .cat-card2{
+    bottom: 150px;
+}
+
+.cat-card2-title{
+    margin: 0px;
+    text-decoration: none; 
+    color: var(--white);
+    top: 50%;
+    left: 50%;
+    transition: .6s; 
 }
 
 
-/* card annuncio */
-.ad-card{  
+/* carousel card */
+.adCard{ 
     position: relative;
+    max-width: 300px;
+    max-height: 380px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 4.63%, rgba(0, 0, 0, 0) 100%);
+    text-decoration: none;
+    color: var(--black);
 }
 
-.ad-card .card-cat{  
-    position: absolute;
-    
+.adCard:hover{ 
+    color: var(--black);
 }
 
-.card-hover{
-    display: none;
+.adCard .adCard-cat{  
+    position: absolute;   
+    left: 6px;
+    top: 2px;
+    color: var(--white);
+    text-decoration: none;
+    text-shadow: 4px 4px 6px black;
+}
+
+ .adCard .adCard-title, .adCard .adCard-price, .adCard .adCard-author{
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 6px;
 }
 
 
+/* FOOTER */
 
+.p-footer .nav-link{
+    color: var(--black);
+    transition: .4s;
+}
+
+.p-footer .btn{
+    background-color: var(--primaryColor); 
+    transition: .4s;
+}
+
+.p-footer .nav-link:hover, .p-footer .nav-link:focus {
+    color: var(--black);
+    transform: scale(1.1);
+}
+
+.p-footer .btn:hover{
+    background-color: var(--primaryColor); 
+    border-color: transparent;
+    transform: scale(1.1);
+}
 
 .background{
     background: linear-gradient(rgba(255, 255, 255, 0.75),rgba(255, 255, 255, 0.75)), url("https://picsum.photos/500/500") ;

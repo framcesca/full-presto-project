@@ -5451,10 +5451,9 @@ var swiper2 = new Swiper(".mySwiper2", {
 // import Swiper from 'https://unpkg.com/swiper@8/swiper-bundle.esm.browser.min.js'
 var swiper = new Swiper('.swiper', {
   // Optional parameters
-  direction: 'horizontal',
+  // direction: 'horizontal',
   slidesPerView: 1,
   spaceBetween: 10,
-  loop: true,
   // If we need pagination
   pagination: {
     el: '.swiper-pagination',
@@ -5466,7 +5465,7 @@ var swiper = new Swiper('.swiper', {
     prevEl: '.swiper-button-prev'
   },
   breakpoints: {
-    920: {
+    800: {
       slidesPerView: 2,
       spaceBetween: 20
     },

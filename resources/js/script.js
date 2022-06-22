@@ -2,11 +2,9 @@
 
 const swiper = new Swiper('.swiper', {
     // Optional parameters
-    direction: 'horizontal',
+    // direction: 'horizontal',
     slidesPerView: 1,
     spaceBetween: 10,
-
-    loop: true,
   
     // If we need pagination
     pagination: {
@@ -21,7 +19,7 @@ const swiper = new Swiper('.swiper', {
     },
 
     breakpoints: {
-        920: {
+        800: {
             slidesPerView: 2,
             spaceBetween: 20,
         },
@@ -30,6 +28,4 @@ const swiper = new Swiper('.swiper', {
             spaceBetween: 75,
         },
     },    
-
-  
 });
