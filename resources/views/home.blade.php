@@ -1,5 +1,12 @@
 <x-layout>
     <x-slot name='title'>Home</x-slot>
+    @if (\Session::has('access.denied'))
+    <div class="alert alert-success">
+        <ul>
+            <li>{!! \Session::get('access.denied') !!}</li>
+        </ul>
+    </div>
+@endif
 
     {{-- hero --}}
     <section class="container-fluid hero-welcome">

@@ -22,9 +22,17 @@ Route::get('/createAd',[PublicController::class,'toCreateAd'])->middleware('auth
 Route::get('/detailsAd/{ad}', [PublicController::class, "toDetailsPage"])->name("detailsAd");
 
 // revisor
-Route::get('/revisor/dashboard', [RevisorController::class, 'toRevisorDashboard'])->name('revisorDashboard');
+Route::get('/revisor/dashboard', [RevisorController::class, 'toRevisorDashboard'])->middleware('isRevisor')->name('revisorDashboard');
 
 // accept ad
-Route::patch('/accept/ad/{ad}', [RevisorController::class, 'acceptAd'])->name('revisorAcceptAd');
+Route::patch('/accept/ad/{ad}', [RevisorController::class, 'acceptAd'])->middleware('isRevisor')->name('revisorAcceptAd');
 // reject ad
-Route::patch('/reject/ad/{ad}', [RevisorController::class, 'rejectAd'])->name('revisorRejectAd');
+Route::patch('/reject/ad/{ad}', [RevisorController::class, 'rejectAd'])->middleware('isRevisor')->name('revisorRejectAd');
+
+// Join US
+
+Route::get('/revisor/request', [RevisorController::class, 'toJoinUs'])->middleware('auth')->name('joinUs');
+Route::get('/revisor/request/mail', [RevisorController::class, 'mailbecameRevisor'])->middleware('auth')->name('becameRevisor');
+
+//Set user as revisor
+Route::get('/admin/create/revisor/{user}',[RevisorController::class,'createRevisor'])->name('createRevisor');
