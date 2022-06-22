@@ -17,7 +17,13 @@ class RevisorController extends Controller
         $ad = Ad::where('is_accepted', null)->first();
         return view('revisor.revisorDashboard', compact('ad'));
     }
+
     public function toJoinUs()
+    {  
+        return view('revisor.joinUs');
+    }
+
+    public function mailbecameRevisor()
     {
         Mail::to('admin@presto.it')->send(new BecomeRevisor(Auth::user()));
         return redirect()->back()->with('message','Complimenti ! Hai richiesto di diventare un revisore');

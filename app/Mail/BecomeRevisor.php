@@ -7,6 +7,7 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Support\Facades\Request;
 
 class BecomeRevisor extends Mailable
 {
@@ -31,6 +32,7 @@ class BecomeRevisor extends Mailable
      */
     public function build()
     {
-        return $this->from('presto@noreply.com')->view('mail.becomeRevisor');
+        $description=Request::input('description');
+        return $this->from('presto@noreply.com')->view('mail.becomeRevisor', compact('description'));
     }
 }

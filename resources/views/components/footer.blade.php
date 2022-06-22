@@ -13,7 +13,7 @@
                   <a href="#" class="nav-link px-5 fw-bold mc-black fs-14">Chi siamo</a>
               </li>
               <li class="nav-item mb-2">
-                  <a href="#" class="nav-link px-5 fw-bold mc-black fs-14">Join Us</a>
+                  <a href="{{route('joinUs')}}" class="nav-link px-5 fw-bold mc-black fs-14">Join Us</a>
               </li>
           </ul>
 

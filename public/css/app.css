@@ -11657,8 +11657,12 @@ textarea.form-control-lg {
 
 .form-box{
     margin: 250px auto;
-    background-color: white;
-    border: 1px solid grey;
+    /* background-color: white; */
+    background-color: rgba(255, 255, 255, 0.3);
+    -webkit-backdrop-filter: blur(50px);
+            backdrop-filter: blur(50px);
+    /* border: 1px solid grey; */
+    border: 1px solid rgba(252, 252, 255, .18);
     border-radius: var(--radius);
 }
 
@@ -11682,7 +11686,8 @@ textarea.form-control-lg {
 }
 
 .form-control, .form-select{
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    border: 1px solid var(--white); 
     border-radius: var(--radius);
 }
 
