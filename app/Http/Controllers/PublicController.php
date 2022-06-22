@@ -13,7 +13,7 @@ class PublicController extends Controller
     }
 
     function toIndexAds () {
-        $ads=Ad::latest()->paginate(12);
+        $ads=Ad::where('is_accepted',true)->latest()->paginate(12);
 
         return view('ads.indexAds',compact('ads'));
     }

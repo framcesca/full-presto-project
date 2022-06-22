@@ -15,7 +15,7 @@
     <div class="min-vh-100">
         {{$slot}}
     </div>
-    @if (Request::routeIs('register')||Request::routeIs('login'))
+    @if (Request::routeIs('register')||Request::routeIs('login')||Request::url()==route('revisorDashboard'))
     @else
     <x-footer/>
     @endif
