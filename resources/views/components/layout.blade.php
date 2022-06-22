@@ -16,6 +16,9 @@
         {{$slot}}
     </div>
     <x-footer/>
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/2ff2af688a.js" crossorigin="anonymous"></script>
+
     {{-- swiper --}}
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="{{asset('js/app.js')}}"></script>
