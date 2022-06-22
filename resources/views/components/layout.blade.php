@@ -18,6 +18,7 @@
     @if (Request::routeIs('register')||Request::routeIs('login'))
     @else
     <x-footer/>
+    @endif
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/2ff2af688a.js" crossorigin="anonymous"></script>
 

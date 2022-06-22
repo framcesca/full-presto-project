@@ -1,20 +1,20 @@
 <x-layout>
   <x-slot name='title'>Registrati</x-slot>
-  @if ($errors->any())
-  <div class="alert alert-danger">
-      <ul>
-          @foreach ($errors->all() as $error)
-              <li>{{ $error }}</li>
-          @endforeach
-      </ul>
-  </div>   
-  @endif
-
-
-    <div class="container-fluid bg-register min-vh-100 ">
-      <div class="row">
-        <div class="col-12 text-center">
-          <h1 class="mt-150 mb-4 fw-bold">Registrati</h1>           
+  
+  
+  <div class="container-fluid bg-register min-vh-100 ">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h1 class="mt-150 mb-4 fw-bold">Registrati</h1>           
+        @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>   
+        @endif
           </div>
             <div class="col-12 col-md-4 col-lg-4 offset-md-4 bg-register-form d-flex justify-content-center pt-4 pb-5">
               <div class="register-form-container">
@@ -40,7 +40,7 @@
                           <input type="password" id="registerPasswordConf" class="form-control input-register" name="password_confirmation" placeholder="exemple">
                           <label for="registerPasswordConf" class="form-label text-black-50" >Conferma password</label>
                         </div>
-                        <button type="submit" class="btn btn-primary w-100">Registrati</button>
+                        <button type="submit" class="form-btn w-100">Registrati</button>
                 </form>
               </div>
             </div>

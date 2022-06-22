@@ -47,7 +47,7 @@
         </div>
         <div class="row my-1 my-md-5">
             <div class="col-12">
-                <div class="swiper p-5">
+                <div class="swiper swiper-home p-5">
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
                         <!-- Slides -->
@@ -61,7 +61,7 @@
                                         <p class="adCard-price text-end">prezzo</p>
                                     </div>
                                     <div class="card-item">
-                                        <h5 class="adCard-author">autore </h5>                        
+                                        <h5 class="adCard-author text-start">autore</h5>                        
                                     </div>
                                 </a>
                             </div>
@@ -76,7 +76,7 @@
                                         <p class="adCard-price text-end">prezzo</p>
                                     </div>
                                     <div class="card-item">
-                                        <h5 class="adCard-author">autore </h5>                        
+                                        <h5 class="adCard-author text-start">autore</h5>                        
                                     </div>
                                 </a>
                             </div>
@@ -91,7 +91,7 @@
                                         <p class="adCard-price text-end">prezzo</p>
                                     </div>
                                     <div class="card-item">
-                                        <h5 class="adCard-author">autore </h5>                        
+                                        <h5 class="adCard-author text-start">autore</h5>                        
                                     </div>
                                 </a>
                             </div>
@@ -106,7 +106,7 @@
                                         <p class="adCard-price text-end">prezzo</p>
                                     </div>
                                     <div class="card-item">
-                                        <h5 class="adCard-author">autore </h5>                        
+                                        <h5 class="adCard-author text-start">autore</h5>                        
                                     </div>
                                 </a>
                             </div>
@@ -121,7 +121,7 @@
                                         <p class="adCard-price text-end">prezzo</p>
                                     </div>
                                     <div class="card-item">
-                                        <h5 class="adCard-author">autore </h5>                        
+                                        <h5 class="adCard-author text-start">autore</h5>                        
                                     </div>
                                 </a>
                             </div>
@@ -136,7 +136,7 @@
                                         <p class="adCard-price text-end">prezzo</p>
                                     </div>
                                     <div class="card-item">
-                                        <h5 class="adCard-author">autore </h5>                        
+                                        <h5 class="adCard-author text-start">autore</h5>                        
                                     </div>
                                 </a>
                             </div>
@@ -151,7 +151,7 @@
                                         <p class="adCard-price text-end">prezzo</p>
                                     </div>
                                     <div class="card-item">
-                                        <h5 class="adCard-author">autore </h5>                        
+                                        <h5 class="adCard-author text-start">autore</h5>                        
                                     </div>
                                 </a>
                             </div>

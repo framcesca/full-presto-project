@@ -1,34 +1,24 @@
 <x-layout>
   <x-slot name='title'> Login</x-slot>
-  @if($errors->any())
-  <div class="alert alert-danger">
-    <ul>
-      @foreach ($errors->all() as $error)
-      <li>{{ $error }}</li>
-      @endforeach
-    </ul>
-  </div>   
-  @endif
   
-  <x-layout>
-    <x-slot name='title'>Registrati</x-slot>
-    @if ($errors->any())
-    <div class="alert alert-danger">
-        <ul>
+  
+  
+  
+  <div class="container-fluid bg-login min-vh-100 ">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h1 class="mt-150 mb-4 fw-bold">Log-in</h1>           
+        @if($errors->any())
+        <div class="alert alert-danger">
+          <ul>
             @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
+            <li>{{ $error }}</li>
             @endforeach
-        </ul>
-    </div>   
-    @endif
-  
-  
-      <div class="container-fluid bg-login min-vh-100 ">
-        <div class="row">
-          <div class="col-12 text-center">
-            <h1 class="mt-150 mb-4 fw-bold">Log-in</h1>           
-            </div>
-              <div class="col-12 col-md-4 col-lg-4 offset-md-4 bg-register-form d-flex justify-content-center pt-4 pb-5">
+          </ul>
+        </div>   
+        @endif
+      </div>
+      <div class="col-12 col-md-4 col-lg-4 offset-md-4 bg-register-form d-flex justify-content-center pt-4 pb-5">
                 <div class="register-form-container">
                   <form action="{{route('login')}}" method="POST">
                       @csrf
@@ -42,14 +32,10 @@
                             <input type="password" id="registerPassword" class="form-control input-register" name="password" placeholder="exemple">
                             <label  for="registerPassword" class="form-label text-black-50">Password</label>
                           </div>
-                          <button type="submit" class="btn btn-primary w-100">Accedi</button>
+                          <button type="submit" class="form-btn w-100">Accedi</button>
                   </form>
                 </div>
               </div>
           </div>
       </div>
-  </x-layout>
-
-
-
 </x-layout>

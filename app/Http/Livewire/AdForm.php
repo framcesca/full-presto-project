@@ -45,7 +45,7 @@ class AdForm extends Component
             "price"=>$this->price
         ]);
         Auth::user()->ads()->save($ads);
-        session()->flash('message','Grazie per aver inserito il nuo annuncio');
+        session()->flash('message','Grazie per aver inserito il nuovo annuncio');
         $this->formCleaner();
     }
 

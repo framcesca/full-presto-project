@@ -22,16 +22,16 @@
         {{-- da qui va il foreach con dentro questa struttura --}}
         <div class="row mt-5">
             @foreach ($ads as $ad)
-            <div class="col-12 col-md-3">
-                <a href="{{route("detailsAd", $ad)}}" class="card">
-                    <img src="https://picsum.photos/180/180" class="card-img" alt="">
-                    <span class="card-cat">{{$ad->category->category}}</span>
+            <div class="col-12 col-md-3 my-3">
+                <a href="{{route("detailsAd", $ad)}}" class="card adCard rounded-0">
+                    <img src="https://picsum.photos/180/180" class="card-img rounded-0" alt="">
+                    <span class="adCard-cat">{{$ad->category->category}}</span>
                     <div class="card-item d-flex justify-content-between">
-                        <h4 class="ad-card-title">{{$ad->title}}</h4> 
-                        <p class="text-end">{{$ad->price}}€</p>
+                        <small class="adCard-title">{{$ad->title}}</small> 
+                        <small class="adCard-price text-end">{{$ad->price}}€</small>
                     </div>
                     <div class="card-item">
-                        <h5 class="">{{$ad->user->name}}</h5>                        
+                        <small class="adCard-author text-start">{{$ad->user->name}}</small>                        
                     </div>
                 </a>
             </div>
