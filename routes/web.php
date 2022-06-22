@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PublicController;
+use App\Http\Controllers\RevisorController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,3 +20,6 @@ Route::get('/indexAds',[PublicController::class,'toIndexAds'])->name('indexAds')
 Route::get('/indexAds/{category}',[PublicController::class,'toCategoryAds'])->name('categoryAds');
 Route::get('/createAd',[PublicController::class,'toCreateAd'])->middleware('auth')->name('createAd');
 Route::get('/detailsAd/{ad}', [PublicController::class, "toDetailsPage"])->name("detailsAd");
+
+// revisor
+Route::get('/revisor/dashboard', [RevisorController::class, 'toRevisorDashboard'])->name('revisorDashboard');

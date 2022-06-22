@@ -35,6 +35,10 @@
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="#">I miei annunci</a></li>
                         <li><hr class="dropdown-divider"></li>
+                        @if (Auth::user()->is_revisor)                           
+                        <li><a class="dropdown-item" href="{{route('revisorDashboard')}}">Da revisionare</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        @endif
                         <a class=" nav-link " href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Logout</a>      
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                         @csrf
