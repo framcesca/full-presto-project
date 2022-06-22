@@ -11337,7 +11337,6 @@ textarea.form-control-lg {
 
 
 
-<<<<<<< HEAD
 .background{
     background: linear-gradient(rgba(255, 255, 255, 0.75),rgba(255, 255, 255, 0.75)), url("https://picsum.photos/500/500") ;
     background-size: cover;
@@ -11353,7 +11352,7 @@ textarea.form-control-lg {
 .text{
     text-decoration: none;
     color: rgb(31,31,31);
-
+    
 }
 .price{
     font-size: 48px;
@@ -11368,7 +11367,72 @@ textarea.form-control-lg {
     margin-left: 110px;
 }
 
-=======
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+}
+
+
+
+.swiper {
+    width: 100%;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.swiper-slide {
+    background-size: cover;
+    background-position: center;
+}
+
+.mySwiper2 {
+    height: 80%;
+    width: 100%;
+}
+
+.mySwiper {
+    height: 20%;
+    box-sizing: border-box;
+    padding: 10px 0;
+}
+
+.mySwiper .swiper-slide {
+    width: 25%;
+    height: 100%;
+    opacity: 0.4;
+}
+
+.mySwiper .swiper-slide-thumb-active {
+    opacity: 1;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+}
 :root{
     --primaryColor: rgb(249, 212, 1);
     --black: rgb(31, 31, 31);
@@ -11378,47 +11442,6 @@ textarea.form-control-lg {
     --fs-h1: 48px;
 }
 
-<<<<<<< HEAD
-#searchBtn, #searchBar{
-    color: var(--black);
-    font-weight: 400;
-    background-color: transparent;
-    border-radius: 0px;
-    border: 0px;
-    border-bottom: 1px solid var(--black);
-}
-
-#searchBar::-moz-placeholder{
-    color: var(--black);
-}
-
-#searchBar:-ms-input-placeholder{
-    color: var(--black);
-}
-
-#searchBar::placeholder{
-    color: var(--black);
-}
-
-#searchBar:focus{
-    box-shadow: none;
-}
-
-.padding{
-    padding-top: 100px;
-}
-.card{
-    position: relative;
-    text-decoration: none;
-}
-.card-cat{
-    position: absolute;
-    top: 20px;
-}
-
-
-
-=======
 .bg-register{
     background-image: url('/../media/bgRegistrati.png');
     background-size: cover;
@@ -11462,7 +11485,112 @@ textarea.form-control-lg {
     top: auto;
     padding-bottom: 200px;
 }
->>>>>>> 0175010ddba3caa23d5d7cc71169be0d9421f601
->>>>>>> fe5e8769aad6dc762e5108194f19c3b16a9ca5a7
+:root{
+    --primaryColor: rgb(249, 212, 1);
+    --black: rgb(31, 31, 31);
+    --white: rgb(252, 252, 255);
+    --radius: 8px;
+    --shadow: 10px 24px 54px rgba(32, 30, 52, 0.16);
+    --fs-h1: 48px;
+}
+
+#searchBtn, #searchBar{
+    color: var(--black);
+    font-weight: 400;
+    background-color: transparent;
+    border-radius: 0px;
+    border: 0px;
+    border-bottom: 1px solid var(--black);
+}
+
+#searchBar::-moz-placeholder{
+    color: var(--black);
+}
+
+#searchBar:-ms-input-placeholder{
+    color: var(--black);
+}
+
+#searchBar::placeholder{
+    color: var(--black);
+}
+
+#searchBar:focus{
+    box-shadow: none;
+}
+
+.padding{
+    padding-top: 100px;
+}
+.card{
+    position: relative;
+    text-decoration: none;
+}
+.card-cat{
+    position: absolute;
+    top: 20px;
+}
+
+:root{
+    --primaryColor: rgb(249, 212, 1);
+    --black: rgb(31, 31, 31);
+    --white: rgb(252, 252, 255);
+    --radius: 8px;
+    --shadow: 10px 24px 54px rgba(32, 30, 52, 0.16);
+    --fs-h1: 48px;
+}
+
+.container-ad-form{
+    padding-top: 12vh;
+}
+
+.form-box{
+    margin: 250px auto;
+    background-color: white;
+    border: 1px solid grey;
+    border-radius: var(--radius);
+}
+
+.form-btn{
+    padding: 10px 0px;
+    width: 100%;
+    border: none;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    background-color: var(--primaryColor);
+    transition: 0.3s;
+}
+
+.form-btn:hover{
+    box-shadow: none;
+}
+
+.input-title{
+    margin-bottom: 5px;
+    font-weight: 900px;
+}
+
+.form-control, .form-select{
+    border: 1px solid black;
+    border-radius: var(--radius);
+}
+
+.form-control:focus, .form-select:focus{
+    box-shadow: none;
+    border: 1px solid black;
+}
+
+.bg-container-fluid{
+    background-image: url("/../media/bgCreaAnnuncio.png");
+    height: 950px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: auto;
+}
+
+.floatingDescription{
+    height: 50px;
+}
 /* import styles bundle */
 /* @import '~swiper/swiper-bundle.css'; */
