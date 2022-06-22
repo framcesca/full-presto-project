@@ -15,6 +15,8 @@
     <div class="min-vh-100">
         {{$slot}}
     </div>
+    @if (Request::routeIs('register')||Request::routeIs('login'))
+    @else
     <x-footer/>
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/2ff2af688a.js" crossorigin="anonymous"></script>

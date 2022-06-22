@@ -1,5 +1,7 @@
-<x-layout>
+<x-layout class="">
     <x-slot name='title'>{{$category->category}}</x-slot>
+
+    
 
     <div class="container mt-5">
         <div class="row mt-5">
@@ -25,4 +27,5 @@
             </div>
         </div>
     </div>
+
 </x-layout>
