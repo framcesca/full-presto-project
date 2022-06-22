@@ -36,7 +36,10 @@
                         <li><a class="dropdown-item" href="#">I miei annunci</a></li>
                         <li><hr class="dropdown-divider"></li>
                         @if (Auth::user()->is_revisor)                           
-                        <li><a class="dropdown-item" href="{{route('revisorDashboard')}}">Da revisionare</a></li>
+                        <li><a class="dropdown-item position-relative" href="{{route('revisorDashboard')}}">Da revisionare
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            {{App\Models\Ad::toBeRevisionedCount()}}
+                        </span></a></li>
                         <li><hr class="dropdown-divider"></li>
                         @endif
                         <a class=" nav-link " href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Logout</a>      
