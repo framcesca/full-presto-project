@@ -2,8 +2,8 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Ad extends Model
 {
@@ -28,6 +28,11 @@ class Ad extends Model
     {
         return Ad::where('is_accepted', null)->count();
     }
-    
+    public function setAccepted($bool)
+    {
+        $this->is_accepted = $bool;
+        $this->save();
+        return true;
+    }
     
 }

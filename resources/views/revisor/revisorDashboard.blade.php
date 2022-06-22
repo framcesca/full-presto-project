@@ -85,7 +85,16 @@
                     <h5 class='text'>Venduta da {{$ad->user->name}}</h5>
                     <p class='text'>{{$ad->description}}</p>
                     <p class='price'>{{$ad->price}} Euro</p>
-                    <button class="btn btn-warning px-5">Contatta il venditore</button>
+                    <form action="{{route('revisorAcceptAd', $ad)}}" method="POST">
+                        @csrf
+                        @method('PATCH')
+                        <button type="submit" class="btn btn-warning px-5">Accetta annuncio</button>
+                    </form>
+                    <form action="{{route('revisorRejectAd', $ad)}}" method="POST">
+                        @csrf
+                        @method('PATCH')
+                        <button type="submit" class="btn btn-danger px-5">Rifiuta annuncio</button>
+                    </form>
                 </a>                        
             </div>
         </div>

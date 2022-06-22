@@ -12,4 +12,16 @@ class RevisorController extends Controller
         $ad = Ad::where('is_accepted', null)->first();
         return view('revisor.revisorDashboard', compact('ad'));
     }
+
+    public function acceptAd(Ad $ad)
+    {
+        $ad->setAccepted(true);
+        return redirect()->back()->with('message','Annuncio accettato');
+    }
+
+    public function rejectAd(Ad $ad)
+    {
+        $ad->setAccepted(false);
+        return redirect()->back()->with('message','Annuncio rifiutato');
+    }
 }
