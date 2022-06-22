@@ -11290,7 +11290,9 @@ textarea.form-control-lg {
     --fs-h1: 48px;
 }
 
-
+.mt-100{
+    margin-top: 100px;
+}
 
 /* navbar */
 .presto-nav{
@@ -11393,11 +11395,19 @@ textarea.form-control-lg {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 4.63%, rgba(0, 0, 0, 0) 100%);
     text-decoration: none;
     color: var(--black);
+    transition: .4s;
+    overflow: hidden;
 }
 
 .adCard:hover{ 
     color: var(--black);
+    transform: scale(1.1);
+
 }
+
+/* .adCard:hover .card-img{ 
+    transform: scale(1.1);
+} */
 
 .adCard .adCard-cat{  
     position: absolute;   

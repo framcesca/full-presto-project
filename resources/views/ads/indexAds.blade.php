@@ -20,7 +20,7 @@
         </div>
 
         {{-- da qui va il foreach con dentro questa struttura --}}
-        <div class="row mt-5">
+        <div class="row mt-5 ">
             @foreach ($ads as $ad)
             <div class="col-12 col-md-3 my-3">
                 <a href="{{route("detailsAd", $ad)}}" class="card adCard rounded-0">

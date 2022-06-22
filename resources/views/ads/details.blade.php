@@ -80,6 +80,7 @@
             </div>
             <div class="col-md-5">
                 <a class='text' href='{{$ad->category->category}}'>
+                    <a href="{{route('categoryAds', $ad->category)}}" class='text'>{{$ad->category->category}}</a>
                     <h4 class='text'>{{$ad->title}}</h4>
                     <h5 class='text'>Venduta da {{$ad->user->name}}</h5>
                     <p class='text'>{{$ad->description}}</p>
