@@ -11457,22 +11457,24 @@ textarea.form-control-lg {
 .background{
     background: linear-gradient(rgba(255, 255, 255, 0.75),rgba(255, 255, 255, 0.75)), url("https://picsum.photos/500/500") ;
     background-size: cover;
-    height: 100vh;
+    height: 110vh;
     background-repeat: no-repeat;
     -webkit-backdrop-filter: blur(125px);
             backdrop-filter: blur(125px);
 }
-.paddingtop{
-    padding-top: 20vh;
+
+.padding-top{
+    padding-top: 25vh;
 }
 
 .text{
     text-decoration: none;
     color: rgb(31,31,31);
-    
+    margin-bottom: 10px;
 }
+
 .price{
-    font-size: 48px;
+    font-size: 40px;
     text-decoration: none;
     color: rgb(31,31,31);
 }
@@ -11507,8 +11509,6 @@ textarea.form-control-lg {
     -o-object-fit: cover;
        object-fit: cover;
 }
-
-
 
 .swiper {
     width: 100%;
