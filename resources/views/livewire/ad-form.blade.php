@@ -33,9 +33,9 @@
             @error('category') <span class="error">{{$message}}</span> @enderror
         </div>
         {{-- Input Image --}}
-        <div class="mb-4">
+        {{-- <div class="mb-4">
             <input class="form-control form-control-lg" id="formFile" type="file">
-        </div>
+        </div> --}}
         {{-- Input Price --}}
         <h6 class="input-title">Prezzo</h6>
         <div class="form-floating mb-4">

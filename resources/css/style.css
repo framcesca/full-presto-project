@@ -5,6 +5,11 @@
     --radius: 8px;
     --shadow: 10px 24px 54px rgba(32, 30, 52, 0.16);
     --fs-h1: 48px;
+    --swiper-theme-color: #1f1f1f !important;
+}
+
+*{
+    font-family: 'Poppins', sans-serif;;
 }
 
 .mt-100{
@@ -144,12 +149,12 @@
 
 .p-footer .nav-link{
     color: var(--black);
-    transition: .4s;
+    transition: .1s;
 }
 
 .p-footer .btn{
     background-color: var(--primaryColor); 
-    transition: .4s;
+    transition: .1s;
 }
 
 .p-footer .nav-link:hover, .p-footer .nav-link:focus {

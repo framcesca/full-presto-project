@@ -1,4 +1,6 @@
 <x-layout>
+    <x-slot name='title'>Crea annuncio</x-slot>
+
     <div class="container-fluid bg-container-fluid">
         <div class="container">
             <div class="container-ad-form">
