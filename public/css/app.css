@@ -11429,12 +11429,12 @@ textarea.form-control-lg {
 
 .p-footer .nav-link{
     color: var(--black);
-    transition: .4s;
+    transition: .1s;
 }
 
 .p-footer .btn{
     background-color: var(--primaryColor); 
-    transition: .4s;
+    transition: .1s;
 }
 
 .p-footer .nav-link:hover, .p-footer .nav-link:focus {
