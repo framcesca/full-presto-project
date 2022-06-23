@@ -9,7 +9,10 @@ use Illuminate\Http\Request;
 class PublicController extends Controller
 {
     public function home () {
-        return view('home');
+
+        $ads=Ad::where('is_accepted',true)->latest()->take(6)->get();
+
+        return view('home',compact('ads'));
     }
 
     public function toIndexAds () {
@@ -24,7 +27,9 @@ class PublicController extends Controller
     
     public function toCategoryAds (Category $category) {
 
-        return view('ads.categoryAds',compact('category'));
+        $ads= Ad::where('category_id',$category->id)->where('is_accepted',true)->latest()->paginate(12);
+
+        return view('ads.categoryAds',compact('ads'),compact('category'));
     }
 
     public function toDetailsPage(Ad $ad) {
@@ -36,6 +41,11 @@ class PublicController extends Controller
         $ads = Ad::search($request->searched)->where('is_accepted',true)->paginate(12);
         return view('ads.indexAds',compact('ads'));
     }
+    // public function searchCategoryAds(Request $request,Category $category)
+    // {   
+    //     $ads = Ad::search($request->searched)->where('is_accepted',true)->paginate(12);
+    //     return view('ads.categoryAds',compact('ads'),compact('category'));
+    // }
 
 
 }

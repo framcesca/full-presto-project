@@ -40,3 +40,4 @@ Route::get('/admin/create/revisor/{user}',[RevisorController::class,'createRevis
 //Set route for TNT Search
 
 Route::get('/search/announce',[PublicController::class,'searchAds'])->name('searchAds');
+Route::get('/search/category/announce',[PublicController::class,'searchCategoryAds'])->name('searchCategoryAds');

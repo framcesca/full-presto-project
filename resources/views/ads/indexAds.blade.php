@@ -30,8 +30,8 @@
                             <small class="adCard-title">{{$ad->title}}</small> 
                             <small class="adCard-price text-end">{{$ad->price}}€</small>
                         </div>
-                        <div class="card-item">
-                            <small class="adCard-author text-start">{{$ad->user->name}}</small>                        
+                        <div class="card-item text-start">
+                            <small class="adCard-author">{{$ad->user->name}}</small>                        
                         </div>
                     </a>
                 </div>

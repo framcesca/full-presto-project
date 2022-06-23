@@ -58,114 +58,23 @@
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
                         <!-- Slides -->
+                        @foreach ($ads as $ad)
                         <div class="swiper-slide">
                             <div class="col-12">
-                                <a href="" class="card adCard rounded-0">
+                                <a href="{{route("detailsAd", $ad)}}" class="card adCard rounded-0">
                                     <img src="https://picsum.photos/180/180" class="card-img rounded-0" alt="">
-                                    <span class="adCard-cat">categoria</span>
+                                    <span class="adCard-cat">{{$ad->category->category}}</span>
                                     <div class="card-item d-flex justify-content-between">
-                                        <h4 class="adCard-title">titolo</h4> 
-                                        <p class="adCard-price text-end">prezzo</p>
+                                        <small class="adCard-title">{{$ad->title}}</small> 
+                                        <small class="adCard-price text-end">{{$ad->price}}€</small>
                                     </div>
-                                    <div class="card-item">
-                                        <h5 class="adCard-author text-start">autore</h5>                        
+                                    <div class="card-item text-start">
+                                        <small class="adCard-author">{{$ad->user->name}}</small>                        
                                     </div>
                                 </a>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="col-12">
-                                <a href="" class="card adCard rounded-0">
-                                    <img src="https://picsum.photos/180/180" class="card-img rounded-0" alt="">
-                                    <span class="adCard-cat">categoria</span>
-                                    <div class="card-item d-flex justify-content-between">
-                                        <h4 class="adCard-title">titolo</h4> 
-                                        <p class="adCard-price text-end">prezzo</p>
-                                    </div>
-                                    <div class="card-item">
-                                        <h5 class="adCard-author text-start">autore</h5>                        
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="col-12">
-                                <a href="" class="card adCard rounded-0">
-                                    <img src="https://picsum.photos/180/180" class="card-img rounded-0" alt="">
-                                    <span class="adCard-cat">categoria</span>
-                                    <div class="card-item d-flex justify-content-between">
-                                        <h4 class="adCard-title">titolo</h4> 
-                                        <p class="adCard-price text-end">prezzo</p>
-                                    </div>
-                                    <div class="card-item">
-                                        <h5 class="adCard-author text-start">autore</h5>                        
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="col-12">
-                                <a href="" class="card adCard rounded-0">
-                                    <img src="https://picsum.photos/180/180" class="card-img rounded-0" alt="">
-                                    <span class="adCard-cat">categoria</span>
-                                    <div class="card-item d-flex justify-content-between">
-                                        <h4 class="adCard-title">titolo</h4> 
-                                        <p class="adCard-price text-end">prezzo</p>
-                                    </div>
-                                    <div class="card-item">
-                                        <h5 class="adCard-author text-start">autore</h5>                        
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="col-12">
-                                <a href="" class="card adCard rounded-0">
-                                    <img src="https://picsum.photos/180/180" class="card-img rounded-0" alt="">
-                                    <span class="adCard-cat">categoria</span>
-                                    <div class="card-item d-flex justify-content-between">
-                                        <h4 class="adCard-title">titolo</h4> 
-                                        <p class="adCard-price text-end">prezzo</p>
-                                    </div>
-                                    <div class="card-item">
-                                        <h5 class="adCard-author text-start">autore</h5>                        
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="col-12">
-                                <a href="" class="card adCard rounded-0">
-                                    <img src="https://picsum.photos/180/180" class="card-img rounded-0" alt="">
-                                    <span class="adCard-cat">categoria</span>
-                                    <div class="card-item d-flex justify-content-between">
-                                        <h4 class="adCard-title">titolo</h4> 
-                                        <p class="adCard-price text-end">prezzo</p>
-                                    </div>
-                                    <div class="card-item">
-                                        <h5 class="adCard-author text-start">autore</h5>                        
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="col-12">
-                                <a href="" class="card adCard rounded-0">
-                                    <img src="https://picsum.photos/180/180" class="card-img rounded-0" alt="">
-                                    <span class="adCard-cat">categoria</span>
-                                    <div class="card-item d-flex justify-content-between">
-                                        <h4 class="adCard-title">titolo</h4> 
-                                        <p class="adCard-price text-end">prezzo</p>
-                                    </div>
-                                    <div class="card-item">
-                                        <h5 class="adCard-author text-start">autore</h5>                        
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-        
-                        
-        
+                        @endforeach
                     </div>
                 
                     
