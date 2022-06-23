@@ -1,5 +1,6 @@
 <x-layout>
-    <x-slot name='title'>Revisor Dashboard</x-slot>
+    
+    <x-slot name='title'>Dettagli annuncio revisore</x-slot>
     <section class="container-fluid background">
         <div class="container paddingtop">
             {{-- <x-gmdi-arrow-back-ios-new-s class="arrow"/>Torna agli annunci --}}

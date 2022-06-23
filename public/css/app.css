@@ -11288,6 +11288,11 @@ textarea.form-control-lg {
     --radius: 8px;
     --shadow: 10px 24px 54px rgba(32, 30, 52, 0.16);
     --fs-h1: 48px;
+    --swiper-theme-color: #1f1f1f !important;
+}
+
+*{
+    font-family: 'Poppins', sans-serif;;
 }
 
 .mt-100{
@@ -11601,19 +11606,6 @@ textarea.form-control-lg {
 
     top: auto;
     padding-bottom: 200px;
-}
-
-/* font */
-
-@font-face {
-    font-family: 'Nexa';
-    font-style: normal;
-    font-weight: 400;
-    src: url('/fonts/nexa/NexaRegular.otf') format('otf');
-}
-
-*{
-    font-family: 'Nexa';
 }
 :root{
     --primaryColor: rgb(249, 212, 1);
