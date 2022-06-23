@@ -82,8 +82,8 @@
                     <!--  pagination -->
                     <div class="swiper-pagination"></div>
                     <!--  navigation buttons -->
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev d-none d-md-flex"></div>
+                    <div class="swiper-button-next d-none d-md-flex"></div>
                 </div>              
             </div>
         </div>
