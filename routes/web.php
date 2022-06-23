@@ -36,3 +36,7 @@ Route::get('/revisor/request/mail', [RevisorController::class, 'mailbecameReviso
 
 //Set user as revisor
 Route::get('/admin/create/revisor/{user}',[RevisorController::class,'createRevisor'])->name('createRevisor');
+
+//Set route for TNT Search
+
+Route::get('/search/announce',[PublicController::class,'searchAds'])->name('searchAds');
