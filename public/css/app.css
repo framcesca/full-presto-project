@@ -11448,6 +11448,12 @@ textarea.form-control-lg {
     transform: scale(1.1);
 }
 
+/* REVISOR->DASHBOARD */
+.margin-up{
+    margin-top: 100px;
+}
+
+
 .background{
     background: linear-gradient(rgba(255, 255, 255, 0.75),rgba(255, 255, 255, 0.75)), url("https://picsum.photos/500/500") ;
     background-size: cover;
