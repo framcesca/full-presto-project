@@ -11596,6 +11596,19 @@ textarea.form-control-lg {
     top: auto;
     padding-bottom: 200px;
 }
+
+/* font */
+
+@font-face {
+    font-family: 'Nexa';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/nexa/NexaRegular.otf') format('otf');
+}
+
+*{
+    font-family: 'Nexa';
+}
 :root{
     --primaryColor: rgb(249, 212, 1);
     --black: rgb(31, 31, 31);
