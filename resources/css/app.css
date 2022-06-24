@@ -4,6 +4,7 @@
 @import'./auth.css';
 @import'./indexAds.css';
 @import'./formAdStyle.css';
+@import '~flag-icons/css/flag-icons';
 
 /* import styles bundle */
 /* @import '~swiper/swiper-bundle.css'; */

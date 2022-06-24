@@ -55,8 +55,8 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="#">ITA</a></li>
-                        {{-- <li><a class="dropdown-item" href="#">ENG</a></li>
-                        <li><a class="dropdown-item" href="#">ESP</a></li> --}}
+                        <li><a class="dropdown-item" href="#">ENG</a></li>
+                        <li><a class="dropdown-item" href="#">ESP</a></li> 
                     </ul>
                 </li>
             </ul>
