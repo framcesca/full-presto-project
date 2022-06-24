@@ -44,9 +44,26 @@ class Ad extends Model
     {
         return Ad::where('is_accepted', null)->count();
     }
+
+    public static function AcceptedCount()
+    {
+        return Ad::where('is_accepted', 1)->count();
+    }
+
+    public static function notAcceptedCount()
+    {
+        return Ad::where('is_accepted', 0)->count();
+    }
+
     public function setAccepted($bool)
     {
         $this->is_accepted = $bool;
+        $this->save();
+        return true;
+    }
+    public function setToRevise()
+    {
+        $this->is_accepted = null;
         $this->save();
         return true;
     }

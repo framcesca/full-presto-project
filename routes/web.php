@@ -23,6 +23,7 @@ Route::get('/detailsAd/{ad}', [PublicController::class, "toDetailsPage"])->name(
 
 // revisor
 Route::get('/revisor/dashboard', [RevisorController::class, 'toRevisorDashboard'])->middleware('isRevisor')->name('revisorDashboard');
+Route::get('/revisor/dashboard/revisorDetailAd/{ad}', [RevisorController::class, 'toRevisorDetailAd'])->middleware('isRevisor')->name('revisorDetailAd');
 
 // accept ad
 Route::patch('/accept/ad/{ad}', [RevisorController::class, 'acceptAd'])->middleware('isRevisor')->name('revisorAcceptAd');

@@ -14,8 +14,12 @@ class RevisorController extends Controller
 {
     public function toRevisorDashboard()
     {
-        $ad = Ad::where('is_accepted', null)->first();
-        return view('revisor.revisorDashboard', compact('ad'));
+        return view('revisor.revisorDashboard');
+    }
+
+    public function toRevisorDetailAd(Ad $ad)
+    {
+        return view('revisor.revisorDetailsAd',compact('ad'));
     }
 
     public function toJoinUs()
@@ -37,12 +41,12 @@ class RevisorController extends Controller
     public function acceptAd(Ad $ad)
     {
         $ad->setAccepted(true);
-        return redirect()->back()->with('message','Annuncio accettato');
+        return redirect(route('revisorDashboard'))->with('message','Annuncio accettato');
     }
 
     public function rejectAd(Ad $ad)
     {
         $ad->setAccepted(false);
-        return redirect()->back()->with('message','Annuncio rifiutato');
+        return redirect(route('revisorDashboard'))->with('message','Annuncio rifiutato');
     }
 }
