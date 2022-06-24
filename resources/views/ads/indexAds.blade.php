@@ -4,7 +4,7 @@
     <div class="container padding">
         <div class="row">
             <div class="col-12 text-center">
-                <h1 class="display-5">I nostri annunci</h1>
+                <h1 class="display-5">{{__('ui.allAnnouncements')}}</h1>
             </div>
             <!-- search bar -->
             <div class="col-12 col-md-6 offset-md-3 mt-2">
