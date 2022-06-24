@@ -54,9 +54,15 @@
                         Lingue
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">ITA</a></li>
-                        <li><a class="dropdown-item" href="#">ENG</a></li>
-                        <li><a class="dropdown-item" href="#">ESP</a></li> 
+                        <li>
+                            <x-_locale lang="it" nation="it"></x-_locale>
+                        </li>
+                        <li>
+                            <x-_locale lang="en" nation="gb"></x-_locale>
+                        </li>
+                        <li>
+                            <x-_locale lang="es" nation="es"></x-_locale>
+                        </li> 
                     </ul>
                 </li>
             </ul>

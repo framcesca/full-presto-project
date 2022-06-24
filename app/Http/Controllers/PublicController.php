@@ -47,5 +47,9 @@ class PublicController extends Controller
     //     return view('ads.categoryAds',compact('ads'),compact('category'));
     // }
 
+    public function setLanguage($lang) {
+        session()->put("locale", $lang);
+        return redirect()->back();
+    }
 
 }
