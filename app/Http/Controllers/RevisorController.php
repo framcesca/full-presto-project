@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Ad;
 use App\Models\User;
 use App\Mail\BecomeRevisor;
+use App\Mail\isRevisor;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Auth;
@@ -35,6 +36,7 @@ class RevisorController extends Controller
 
     public function createRevisor(User $user){
         Artisan::call('presto:makeUserRevisor',['email'=>$user->email]);
+        Mail::to($user->email)->send(new isRevisor($user));
         return redirect('/')->with('message','Complimenti! Hai l\'utente è diventato revisore');
     }
     
