@@ -9,9 +9,10 @@
             <div class="row justify-content-center">
 
                 {{-- Left Col --}}
-                <div class="col-12 col-md-6 col-lg-5 col-xl-4">
+                <div class="col-12 col-sm-8 offset-md-0 col-md-6 col-lg-5 col-xl-4 m-md-0">
 
                     {{-- Swiper 1 --}}
+                    <h2 class='text fw-bolder d-md-none'>{{$ad->title}}</h4>
                     <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff;" class="swiper mySwiper2">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
@@ -50,17 +51,21 @@
                 </div> {{-- End Left Col --}}
 
                 {{-- Right Col --}}
-                <div class="col-12 col-md-6 col-lg-5 col-xl-4 d-flex align-items-center">
+                <div class="col-12 col-sm-8 offset-md-0 col-md-6 col-lg-5 col-xl-4 d-flex align-items-center mt-5 m-md-0">
 
-                    <div class="m-auto">
-                        <a class='text' href='{{$ad->category->category}}'>
-                            <a href="{{route('categoryAds', $ad->category)}}" class='text'>{{$ad->category->category}}</a>
-                            <h3 class='text fw-bolder'>{{$ad->title}}</h4>
+                    <div class="ps-0 ps-md-4 mt-3">
+                        <div>
+                            <a class='text a-details btn rounded-pill' href='{{route('categoryAds', $ad->category)}}'>
+                                <i class="fa-solid fa-tag"></i>
+                                {{$ad->category->category}}
+                            </a>
+                            <h2 class='text fw-bolder d-none d-md-block'>{{$ad->title}}</h4>
                             <h5 class='text'>Venduto da <span class="fst-italic fw-bold">{{$ad->user->name}}</span></h5>
-                            <p class='text fw-bold'>Dettagli articolo:<span class="fw-normal"><br>{{$ad->description}}</span></p>
+                            <p class='text fw-bold'>Dettagli articolo:</p>
+                            <p class="fw-normal">{{$ad->description}}</p>
                             <p class='price fw-bolder'>{{$ad->price}}€</p>
                             {{-- <button class="btn btn-warning px-5">Contatta il venditore</button> --}}
-                        </a>
+                        </div>
                     </div>
 
                 </div> {{-- End Right Col --}}

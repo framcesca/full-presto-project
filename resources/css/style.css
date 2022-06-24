@@ -39,6 +39,9 @@
     backdrop-filter: blur(24px);
 }
 
+.navbar-toggler:focus{
+    box-shadow: none;
+}
 
 
 

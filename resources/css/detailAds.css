@@ -1,13 +1,13 @@
 .background{
     background: linear-gradient(rgba(255, 255, 255, 0.75),rgba(255, 255, 255, 0.75)), url("https://picsum.photos/500/500") ;
     background-size: cover;
-    height: 110vh;
+    height: 120vh;
     background-repeat: no-repeat;
     backdrop-filter: blur(125px);
 }
 
 .padding-top{
-    padding-top: 25vh;
+    padding-top: 20vh;
 }
 
 .text{
@@ -99,4 +99,13 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.a-details:hover{
+    color: var(--black);
+    background-color: var(--primaryColor);
+}
+
+.a-details:focus{
+    box-shadow: none;
 }
