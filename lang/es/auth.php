@@ -16,5 +16,5 @@ return [
                     
     'failed'   => "Las credenciales que pusiste no son correctas.", 
     'password' => 'La frase puesta no es correcta. ',
-    'throttle' => "Demasiados intentos fallados. Te invitamos de intentar otra vez:seconds segundos.",
+    'throttle' => "Demasiados intentos fallados. Te invitamos de intentar otra vez :seconds segundos.",
 ];

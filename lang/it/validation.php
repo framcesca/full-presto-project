@@ -37,7 +37,7 @@ return [
     'different'            => "':attribute' e :other devono essere diversi.",
     'digits'               => "':attribute' deve essere lungo :digits caratteri.",
     'digits_between'       => "':attribute' deve essere compreso tra :min e :max caratteri.",
-    'dimensions'           => "Le dimensioni immagine di ':attribute' non sono valide",
+    'dimensions'           => "Le dimensioni dell'immagine ':attribute' non sono valide",
     'distinct'             => "':attribute' contiene dei valori duplicati",
     'email'                => "':attribute' deve essere un indirizzo email valido.",
     'exists'               => "L'elemento ':attribute' selezionato non è valido.",
