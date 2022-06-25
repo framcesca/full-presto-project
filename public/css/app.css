@@ -13391,5 +13391,26 @@ textarea.form-control-lg {
     background: red !important;
 }
 
+.swiper-home-section{
+    margin-top: 150px;
+}
+
+.swiper-home{
+    height: 500px !important;
+}
+
+.swiper-button-prev::after{
+    font-family: "Font Awesome 6 Free";
+    content: "\f191";
+    color: var(--black);
+    font-size: 35px;
+}
+
+.swiper-button-next::after{
+    font-family: "Font Awesome 6 Free";
+    content: "\f152";
+    color: var(--black);
+    font-size: 35px;
+}
 /* import styles bundle */
 /* @import '~swiper/swiper-bundle.css'; */

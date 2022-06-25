@@ -6,6 +6,7 @@
 @import'./formAdStyle.css';
 @import '~flag-icons/css/flag-icons';
 @import './revisor';
+@import './swiperHome.css';
 
 /* import styles bundle */
 /* @import '~swiper/swiper-bundle.css'; */
