@@ -13349,6 +13349,35 @@ textarea.form-control-lg {
   background-image: url(/images/vendor/flag-icons/flags/1x1/xk.svg?75d33f962132c5afb8c700f3f7ca35e3);
 }
 
+/* REVISOR-DASHBOARD */
+/* card generica */
+.revisor-card{
+    background: var(--white);
+    box-shadow: var(--shadow);
+    border-radius: 14px;
+}
+
+/* classi width titoli */
+.w-title{
+    width: 35% !important;
+}
+
+.w-user{
+    width: 20% !important;
+}
+
+.w-date{
+    width: 30% !important;
+}
+
+.w-botton{
+    width: 15% !important;
+}
+
+
+
+/* REVISOR DETAIL */
+
 /* btn detail-revisor */
 
 .btn-accept{
