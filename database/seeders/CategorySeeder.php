@@ -20,13 +20,21 @@ class CategorySeeder extends Seeder
             'Elettronica','Motori','Per la casa','Moda','Sport','Bricolage','Libri e musica','Videogiochi'
         ];
 
+        $imgs=[
+            '/../media/categoryElettronica.png','/../media/categoryMotori.png','/../media/categoryPerLaCasa.png','/../media/categoryModa.png','/../media/categorySport.png','/../media/categoryBricolage.png','/../media/categoryLibri.png','/../media/categoryVideogiochi.png'
+        ];
+
+        $index=0;
+
         foreach($categories as $category){
             
             DB::table('categories')->insert([
                 'category' =>$category,
+                'img' =>$imgs[$index],
                 'created_at'=>Carbon::now(),
                 'updated_at'=>Carbon::now(),
             ]);
+            $index++;
         }
     }
 }
