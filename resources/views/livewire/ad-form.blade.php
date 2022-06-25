@@ -1,7 +1,7 @@
 <div>
     @if (session('message'))
         <div class="alert alert-success">
-            {{session('message')}}
+            <small>{{session('message')}}</small>
         </div>
     @endif
     <form wire:submit.prevent="submitAd">
@@ -18,6 +18,7 @@
         <div class="form-floating mb-4">
             <input type="text" class="form-control" id="floatingDescription" placeholder=" " wire:model="description">
             <label for="floatingDescription">Descrizione</label>
+            <small class="text-primary ps-1 d-block">* Descrizione non visibile nell'anteprima.</small>
             @error('description') <span class="error">{{$message}}</span> @enderror
         </div>
         {{-- Input Category --}}
@@ -33,9 +34,10 @@
             @error('category') <span class="error">{{$message}}</span> @enderror
         </div>
         {{-- Input Image --}}
-        {{-- <div class="mb-4">
+        <h6 class="input-title">Inserisci delle immagini</h6>
+        <div class="mb-4">
             <input class="form-control form-control-lg" id="formFile" type="file">
-        </div> --}}
+        </div>
         {{-- Input Price --}}
         <h6 class="input-title">Prezzo</h6>
         <div class="form-floating mb-4">

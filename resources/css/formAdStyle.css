@@ -12,10 +12,11 @@
 }
 
 .form-box{
-    margin: 250px auto;
+    padding: 25px;
+    /* margin: 250px auto; */
     /* background-color: white; */
-    background-color: rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(50px);
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(70px);
     /* border: 1px solid grey; */
     border: 1px solid rgba(252, 252, 255, .18);
     border-radius: var(--radius);
@@ -62,4 +63,8 @@
 
 .floatingDescription{
     height: 50px;
+}
+
+.z-index-upper{
+    z-index: 999;
 }

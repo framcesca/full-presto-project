@@ -73,18 +73,19 @@
     position: relative;
     height: 350px;
     transition: .6s;
-    background: url("/../media/categoryLibri.png");
+    /* background: url("/../media/categoryLibri.png"); */
     overflow: hidden;
 
 }
-.cat-card1:hover {
-    background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url("/../media/categoryLibri.png");
-}
+/* .cat-card1:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5));
+} */
 
 .cat-card2{
+    height: 100%;
     position: absolute;
     width: 100%;
-    bottom: -150px;
+    bottom: -350px;
     transition: .6s;
     display: flex;
     justify-content: center;
@@ -92,7 +93,7 @@
 }
 
 .cat-card1:hover .cat-card2{
-    bottom: 150px;
+    bottom: 0px;
 }
 
 .cat-card2-title{
@@ -120,6 +121,7 @@
     color: var(--black);
     transition: .4s;
     overflow: hidden;
+    background-color: var(--white);
 }
 
 .adCard:hover{ 
