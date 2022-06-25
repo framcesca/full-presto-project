@@ -11406,6 +11406,7 @@ textarea.form-control-lg {
     color: var(--black);
     transition: .4s;
     overflow: hidden;
+    background-color: var(--white);
 }
 
 .adCard:hover{ 
@@ -11680,11 +11681,12 @@ textarea.form-control-lg {
 }
 
 .form-box{
-    margin: 250px auto;
+    padding: 25px;
+    /* margin: 250px auto; */
     /* background-color: white; */
-    background-color: rgba(255, 255, 255, 0.3);
-    -webkit-backdrop-filter: blur(50px);
-            backdrop-filter: blur(50px);
+    background-color: rgba(255, 255, 255, 0.6);
+    -webkit-backdrop-filter: blur(70px);
+            backdrop-filter: blur(70px);
     /* border: 1px solid grey; */
     border: 1px solid rgba(252, 252, 255, .18);
     border-radius: var(--radius);
@@ -11731,6 +11733,10 @@ textarea.form-control-lg {
 
 .floatingDescription{
     height: 50px;
+}
+
+.z-index-upper{
+    z-index: 999;
 }
 .fib {
   background-size: contain;
@@ -13341,6 +13347,48 @@ textarea.form-control-lg {
 }
 .fi-xk.fis {
   background-image: url(/images/vendor/flag-icons/flags/1x1/xk.svg?75d33f962132c5afb8c700f3f7ca35e3);
+}
+
+/* btn detail-revisor */
+
+.btn-accept{
+    display: inline-block;
+    padding: 10px 15px;
+    box-shadow: var(--shadow);
+    text-transform: uppercase;
+    color: black;
+    text-decoration: none;
+    transition: 0.5s;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    border: none;
+    background: transparent;
+}
+
+.btn-accept:hover{
+    color: white;
+    background: green !important;
+}
+
+.btn-reject{
+    margin-right: 5px;
+    display: inline-block;
+    padding: 10px 15px;
+    box-shadow: var(--shadow);
+    text-transform: uppercase;
+    color: black;
+    text-decoration: none;
+    transition: 0.5s;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    border: none;
+    background: transparent;
+}
+.btn-reject:hover{
+    color: white;
+    background: red !important;
 }
 
 /* import styles bundle */

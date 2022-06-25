@@ -121,6 +121,7 @@
     color: var(--black);
     transition: .4s;
     overflow: hidden;
+    background-color: var(--white);
 }
 
 .adCard:hover{ 

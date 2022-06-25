@@ -64,16 +64,18 @@
                             <p class='text fw-bold'>Dettagli articolo:</p>
                             <p class="fw-normal">{{$ad->description}}</p>
                             <p class='price fw-bolder'>{{$ad->price}}€</p>
-                            <form class="my-3" action="{{route('revisorAcceptAd', $ad)}}" method="POST">
-                                @csrf
-                                @method('PATCH')
-                                <button type="submit" class="btn btn-warning px-5">Accetta annuncio</button>
-                            </form>
-                            <form action="{{route('revisorRejectAd', $ad)}}" method="POST">
-                                @csrf
-                                @method('PATCH')
-                                <button type="submit" class="btn btn-danger px-5">Rifiuta annuncio</button>
-                            </form>
+                            <div class="d-flex">
+                                <form class="me-3" action="{{route('revisorAcceptAd', $ad)}}" method="POST">
+                                    @csrf
+                                    @method('PATCH')
+                                    <button type="submit" class="btn-accept rounded-circle bg-white"><i class="fa-solid fa-check"></i></button>
+                                </form>
+                                <form action="{{route('revisorRejectAd', $ad)}}" method="POST">
+                                    @csrf
+                                    @method('PATCH')
+                                    <button type="submit" class="btn-reject rounded-circle bg-white ml-5"><i class="fa-regular fa-trash-can"></i></button>
+                                </form>
+                            </div>
                         </div>
                     </div>
 
