@@ -23,10 +23,10 @@
 
         {{-- tabella da revisionare --}}
         <div class="row my-4">
-            <div class="col-10 offset-md-1 revisor-card my-5">
+            <div class="col-10 offset-md-1 revisor-card my-5 py-3">
                 <div class="card-body">
-                    <table class="table">
-                        @forelse ($ads_to_revise as $ad)
+                    <table class="table margin-up">
+                        @if (App\Models\Ad::toBeRevisionedCount()>0)
                         <h2 class="text-center">Annunci da revisionare</h2>
                         <thead>
                             <tr>
@@ -36,6 +36,8 @@
                                 <th scope="col" class="w-date">Data</th>
                             </tr>
                         </thead>
+                        @endif
+                        @forelse ($ads_to_revise as $ad)
                         <tbody wire:key="{{ $loop->index }}">
                             <tr>
                                 <td>
@@ -53,11 +55,11 @@
                                 <div class="col-10 offset-md-1 mt-3 text-center">
                                     <h2 class="text-center">Non hai annunci da revisionare</h2>
                                 </div>
-                                @endforelse    
+                                @endforelse
                             </tr>
-                        </tbody>  
+                        </tbody>
                     </table>
-                </div>                
+                </div>
             </div>
         </div>
     </div>
@@ -65,7 +67,7 @@
         <div class="row my-4">
             <div class="col-10 offset-md-1  revisor-card py-3 my-5">
                 <div class="card-body">
-                    
+
                     <table class="table margin-up">
                         <h2 class="text-center">Annunci rifiutati</h2>
                         <thead>
@@ -97,7 +99,7 @@
                             <tr>
                                 <td colspan="3"></td>
                                 <td></td>
-                            @endforelse    
+                            @endforelse
                             </tr>
                         </tbody>
                     </table>
