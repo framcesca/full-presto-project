@@ -6,7 +6,7 @@ return [
     'catadsno'        =>'No hay anuncios para esta categoría',
     'catadsnew'       =>'Nuevo anuncio',    
     'titlenew'        =>'Crea anuncio',
-    'cratead'         =>'Crea tu anuncio',
+    'createad'         =>'Crea tu anuncio',
     'titledet'        =>'Detalles anuncio',
     'soldby'          =>'Vendido da ',
     'detailart'       =>'Detalles artículo:',
@@ -34,7 +34,8 @@ return [
     'lavnoi'          =>'Únete a nosotras',
     
     //nav
-    
+    'profile'         =>'profilo',
+    'miei'            =>'i miei annunci',
     'revisorig'       =>'para ser revisado!',
     'lang'            =>'Idiomas',
     'out'             =>'Salir',
@@ -64,7 +65,7 @@ return [
     
     //mail
     
-    'noi'             =>'Un usuario ha solicitado trabajar con nosotrosi',
+    'noii'             =>'Un usuario ha solicitado trabajar con nosotrosi',
     'dati'            =>'Datos del usuario:',
     'renrev'          =>'Para hacer un revisor, haga clic aquí:',
     'potere'          =>'Hazlo revisor',
@@ -73,7 +74,7 @@ return [
     'accettata'       =>'¡Tu petición ha sido aceptada!',
     'selodicitu'      =>'Bienvenido a la familia de Presto',
     'ecco'            =>'Inicie sesión y comience a revisar los anuncios de inmediato',
-
+    'titlee'          =>'Presto.es'
 
 
 

@@ -57,7 +57,7 @@
             <div class="col-12">
 
                 {{-- Section Title --}}
-                <h2 class="text-center">Scopri gli ultimi annunci</h2>
+                <h2 class="text-center">{{__('ui.discover')}}</h2>
 
                 {{-- Swiper --}}
                 <div class="swiper swiper-home">
