@@ -6,7 +6,7 @@
     <div class="container mt-5">
         <div class="row mt-100">
             <div class="col-12 text-center">
-                <h1 class="display-5">{{__('ui.catadsin')}}{{$category->category}}</h1>
+                <h1 class="display-5">{{__('ui.catadsin')}} {{$category->category}}</h1>
             </div>
                         <!-- search bar -->
             {{-- <div class="col-12 col-md-6 offset-md-3 mt-2">

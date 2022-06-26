@@ -8,7 +8,7 @@ return [
     'catadsnew'        =>'Nuovo annuncio', 
      // create ad //
     'titlenew'        =>'Crea annuncio',
-    'cratead'         =>'Crea il tuo annuncio',
+    'createad'         =>'Crea il tuo annuncio',
     //detail ad //
     'titledet'        =>'Dettagli annuncio',
     'soldby'          =>'Venduto da ',
@@ -39,6 +39,8 @@ return [
     'noi'             =>'Chi siamo',
     'lavnoi'          =>'Lavora con noi',
     //nav
+    'profile'         =>'profilo',
+    'miei'            =>'i miei annunci',
     'revisoring'      =>'Da revisionare',
     'lang'            =>'Lingue',
     'out'             =>'Esci',
@@ -70,7 +72,7 @@ return [
 
 
     //mail
-    'noi'             =>'Un utente ha richiesto di lavorare con noi',
+    'noii'             =>'Un utente ha richiesto di lavorare con noi',
     'dati'            =>'Dati dell\'utente:',
     'renrev'          =>'Per rendere revisore, clicca qui:',
     'potere'          =>'Rendi revisore',
@@ -81,10 +83,6 @@ return [
     'accettata'       =>'la tua richiesta è stata accettata!',
     'selodicitu'      =>'Benvenuto nella famiglia di Presto',
     'ecco'            =>'Effettua il login ed inizia subito a revisionare annunci',
-    'allAnnouncements'=>'I nostri annunci!',
-    'allAnnouncements'=>'I nostri annunci!',
-    'allAnnouncements'=>'I nostri annunci!',
-    'allAnnouncements'=>'I nostri annunci!',
-    'allAnnouncements'=>'I nostri annunci!',
-    'allAnnouncements'=>'I nostri annunci!',
+    'titlee'          =>'Presto.it',
+ 
 ];

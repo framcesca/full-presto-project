@@ -16,5 +16,5 @@ yarn-error.log
 /.vscode
 /storage/ads.index-shm
 /storage/ads.index-wal
-
+/storage/ads.index
 
