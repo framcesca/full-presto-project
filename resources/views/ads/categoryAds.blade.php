@@ -6,7 +6,7 @@
     <div class="container mt-5">
         <div class="row mt-100">
             <div class="col-12 text-center">
-                <h1 class="display-5">I nostri annunci in {{$category->category}}</h1>
+                <h1 class="display-5">{{__('ui.catadsin')}}{{$category->category}}</h1>
             </div>
                         <!-- search bar -->
             {{-- <div class="col-12 col-md-6 offset-md-3 mt-2">
@@ -37,8 +37,8 @@
             </div>
             @empty
             <div>
-            <h2>Non ci sono annunci per questa categoria</h2>
-            <a class="btn btn-danger" href="{{route('createAd')}}">Nuovo annuncio</a>
+            <h2>{{__('ui.catadsno')}}</h2>
+            <a class="btn btn-danger" href="{{route('createAd')}}">{{__('ui.catadsnew')}}</a>
             @endforelse
             </div>
         </div>

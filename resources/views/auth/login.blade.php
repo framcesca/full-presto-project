@@ -1,5 +1,5 @@
 <x-layout>
-  <x-slot name='title'> Login</x-slot>
+  <x-slot name='title'> {{__('ui.log-in')}}</x-slot>
   
   
   
@@ -7,7 +7,7 @@
   <div class="container-fluid bg-login min-vh-100 ">
     <div class="row">
       <div class="col-12 text-center">
-        <h1 class="mt-150 mb-4 fw-bold">Log-in</h1>           
+        <h1 class="mt-150 mb-4 fw-bold">{{__('ui.log-in')}}</h1>           
         @if($errors->any())
         <div class="alert alert-danger">
           <ul>
@@ -22,17 +22,17 @@
                 <div class="register-form-container">
                   <form action="{{route('login')}}" method="POST">
                       @csrf
-                          <h5 class="mt-3 fw-bold">Email</h5>
+                          <h5 class="mt-3 fw-bold">{{__('ui.log-mail')}}</h5>
                           <div class="form-floating mb-3">
                             <input type="email" id="registerEmail"  class="form-control input-register" name="email" placeholder="name@example.com">
-                            <label for="registerEmail" class="form-label text-black-50">Email</label>
+                            <label for="registerEmail" class="form-label text-black-50">{{__('ui.log-mail')}}</label>
                           </div>
-                          <h5 class="mt-3 fw-bold">Password</h5>
+                          <h5 class="mt-3 fw-bold">{{__('ui.log-pas')}}</h5>
                           <div class="form-floating mb-3">
                             <input type="password" id="registerPassword" class="form-control input-register" name="password" placeholder="exemple">
-                            <label  for="registerPassword" class="form-label text-black-50">Password</label>
+                            <label  for="registerPassword" class="form-label text-black-50">{{__('ui.log-pas')}}</label>
                           </div>
-                          <button type="submit" class="form-btn w-100">Accedi</button>
+                          <button type="submit" class="form-btn w-100">{{__('ui.logenter')}}</button>
                   </form>
                 </div>
               </div>

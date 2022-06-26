@@ -2,25 +2,25 @@
     <div class="container">
         <div class="row margin-up justify-content-center text-center">
             <div class="col-4">
-                <p>Annunci da revisionare: {{App\Models\Ad::toBeRevisionedCount()}}</p>
+                <p>{{__('ui.anre')}}: {{App\Models\Ad::toBeRevisionedCount()}}</p>
             </div>
             <div class="col-4">
-                <p>Annunci accettati: {{App\Models\Ad::AcceptedCount()}}</p>
+                <p>{{__('ui.accet')}}: {{App\Models\Ad::AcceptedCount()}}</p>
             </div>
             <div class="col-4">
-                <p>Annunci rifiutati: {{App\Models\Ad::notAcceptedCount()}}</p>
+                <p>{{__('ui.rif')}}: {{App\Models\Ad::notAcceptedCount()}}</p>
             </div>
         </div>
         {{-- tabella da revisionare --}}
         <div class="row mt-4">
             <table class="table">
-                <h2>Annunci da revisionare</h2>
+                <h2>{{__('ui.anre')}}:</h2>
                 <thead>
                     <tr>
                         {{-- <th scope="col">icona</th> --}}
-                        <th scope="col">Titolo</th>
-                        <th scope="col">Utente</th>
-                        <th scope="col">Data</th>
+                        <th scope="col">{{__('ui.tit')}}</th>
+                        <th scope="col">{{__('ui.user')}}</th>
+                        <th scope="col">{{__('ui.data')}}</th>
                     </tr>
                 </thead>
             @forelse ($ads_to_revise as $ad)
@@ -38,7 +38,7 @@
                 </tr>
                         @empty
                         <div class="col-12 mt-3 text-center">
-                            <h2>Non hai annunci da revisionare</h2>
+                            <h2>{{__('ui.nhadr')}}</h2>
                         </div>
                         @endforelse    
                     </tr>
@@ -50,14 +50,14 @@
     <div class="container">
         <div class="row">
             <table class="table margin-up">
-                <h2>Annunci rifiutati</h2>
+                <h2>{{__('ui.rif')}}</h2>
                 <thead>
                     <tr>
                         {{-- <th scope="col">icona</th> --}}
-                        <th scope="col">Titolo</th>
-                        <th scope="col">Utente</th>
-                        <th scope="col">Data</th>
-                        <th scope="col">Annulla</th>
+                        <th scope="col">{{__('ui.tit')}}</th>
+                        <th scope="col">{{__('ui.user')}}</th>
+                        <th scope="col">{{__('ui.data')}}</th>
+                        <th scope="col">{{__('ui.nono')}}</th>
                     </tr>
                 </thead>
                 @forelse($ads_rejected as $ad)
@@ -73,7 +73,7 @@
                             <p>{{$ad->created_at}}</p>
                         </td>
                         <td>
-                            <button wire:click.prevent="setToRevise({{$ad}})" class="btn btn-warning">Annulla</button>
+                            <button wire:click.prevent="setToRevise({{$ad}})" class="btn btn-warning">{{__('ui.nono')}}</button>
                         </td>
                     </tr>
                     @empty
@@ -86,18 +86,18 @@
             </table>
         </div>
     </div>
-    {{-- tabella annunci accettati --}}
+    {{-- tabella  --}}
     <div class="container">
         <div class="row">
             <table class="table margin-up">
-                <h2>Annunci accettati</h2>
+                <h2>{{__('ui.catadsno')}}</h2>
                 <thead>
                     <tr>
                         {{-- <th scope="col">icona</th> --}}
-                        <th scope="col">Titolo</th>
-                        <th scope="col">Utente</th>
-                        <th scope="col">Data</th>
-                        <th scope="col">Annulla</th>
+                        <th scope="col">{{__('ui.tit')}}</th>
+                        <th scope="col"{{__('ui.user')}}></th>
+                        <th scope="col">{{__('ui.data')}}</th>
+                        <th scope="col">{{__('ui.nono')}}</th>
                     </tr>
                 </thead>
                 @forelse($ads_accepted as $ad)
@@ -113,7 +113,7 @@
                             <p>{{$ad->created_at}}</p>
                         </td>
                         <td>
-                            <button wire:click.prevent="setToRevise({{$ad}})" class="btn btn-warning">Annulla</button>
+                            <button wire:click.prevent="setToRevise({{$ad}})" class="btn btn-warning">{{__('ui.nono')}}</button>
                         </td>
                     </tr>
                     @empty

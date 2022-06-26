@@ -13,13 +13,13 @@
         <div class="container">
             <div class="row align-items-center justify-content-center vh-100">
                 <div class="col-12">
-                    <h1 class="display-2 fw-semibold">È presto fatto!</h1>
-                    <h2 class="fs-3 fw-semibold">Vendi & Compra le cose che non usi più.</h2>
-                    <a href="{{route('createAd')}}" class="btn hero-btn">Entra in presto</a>
+                    <h1 class="display-2 fw-semibold">{{__('ui.fatto')}}</h1>
+                    <h2 class="fs-3 fw-semibold">{{__('ui.sell')}}</h2>
+                    <a href="{{route('createAd')}}" class="btn hero-btn">{{__('ui.entry')}}</a>
                 </div>
 
                 <div class="col-12 align-self-end text-center mt-0 pt-0">
-                    <h2 class="cat-title">Le categorie</h2>
+                    <h2 class="cat-title">{{__('ui.categ')}}</h2>
                 </div>
             </div>
             
@@ -51,7 +51,7 @@
     <section class="container">
         <!-- Slider main container -->
         <div>
-            <h1 class="text-center my-5">Scopri gli ultimi annunci</h1>
+            <h1 class="text-center my-5">{{__('ui.discover')}}</h1>
         </div>
         <div class="row my-1 my-md-5">
             <div class="col-12">

@@ -8,11 +8,11 @@
 </head>
 <body>
     <div>
-        <h1>Congratulazioni {{$user->name}} la tua richiesta è stata accettata!</h1>
+        <h1>{{__('ui.congrats')}} {{$user->name}}{{__('ui.accettata')}}</h1>
         <br>
-        <h2>Benvenuto nella famiglia di Presto</h2>
+        <h2>{{__('ui.selodicitu')}}</h2>
         <br>
-        <a href="{{route('login')}}">Effettua il login ed inizia subito a revisionare annunci</a>
+        <a href="{{route('login')}}">{{__('ui.ecco')}}</a>
     </div>
 </body>
 </html>

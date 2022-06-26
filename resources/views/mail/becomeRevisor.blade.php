@@ -8,13 +8,13 @@
 </head>
 <body>
     <div>
-        <h1>Un utente ha richiesto di lavorare con noi</h1>
-        <h2>Dati dell'utente:</h2>
-        <p>Nome: {{$user->name}}</p>
-        <p>Email: {{$user->email}}</p>
-        <p>Descrizione: {{$description}}</p>
-        <p>Per rendere revisore, clicca qui:</p>
-        <a href="{{route('createRevisor', $user)}}">Rendi revisore</a>
+        <h1>{{__('ui.noi')}}</h1>
+        <h2>{{__('ui.dati')}}:</h2>
+        <p>{{__('ui.reg-name')}}: {{$user->name}}</p>
+        <p>{{__('ui.log-email')}}: {{$user->email}}</p>
+        <p>{{__('ui.desc')}}: {{$description}}</p>
+        <p>{{__('ui.renrev')}}</p>
+        <a href="{{route('createRevisor', $user)}}">{{__('ui.potere')}}</a>
     </div>
 </body>
 </html>

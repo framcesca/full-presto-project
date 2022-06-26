@@ -9,7 +9,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('indexAds')}}">Annunci</a>
+                    <a class="nav-link" href="{{route('indexAds')}}">{{__('ui.indexads')}}</a>
                 </li>
             </ul>
         </div>
@@ -17,14 +17,14 @@
             <ul class="navbar-nav ms-auto">
                 @guest    
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('register')}}">Registrati</a>
+                    <a class="nav-link" href="{{route('register')}}">{{__('ui.reg')}}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('login')}}">Log-in</a>
+                    <a class="nav-link" href="{{route('login')}}">{{__('ui.log-in')}}</a>
                 </li>
                 @else
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('createAd')}}">Nuovo annuncio</a>
+                    <a class="nav-link" href="{{route('createAd')}}">{{__('ui.catadsnew')}}</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -36,13 +36,13 @@
                         <li><a class="dropdown-item" href="#">I miei annunci</a></li>
                         <li><hr class="dropdown-divider"></li> --}}
                         @if (Auth::user()->is_revisor)                           
-                        <li><a class="dropdown-item position-relative" href="{{route('revisorDashboard')}}">Da revisionare
+                        <li><a class="dropdown-item position-relative" href="{{route('revisorDashboard')}}">{{__('ui.revisoring')}}
                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                             {{App\Models\Ad::toBeRevisionedCount()}}
                         </span></a></li>
                         <li><hr class="dropdown-divider"></li>
                         @endif
-                        <a class=" nav-link " href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Logout</a>      
+                        <a class=" nav-link " href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{__('ui.out')}}</a>      
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                         @csrf
                         </form>
@@ -51,7 +51,7 @@
                 @endguest
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Lingue
+                        {{__('ui.lang')}}
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li>

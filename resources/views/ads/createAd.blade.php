@@ -1,5 +1,5 @@
 <x-layout>
-    <x-slot name='title'>Crea annuncio</x-slot>
+    <x-slot name='title'>{{__('ui.titlenew')}}</x-slot>
 
     {{-- Container Fluid --}}
     <div class="container-fluid bg-container-fluid">
@@ -9,7 +9,7 @@
 
             {{-- Wrapping Container Form --}}
             <div class="container-ad-form">
-                <h1 class="text-center mb-5">Crea il tuo annuncio</h1>
+                <h1 class="text-center mb-5">{{__('ui.createad')}}</h1>
 
                 {{-- Row --}}
                 <div class="row">

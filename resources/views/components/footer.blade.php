@@ -4,16 +4,16 @@
         <div class="col-12 d-flex align-items-center justify-content-center mt-5">
             <ul class="nav d-flex align-items-center justify-content-center">
                 <li class="nav-item mb-2">
-                    <a href="#" class="nav-link px-5 fw-bold mc-black fs-14">Contattaci</a>
+                    <a href="#" class="nav-link px-5 fw-bold mc-black fs-14">{{__('ui.cont')}}</a>
                 </li>
                 <li class="nav-item mb-2">
-                    <a href="#" class="nav-link px-5 fw-bold mc-black fs-14">FAQs</a>
+                    <a href="#" class="nav-link px-5 fw-bold mc-black fs-14">{{__('ui.faq')}}</a>
                 </li>
                 <li class="nav-item mb-2">
-                    <a href="#" class="nav-link px-5 fw-bold mc-black fs-14">Chi siamo</a>
+                    <a href="#" class="nav-link px-5 fw-bold mc-black fs-14">{{__('ui.noi')}}</a>
                 </li>
                 <li class="nav-item mb-2">
-                    <a href="{{route('joinUs')}}" class="nav-link px-5 fw-bold mc-black fs-14">Join Us</a>
+                    <a href="{{route('joinUs')}}" class="nav-link px-5 fw-bold mc-black fs-14">{{__('ui.lavnoi')}}</a>
                 </li>
             </ul>
         </div>

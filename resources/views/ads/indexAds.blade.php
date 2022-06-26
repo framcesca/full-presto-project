@@ -1,5 +1,5 @@
 <x-layout>
-    <x-slot name='title'>Annunci</x-slot>
+    <x-slot name='title'>{{__('ui.indexads')}}</x-slot>
     
     <div class="container padding">
         <div class="row">
@@ -37,7 +37,7 @@
                 </div>
             @empty
                 <div class="col-12">
-                    <h2>La ricerca non ha prodotto risultati</h2>
+                    <h2>{{__('ui.noresads')}}</h2>
                 </div>
             @endforelse
             {{$ads->links()}}
