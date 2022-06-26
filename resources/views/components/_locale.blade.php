@@ -12,6 +12,9 @@
         @case("es")
         <span class="ms-2">Español</span>
         @break
+        @case("fr")
+        <span class="ms-2">Français</span>
+        @break
         @endswitch
     </button>
 </form>

@@ -74,7 +74,7 @@ return [
     'accettata'       =>'¡Tu petición ha sido aceptada!',
     'selodicitu'      =>'Bienvenido a la familia de Presto',
     'ecco'            =>'Inicie sesión y comience a revisar los anuncios de inmediato',
-    'titlee'          =>'Presto.es'
+    'titlee'          =>'Presto.it/es'
 
 
 
