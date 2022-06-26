@@ -91,7 +91,7 @@
                     <div class="swiper-wrapper">
                         @foreach($images as $key=> $image)
                         <div class="swiper-slide">
-                            <img class="img-fluid" src="{{$image->temporaryUrl()}}" />
+                            <img class="h-100" style="height:300px !important; width:300px !important;" src="{{$image->temporaryUrl()}}" />
                         </div>
                         @endforeach
                     </div>
@@ -104,7 +104,7 @@
                 <span class="adCard-cat z-index-upper">{{App\Models\Category::find($this->category)->category}}</span>
             @endif
 
-            <div class="card-item d-flex justify-content-between">
+            <div class="card-item d-flex justify-content-between" style="height: 27px;">
                 {{-- Ad Title --}}
                 @if (!$this->title)
                     <small class="adCard-title">Tavola da Surf</small>
@@ -121,7 +121,7 @@
             </div>
 
             {{-- Ad Author --}}
-            <div class="card-item text-start">
+            <div class="card-item text-start" style="height: 24px;">
                 <small class="adCard-author">{{Auth::user()->name}}</small>                        
             </div>
 

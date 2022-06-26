@@ -11319,19 +11319,19 @@ textarea.form-control-lg {
 }   
 
 .presto-nav ul .dropdown-menu{
-    background-color: rgba(255, 255, 255, 0.3);
-    -webkit-backdrop-filter: blur(24px);
-            backdrop-filter: blur(24px);
+    /* background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(24px); */
+    background-color: var(--white);
 }
+
 
 .navbar-toggler:focus{
     box-shadow: none;
 }
 
 
-
 /* HOME */
-/* hero */
+
 .hero-welcome{
     background: url('/../media/bgHeroHomepage.png');
     height: 100vh;
@@ -11428,7 +11428,7 @@ textarea.form-control-lg {
     text-shadow: 4px 4px 6px black;
 }
 
- .adCard .adCard-title, .adCard .adCard-price, .adCard .adCard-author{
+.adCard .adCard-title, .adCard .adCard-price, .adCard .adCard-author{
     padding-left: 6px;
     padding-right: 6px;
     padding-top: 6px;
@@ -11463,7 +11463,24 @@ textarea.form-control-lg {
     margin-top: 100px;
 }
 
+/* MEDIA QUERIES NAVBAR */
 
+/* @media screen and(max-width:576px) {
+    .mobile-nav{
+        display: block;
+    }
+    .web-nav{
+        display: none;
+    }
+}
+@media screen and(min-width:576px) {
+    .mobile-nav{
+        display: none;
+    }
+    .web-nav{
+        display: block;
+    }
+} */
 .background{
     background: linear-gradient(rgba(255, 255, 255, 0.75),rgba(255, 255, 255, 0.75)), url("https://picsum.photos/500/500") ;
     background-size: cover;
@@ -11738,6 +11755,7 @@ textarea.form-control-lg {
 .z-index-upper{
     z-index: 999;
 }
+
 .fib {
   background-size: contain;
   background-position: 50%;
