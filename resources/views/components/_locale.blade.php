@@ -9,11 +9,14 @@
         @case("gb")
         <span class="ms-2">English</span>
         @break
-        @case("es")
-        <span class="ms-2">Español</span>
+        @case("pt")
+        <span class="ms-2">Português</span>
         @break
         @case("fr")
         <span class="ms-2">Français</span>
+        @break
+        @case("es")
+        <span class="ms-2">Español</span>
         @break
         @endswitch
     </button>
