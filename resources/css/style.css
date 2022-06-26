@@ -35,18 +35,19 @@
 }   
 
 .presto-nav ul .dropdown-menu{
-    background-color: rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(24px);
+    /* background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(24px); */
+    background-color: var(--white);
 }
+
 
 .navbar-toggler:focus{
     box-shadow: none;
 }
 
 
-
 /* HOME */
-/* hero */
+
 .hero-welcome{
     background: url('/../media/bgHeroHomepage.png');
     height: 100vh;
@@ -143,7 +144,7 @@
     text-shadow: 4px 4px 6px black;
 }
 
- .adCard .adCard-title, .adCard .adCard-price, .adCard .adCard-author{
+.adCard .adCard-title, .adCard .adCard-price, .adCard .adCard-author{
     padding-left: 6px;
     padding-right: 6px;
     padding-top: 6px;
@@ -178,3 +179,21 @@
     margin-top: 100px;
 }
 
+/* MEDIA QUERIES NAVBAR */
+
+/* @media screen and(max-width:576px) {
+    .mobile-nav{
+        display: block;
+    }
+    .web-nav{
+        display: none;
+    }
+}
+@media screen and(min-width:576px) {
+    .mobile-nav{
+        display: none;
+    }
+    .web-nav{
+        display: block;
+    }
+} */
