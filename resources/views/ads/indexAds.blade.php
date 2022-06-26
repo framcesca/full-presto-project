@@ -24,7 +24,11 @@
             @forelse ($ads as $ad)
                 <div class="col-12 col-md-3 my-3">
                     <a href="{{route("detailsAd", $ad)}}" class="card adCard rounded-0">
-                        <img src="https://picsum.photos/180/180" class="card-img rounded-0" alt="">
+                        @if (!$ad->images()->first())
+                        <img src="https://picsum.photos/180/180" class="card-img rounded-0">
+                        @else
+                        <img src="./storage/{{$ad->images()->first()->path}}" class="card-img rounded-0">
+                        @endif
                         <span class="adCard-cat">{{$ad->category->category}}</span>
                         <div class="card-item d-flex justify-content-between">
                             <small class="adCard-title">{{$ad->title}}</small> 

@@ -15,6 +15,7 @@
                     <h2 class='text fw-bolder d-md-none'>{{$ad->title}}</h4>
                     <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff;" class="swiper mySwiper2">
                         <div class="swiper-wrapper">
+                            @if (!$ad->images()->first())
                             <div class="swiper-slide">
                                 <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
                             </div>
@@ -27,12 +28,20 @@
                             <div class="swiper-slide">
                                 <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
                             </div>
+                            @else
+                            @foreach ($ad->images()->get() as $img)
+                            <div class="swiper-slide">
+                                <img src="/../storage/{{$img->path}}" />
+                            </div> 
+                            @endforeach
+                            @endif
                         </div>
                     </div>
 
                     {{-- Swiper 2 --}}
                     <div thumbsSlider="" class="swiper mySwiper mt-3">
                         <div class="swiper-wrapper">
+                            @if (!$ad->images()->first())
                             <div class="swiper-slide">
                                 <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
                             </div>
@@ -45,6 +54,13 @@
                             <div class="swiper-slide">
                                 <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
                             </div>
+                            @else
+                            @foreach ($ad->images()->get() as $img)
+                            <div class="swiper-slide">
+                                <img src="/../storage/{{$img->path}}" />
+                            </div> 
+                            @endforeach
+                            @endif
                         </div>
                     </div>
 

@@ -4,21 +4,29 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use App\Models\Category;
+use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Request;
 
 class AdForm extends Component
 {
+    use WithFileUploads;
+    
 
     public $title;
     public $description;
     public $price;
     public $category;
+    public $temporary_images;
+    public $images = [];
 
     protected $rules = [
         'title' => 'required|min:1|max:20',
         'description' => 'required|min:1|max:255',
-        'price' => 'required|min:1|max:10',
-        'category' => 'required|min:1'
+        'price' => 'required|numeric|max:9999999999',
+        'category' => 'required|min:1',
+        'images.*'=> 'required|image|max:1024',
+        'temporary_images.*'=> 'required|image|max:2048',
     ];
 
     protected $messages = [
@@ -29,6 +37,11 @@ class AdForm extends Component
         'price.required' => 'Campo obbligatorio.',
         'price.max' => 'Hai raggiunto il numero massimo di caratteri.',
         'category.required' => 'Selezione obbligatoria.',
+        'temporary_images.required' => 'Immagine obbligatoria',
+        'temporary_images.*.image' => 'I file devono essere immagini',
+        'temporary_images.*.max' => 'Foto max 1 Mb',
+        'images.image'=> 'I file devono essere immagini',
+        'images.max' => 'Foto max 1 Mb'
     ];
 
     public function updated($propertyName)
@@ -36,29 +49,68 @@ class AdForm extends Component
         $this->validateOnly($propertyName);
     }
 
-    public function submitAd() {
-        $validatedData = $this->validate();
-        $category = Category::find($validatedData["category"]);
-            $ads = $category->ads()->create([
-            "title"=>$this->title,
-            "description"=>$this->description,
-            "price"=>$this->price
-        ]);
-        Auth::user()->ads()->save($ads);
-        session()->flash('message','Grazie, il tuo annuncio sarà sottoposto a revisione.');
-        $this->formCleaner();
+    
+    
+    public function render()
+    {
+        return view('livewire.ad-form');
     }
+    
+    public function updatedTemporaryImages()
+    {
+        if($this->validate([
+            'temporary_images.*'=> 'required|image|max:1024',
+            ])){
+                foreach($this->temporary_images as $image){
+                    $this->images[]=$image;
+                }
+            }
+        }
 
+    public function restartCarousel(){
+        $this->dispatchBrowserEvent('contentChanged');
+    }
+        
+    public function removeImage($key)
+    {
+        if(in_array($key,array_keys($this->images)))
+        {
+            unset($this->images[$key]);
+        }
+    }
+    
+    public function submitAd() {
+        if(count($this->images))
+        {
+            $validatedData = $this->validate();
+            $category = Category::find($validatedData["category"]);
+            $ad = $category->ads()->create([
+                "title"=>$this->title,
+                "description"=>$this->description,
+                "price"=>$this->price
+            ]);
+            
+            if(count($this->images)){
+                foreach($this->images as $image){
+                    $ad->images()->create(['path'=>$image->store('images','public')]);
+                }
+            }
+            Auth::user()->ads()->save($ad);
+            session()->flash('message','Grazie, il tuo annuncio sarà sottoposto a revisione.');
+            $this->formCleaner();
+        }else
+        {
+            session()->flash('message','Inserire almeno un immagine');
+        }
+    }
     public function formCleaner() {
         $this->title = "";
         $this->description = "";
         $this->price = "";
         $this->category = "";
+        $this->temporary_images=[];
+        $this->images=[];
     }
-
-    public function render()
-    {
-        return view('livewire.ad-form');
+        
+        
     }
-
-}

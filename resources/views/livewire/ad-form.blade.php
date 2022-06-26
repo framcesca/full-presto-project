@@ -13,14 +13,14 @@
                     {{-- Input Title --}}
                     <h6 class="input-title">Titolo del tuo annuncio</h6>
                     <div class="form-floating mb-4">
-                        <input type="text" class="form-control" id="floatingInput" placeholder=" " wire:model="title">
+                        <input wire:change="restartCarousel" type="text" class="form-control" id="floatingInput" placeholder=" " wire:model="title">
                         <label for="floatingInput">Titolo</label>
                         @error('title') <span class="error">{{$message}}</span> @enderror
                     </div>
                     {{-- Input Details --}}
                     <h6 class="input-title">Dettagli</h6>
                     <div class="form-floating mb-4">
-                        <input type="text" class="form-control" id="floatingDescription" placeholder=" " wire:model="description">
+                        <input wire:change="restartCarousel" type="text" class="form-control" id="floatingDescription" placeholder=" " wire:model="description">
                         <label for="floatingDescription">Descrizione</label>
                         <small class="text-primary ps-1 d-block">* Descrizione non visibile nell'anteprima.</small>
                         @error('description') <span class="error">{{$message}}</span> @enderror
@@ -28,7 +28,7 @@
                     {{-- Input Category --}}
                     <h6 class="input-title">Categoria</h6>
                     <div class="form-floating mb-4">
-                        <select class="form-select" id="floatingCategories" wire:model.defer="category">
+                        <select wire:change="restartCarousel" class="form-select" id="floatingCategories" wire:model.defer="category">
                             <option hidden selected value="{{$category = ""}}">Seleziona categoria</option>
                             @foreach ($categories as $category)
                                 <option value="{{$category->id}}">{{$category->category}}</option>
@@ -40,12 +40,15 @@
                     {{-- Input Image --}}
                     <h6 class="input-title">Inserisci delle immagini</h6>
                     <div class="mb-4">
-                        <input class="form-control form-control-lg" id="formFile" type="file">
+                        <input wire:change="restartCarousel" wire:model="temporary_images" name="images" multiple class="form-control form-control-lg @error('temporary_images.*') is-invalid @enderror" id="formFile" type="file">
+                        @error('temporary_images.*')
+                            <span class="error">{{$message}}</span>
+                        @enderror
                     </div>
                     {{-- Input Price --}}
                     <h6 class="input-title">Prezzo</h6>
                     <div class="form-floating mb-4">
-                        <input type="text" class="form-control" id="floatingPrice" placeholder=" " wire:model="price">
+                        <input wire:change="restartCarousel" type="text" class="form-control" id="floatingPrice" placeholder=" " wire:model="price">
                         <label for="floatingPrice">Prezzo</label>
                         @error('price') <span class="error">{{$message}}</span> @enderror
                     </div>
@@ -64,7 +67,7 @@
         {{-- Card --}}
         <div class="card adCard rounded-0 m-auto">
 
-            @if (true)
+            @if(empty($images))
                 {{-- Place Holder Images Card Swiper --}}
                 <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff;" class="swiper mySwiper2">
                     <div class="swiper-wrapper">
@@ -86,35 +89,34 @@
                 {{-- User Images Card Swiper --}}
                 <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff;" class="swiper mySwiper2">
                     <div class="swiper-wrapper">
-                        @foreach ($images as $image)
+                        @foreach($images as $key=> $image)
                         <div class="swiper-slide">
-                            <img src="{{$image}}" />
+                            <img class="img-fluid" src="{{$image->temporaryUrl()}}" />
                         </div>
                         @endforeach
                     </div>
                 </div>
             @endif
-
             {{-- Card Details --}}
-            @if (!$category)
+            @if(!$this->category)
                 <span class="adCard-cat z-index-upper">Sport</span>
             @else
-                <span class="adCard-cat z-index-upper">{{$category->category}}</span>
+                <span class="adCard-cat z-index-upper">{{App\Models\Category::find($this->category)->category}}</span>
             @endif
 
             <div class="card-item d-flex justify-content-between">
                 {{-- Ad Title --}}
-                @if (true)
+                @if (!$this->title)
                     <small class="adCard-title">Tavola da Surf</small>
                 @else
                     <small class="adCard-title">{{$title}}</small>
                 @endif
                 
                 {{-- Ad Price --}}
-                @if (true)
+                @if (!$this->price)
                     <small class="adCard-price text-end">267€</small>
                 @else
-                    <small class="adCard-price text-end">{{$price}}</small>
+                    <small class="adCard-price text-end">{{$price}}€</small>
                 @endif
             </div>
 
@@ -125,7 +127,7 @@
 
         </div>
 
-        @if (true)
+        @if(empty($images))
             {{-- Place Holder Images Swiper --}}
             <div thumbsSlider="" class="swiper mySwiper mt-3">
                 <div class="swiper-wrapper">
@@ -147,9 +149,10 @@
             {{-- User Images Swiper --}}
             <div thumbsSlider="" class="swiper mySwiper mt-3">
                 <div class="swiper-wrapper">
-                    @foreach ($images as $image)
-                    <div class="swiper-slide">
-                        <img src="{{$image}}" />
+                    @foreach($images as $key => $image)
+                    <div class="swiper-slide d-flex flex-column">
+                        <img class="img-fluid mb-2" src="{{$image->temporaryUrl()}}" />
+                        <button wire:click="removeImage({{$key}})" type="button" class="btn-reject rounded-circle bg-white ml-5"><i class="fa-regular fa-trash-can"></i></button>
                     </div>
                     @endforeach
                 </div>

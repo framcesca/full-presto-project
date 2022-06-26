@@ -64,12 +64,16 @@
 
                     {{-- Swiper Wrapper --}}
                     <div class="swiper-wrapper">
-
+                        
                         {{-- Swiper Pages --}}
                         @foreach ($ads as $ad)
                             <div class="swiper-slide">
                                 <a href="{{route("detailsAd", $ad)}}" class="card adCard rounded-0 w-100">
+                                    @if (!$ad->images()->first())
                                     <img src="https://picsum.photos/180/180" class="card-img rounded-0">
+                                    @else
+                                    <img src="./storage/{{$ad->images()->first()->path}}" class="card-img rounded-0">
+                                    @endif
                                     <span class="adCard-cat">{{$ad->category->category}}</span>
                                     <div class="card-item d-flex justify-content-between">
                                         <small class="adCard-title">{{$ad->title}}</small> 
