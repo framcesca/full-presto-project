@@ -22,15 +22,14 @@
                     <h2 class="cat-title">{{__('ui.categ')}}</h2>
                 </div>
             </div>
-            
-           
+
         </div>
     </section>
 
 
     <section class="container-fluid">
         <div class="row">
-            
+
             @foreach ($categories as $category)     
             <div class="col-12 col-md-6 col-lg-3 p-0 cat-card">
                 <a href="{{route('categoryAds',compact('category'))}}">
@@ -48,22 +47,29 @@
         </div>
     </section>
 
-    <section class="container">
-        <!-- Slider main container -->
-        <div>
-            <h1 class="text-center my-5">{{__('ui.discover')}}</h1>
-        </div>
-        <div class="row my-1 my-md-5">
+    {{-- Swiper Section --}}
+    <section class="container swiper-home-section">
+
+        {{-- Row --}}
+        <div class="row">
+
+            {{-- Col --}}
             <div class="col-12">
-                <div class="swiper swiper-home p-5">
-                    <!-- Additional required wrapper -->
+
+                {{-- Section Title --}}
+                <h2 class="text-center">Scopri gli ultimi annunci</h2>
+
+                {{-- Swiper --}}
+                <div class="swiper swiper-home">
+
+                    {{-- Swiper Wrapper --}}
                     <div class="swiper-wrapper">
-                        <!-- Slides -->
+
+                        {{-- Swiper Pages --}}
                         @foreach ($ads as $ad)
-                        <div class="swiper-slide">
-                            <div class="col-12">
-                                <a href="{{route("detailsAd", $ad)}}" class="card adCard rounded-0">
-                                    <img src="https://picsum.photos/180/180" class="card-img rounded-0" alt="">
+                            <div class="swiper-slide">
+                                <a href="{{route("detailsAd", $ad)}}" class="card adCard rounded-0 w-100">
+                                    <img src="https://picsum.photos/180/180" class="card-img rounded-0">
                                     <span class="adCard-cat">{{$ad->category->category}}</span>
                                     <div class="card-item d-flex justify-content-between">
                                         <small class="adCard-title">{{$ad->title}}</small> 
@@ -74,19 +80,21 @@
                                     </div>
                                 </a>
                             </div>
-                        </div>
                         @endforeach
-                    </div>
-                
-                    
-                    
-                    <!--  pagination -->
+
+                    </div> {{-- End Swiper Wrapper --}}
+
+                    {{-- Pagination --}}
                     <div class="swiper-pagination"></div>
-                    <!--  navigation buttons -->
+
+                    {{-- Navigation Buttons --}}
                     <div class="swiper-button-prev d-none d-md-flex"></div>
                     <div class="swiper-button-next d-none d-md-flex"></div>
-                </div>              
-            </div>
+
+                </div> {{-- End Swiper --}}
+                
+            </div> {{-- End Col --}}
+
         </div>
     </section>
 </x-layout>

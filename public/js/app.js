@@ -5450,11 +5450,9 @@ var swiper2 = new Swiper(".mySwiper2", {
 
 // import Swiper from 'https://unpkg.com/swiper@8/swiper-bundle.esm.browser.min.js'
 var swiper = new Swiper('.swiper', {
-  // Optional parameters
-  // direction: 'horizontal',
   slidesPerView: 1,
-  spaceBetween: 10,
-  // If we need pagination
+  spaceBetween: 0,
+  // Pagination
   pagination: {
     el: '.swiper-pagination',
     dynamicBullets: true
@@ -5464,14 +5462,15 @@ var swiper = new Swiper('.swiper', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev'
   },
+  // Breakpoints
   breakpoints: {
-    800: {
+    1000: {
       slidesPerView: 2,
-      spaceBetween: 20
+      spaceBetween: 10
     },
-    1024: {
+    1400: {
       slidesPerView: 3,
-      spaceBetween: 75
+      spaceBetween: 0
     }
   }
 });
