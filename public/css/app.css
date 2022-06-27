@@ -11299,7 +11299,7 @@ textarea.form-control-lg {
     margin-top: 100px;
 }
 
-/* navbar */
+/* NAVBAR */
 .presto-nav{
     background-color: rgba(255, 255, 255, 0.3);
     -webkit-backdrop-filter: blur(24px);
@@ -11324,9 +11324,32 @@ textarea.form-control-lg {
     background-color: var(--white);
 }
 
-
 .navbar-toggler:focus{
     box-shadow: none;
+}
+
+/* NAVBAR YELLOW */
+
+.presto-nav-yellow{
+    background-color: var(--primaryColor);
+    -webkit-backdrop-filter: blur(24px);
+            backdrop-filter: blur(24px);
+}    
+
+.presto-nav-yellow .nav-link, .presto-nav .nav-link.active{
+    color: var(--black) !important;
+}    
+
+.presto-nav-yellow .nav-link:hover, .presto-nav .nav-link.active:hover{
+    color: var(--black) !important;
+}    
+
+.presto-nav-yellow .nav-link{
+    text-align: end;
+}   
+
+.presto-nav-yellow ul .dropdown-menu{
+    background-color: var(--white);
 }
 
 
@@ -11465,7 +11488,7 @@ textarea.form-control-lg {
 
 /* MEDIA QUERIES NAVBAR */
 
-/* @media screen and(max-width:576px) {
+@media screen and (max-width:576px) {
     .mobile-nav{
         display: block;
     }
@@ -11473,14 +11496,14 @@ textarea.form-control-lg {
         display: none;
     }
 }
-@media screen and(min-width:576px) {
+@media screen and (min-width:576px) {
     .mobile-nav{
         display: none;
     }
     .web-nav{
         display: block;
     }
-} */
+}
 .background{
     background: linear-gradient(rgba(255, 255, 255, 0.75),rgba(255, 255, 255, 0.75)), url("https://picsum.photos/500/500") ;
     background-size: cover;
@@ -11601,14 +11624,8 @@ textarea.form-control-lg {
     height: 900px;
     background-repeat: no-repeat;
     background-position: center;
-
     top: auto;
     padding-bottom: 200px;
-}
-
-.bg-register-form{
-    background-color: var(--white);
-    border-radius: var(--radius);
 }
 
 .register-form-container{
@@ -11634,7 +11651,6 @@ textarea.form-control-lg {
     height: 900px;
     background-repeat: no-repeat;
     background-position: center;
-
     top: auto;
     padding-bottom: 200px;
 }
