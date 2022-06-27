@@ -16,7 +16,7 @@
         </div>   
         @endif
           </div>
-            <div class="col-12 col-md-4 col-lg-4 offset-md-4 bg-register-form d-flex justify-content-center pt-4 pb-5">
+            <div class="col-12 col-md-4 col-lg-4 offset-md-4 form-box d-flex justify-content-center pt-4 pb-5">
               <div class="register-form-container">
                 <form action="{{route('register')}}" method="POST">
                     @csrf

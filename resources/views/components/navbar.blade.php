@@ -1,6 +1,6 @@
 {{-- NAVBAR DESKTOP --}}
 
-<nav class="navbar navbar-expand-lg presto-nav web-nav navbar-light fixed-top">
+<nav class="navbar navbar-expand-lg @if(Request::url()==route('revisorDashboard')) presto-nav-yellow @else presto-nav @endif web-nav navbar-light fixed-top">
     <div class="container">
         <a class="navbar-brand py-3" href="/">
             <img src="/../media/logo.svg" alt="" width="120">        
@@ -83,7 +83,7 @@
 
 {{-- NAVBAR MOBILE --}}
 
-<nav class="navbar navbar-expand presto-nav mobile-nav navbar-light fixed-bottom d-none">
+<nav class="navbar navbar-expand @if(Request::url()==route('revisorDashboard')) presto-nav-yellow @else presto-nav @endif mobile-nav navbar-light fixed-bottom">
     <div class="container">
         <a class="navbar-brand py-3" href="/">
             <img src="/../media/pittogrammaPresto.svg" alt="" width="30">        

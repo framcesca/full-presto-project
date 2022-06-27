@@ -13,14 +13,8 @@
     height: 900px;
     background-repeat: no-repeat;
     background-position: center;
-
     top: auto;
     padding-bottom: 200px;
-}
-
-.bg-register-form{
-    background-color: var(--white);
-    border-radius: var(--radius);
 }
 
 .register-form-container{
@@ -46,7 +40,6 @@
     height: 900px;
     background-repeat: no-repeat;
     background-position: center;
-
     top: auto;
     padding-bottom: 200px;
 }

@@ -92,7 +92,7 @@
                                 @endswitch
                             </a>
                             <h2 class='text fw-bolder d-none d-md-block'>{{$ad->title}}</h4>
-                            <h5 class='text'>{{__('ui.soldby')}}<span class="fst-italic fw-bold">{{$ad->user->name}}</span></h5>
+                            <h5 class='text'>{{__('ui.soldby')}}<a href="{{route("authorProfile", $ad->user_id)}}" class="fst-italic fw-bold">{{$ad->user->name}}</a></h5>
                             <p class='text fw-bold'>{{__('ui.detailart')}}</p>
                             <p class="fw-normal">{{$ad->description}}</p>
                             <p class='price fw-bolder'>{{$ad->price}}€</p>
