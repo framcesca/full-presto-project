@@ -84,5 +84,6 @@ return [
     'selodicitu'      =>'Bem-vindo à família Presto',
     'ecco'            =>'Inicie sessão e comece já a rever os anúncios',
     'titlee'          =>'Presto.it/pt',
- 
+    'nonanc'          =>'Não registrado ainda?',
+    'unipr'           =>'Junte-se à família Presto!',
 ];

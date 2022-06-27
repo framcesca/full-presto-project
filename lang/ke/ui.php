@@ -84,5 +84,6 @@ return [
     'selodicitu'      =>'karibu kwa familia Presto',
     'ecco'            =>'Ingia na uanze kukagua "matangazo" sasa',
     'titlee'          =>'Presto.it/sw',
- 
+    'nonanc'          =>'Bado hujasajiliwa?',
+    'unipr'           =>'Jiunge na familia ya Presto!',
 ];

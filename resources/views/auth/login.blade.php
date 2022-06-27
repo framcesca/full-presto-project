@@ -33,7 +33,7 @@
                             <label  for="registerPassword" class="form-label text-black-50">{{__('ui.log-pas')}}</label>
                           </div>
                           <button type="submit" class="form-btn w-100">{{__('ui.logenter')}}</button>
-                          <p class="pt-3 px-1">Non sei ancora registrato?<a class="text-decoration-none" href="{{route('register')}}"> Unisciti alla famiglia Presto!</a></p>
+                          <p class="pt-3 px-1">{{__('ui.nonanc')}}<a class="text-decoration-none" href="{{route('register')}}">{{__('ui.unipr')}}</a></p>
                   </form>
                 </div>
               </div>

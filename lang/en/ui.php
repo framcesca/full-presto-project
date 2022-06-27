@@ -69,5 +69,6 @@ return [
     'selodicitu'      =>'Welcome in our family, Presto',
     'ecco'            =>'Login now and start now to inspect ads',
     'titlee'          =>'Presto.it/us',
-
+    'nonanc'          =>'Not registered yet?',
+    'unipr'           =>'Join to Presto family!',
 ];
