@@ -71,6 +71,9 @@
                         <li>
                             <x-_locale lang="pt" nation="pt"></x-_locale>
                         </li>
+                        <li>
+                            <x-_locale lang="ke" nation="ke"></x-_locale>
+                        </li>
                     </ul>
                 </li>
             </ul>

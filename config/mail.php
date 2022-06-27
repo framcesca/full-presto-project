@@ -108,10 +108,10 @@ return [
     */
 
     'markdown' => [
-        'theme' => 'default',
+        'theme' => 'custom', //custom.css
 
         'paths' => [
-            resource_path('views/vendor/mail'),
+            resource_path('resources/views/mail/html/themes/custom.css'),
         ],
     ],
 
