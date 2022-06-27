@@ -12,7 +12,6 @@ class RevisorDashboard extends Component
     public $ads_rejected;
     protected $listeners = ['refreshComponent' => 'refresh'];
 
-
     public function mount()
     {
         $ads_accepted=Ad::where('is_accepted', 1)->latest()->get();

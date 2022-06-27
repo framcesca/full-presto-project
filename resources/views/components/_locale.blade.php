@@ -18,6 +18,9 @@
         @case("es")
         <span class="ms-2">Español</span>
         @break
+        @case("ke")
+        <span class="ms-2">Swahili</span>
+        @break
         @endswitch
     </button>
 </form>

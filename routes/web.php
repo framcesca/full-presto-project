@@ -1,8 +1,10 @@
 <?php
 
-use App\Http\Controllers\PublicController;
-use App\Http\Controllers\RevisorController;
+use App\Http\Livewire\AuthorAds;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PublicController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\RevisorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,3 +47,6 @@ Route::get('/search/category/announce',[PublicController::class,'searchCategoryA
 
 // Languages
 Route::post("/lingua/{lang}", [PublicController::class, "setLanguage"])->name("set_language_locale");
+
+// Author Profile
+Route::get("/authorProfile/{id}", [ProfileController::class, "toAuthorProfile"])->name("authorProfile");

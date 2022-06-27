@@ -61,8 +61,8 @@ return [
     
     'noii'             =>'A user wants to work with us',
     'dati'            =>'User\'s data:',
-    'renrev'          =>'To make it an auditor Click here:',
-    'potere'          =>'Make it Auditor',
+    'renrev'          =>'To make him an auditor Click here:',
+    'potere'          =>'Make him an Auditor!',
 
     'congrats'        =>'Congratulatulations',
     'accettata'       =>'Your request has been accepted!',

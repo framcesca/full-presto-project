@@ -189,7 +189,7 @@
                     @foreach($images as $key => $image)
                     <div class="swiper-slide d-flex flex-column">
                         <img class="img-fluid mb-2" src="{{$image->temporaryUrl()}}" />
-                        <button wire:click="removeImage({{$key}})" type="button" class="btn-reject rounded-circle bg-white ml-5"><i class="fa-regular fa-trash-can"></i></button>
+                        <button wire:click="removeImage({{$key}})" type="button" class="btn-reject rounded-circle bg-white ml-5 mb-2"><i class="fa-regular fa-trash-can"></i></button>
                     </div>
                     @endforeach
                 </div>
