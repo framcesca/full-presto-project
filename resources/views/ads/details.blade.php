@@ -1,6 +1,6 @@
 <x-layout>
     <x-slot name='title'>{{__('ui.titledet')}}</x-slot>
-    <section class="container-fluid background">
+    <section class="container-fluid background" style="background: linear-gradient(rgba(255, 255, 255, 0.8),rgba(255, 255, 255, 0.8)), url({{$ad->images()->first()->getUrl(300,300)}}); background-repeat: no-repeat; background-size: cover; height: 120vh;">
 
         {{-- Container Page --}}
         <div class="container padding-top">

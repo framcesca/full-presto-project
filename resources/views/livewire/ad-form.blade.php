@@ -200,8 +200,8 @@
             <div thumbsSlider="" class="swiper mySwiper mt-3">
                 <div class="swiper-wrapper">
                     @foreach($images as $key => $image)
-                    <div class="swiper-slide d-flex flex-column">
-                        <img class="img-fluid mb-2" src="{{$image->temporaryUrl()}}" />
+                    <div class="swiper-slide d-flex flex-column" style="height: 145px !important; width:82px !important; ">
+                        <img class="img-fluid mb-2" style="max-height:82px !important; max-width:82px !important;" src="{{$image->temporaryUrl()}}" />
                         <button wire:click="removeImage({{$key}})" type="button" class="btn-reject rounded-circle bg-white ml-5 mb-2"><i class="fa-regular fa-trash-can"></i></button>
                     </div>
                     @endforeach

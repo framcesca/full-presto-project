@@ -11504,14 +11504,15 @@ textarea.form-control-lg {
         display: block;
     }
 }
-.background{
+/* .background{
     background: linear-gradient(rgba(255, 255, 255, 0.75),rgba(255, 255, 255, 0.75)), url("https://picsum.photos/500/500") ;
     background-size: cover;
     height: 120vh;
     background-repeat: no-repeat;
-    -webkit-backdrop-filter: blur(125px);
-            backdrop-filter: blur(125px);
-}
+    backdrop-filter: blur(125px);
+    filter: blur(8px); 
+    -webkit-filter: blur(8px);
+} */
 
 .padding-top{
     padding-top: 20vh;

@@ -1,6 +1,6 @@
 <x-layout>
     <x-slot name='title'>{{__('ui.titledet')}}</x-slot>
-    <section class="container-fluid background">
+    <section class="container-fluid background vh-100">
 
         {{-- Container Page --}}
         <div class="container padding-top">
