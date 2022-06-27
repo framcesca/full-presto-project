@@ -8,6 +8,11 @@
                         <small>{{session('message')}}</small>
                     </div>
                 @endif
+                @if (session('alert'))
+                    <div class="alert alert-danger">
+                        <small>{{session('alert')}}</small>
+                    </div>
+                @endif
                 <form wire:submit.prevent="submitAd">
                     @csrf
                     {{-- Input Title --}}
@@ -31,7 +36,23 @@
                         <select wire:change="restartCarousel" class="form-select" id="floatingCategories" wire:model.defer="category">
                             <option hidden selected value="{{$category = ""}}">{{__('ui.selcate')}}</option>
                             @foreach ($categories as $category)
-                                <option value="{{$category->id}}">{{$category->category}}</option>
+                                @switch(Lang::locale())
+                                    @case("en")
+                                        <option value="{{$category->id}}">{{$category->category_en}}</option>
+                                    @break
+
+                                    @case("es")
+                                        <option value="{{$category->id}}">{{$category->category_es}}</option>
+                                    @break
+
+                                    @case("fr")
+                                        <option value="{{$category->id}}">{{$category->category_fr}}</option>
+                                    @break
+
+                                    @default
+                                        <option value="{{$category->id}}">{{$category->category_it}}</option>
+                                    @break
+                                @endswitch
                             @endforeach
                         </select>
                         <label for="floatingCategories">{{__('ui.cate')}}</label>
@@ -101,7 +122,23 @@
             @if(!$this->category)
                 <span class="adCard-cat z-index-upper">Sport</span>
             @else
-                <span class="adCard-cat z-index-upper">{{App\Models\Category::find($this->category)->category}}</span>
+                @switch(Lang::locale())
+                    @case("en")
+                        <span class="adCard-cat z-index-upper">{{App\Models\Category::find($this->category)->category_en}}</span>
+                    @break
+
+                    @case("es")
+                        <span class="adCard-cat z-index-upper">{{App\Models\Category::find($this->category)->category_es}}</span>
+                    @break
+
+                    @case("fr")
+                        <span class="adCard-cat z-index-upper">{{App\Models\Category::find($this->category)->category_fr}}</span>
+                    @break
+
+                    @default
+                        <span class="adCard-cat z-index-upper">{{App\Models\Category::find($this->category)->category_it}}</span>
+                    @break
+                @endswitch
             @endif
 
             <div class="card-item d-flex justify-content-between" style="height: 27px;">
