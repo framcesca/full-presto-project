@@ -15,12 +15,12 @@
 
                     {{-- Section Basic Informations --}}
                     <section class="row authorProfile-boxModel d-flex px-4 py-3 m-0">
-                        <div class="col-12 col-lg-4 authorProfile-image d-flex justify-content-center">
+                        <div class="col-12 col-xl-4 authorProfile-image d-flex justify-content-center">
                             <img class="avatarProfile" src="/media/avatarProfile.jpg">
                         </div>
-                        <div class="col-12 col-lg-8 authorProfile-details d-flex flex-column justify-content-center mt-3 mt-lg-0">
-                            <h5 class="m-0 fw-bold text-center text-lg-start">{{$author->name}}</h5>
-                            <p class="m-0 text-center text-lg-start">Palermo, Sicilia</p>
+                        <div class="col-12 col-xl-8 authorProfile-details d-flex flex-column justify-content-center mt-3 mt-xl-0">
+                            <h5 class="m-0 fw-bold text-center text-xl-start">{{$author->name}}</h5>
+                            <p class="m-0 text-center text-xl-start">Palermo, Sicilia</p>
                         </div>
                     </section>
 

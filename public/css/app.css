@@ -13477,7 +13477,7 @@ textarea.form-control-lg {
     font-size: 35px;
 }
 .authorProfile-padding-top{
-    padding-top: 200px;
+    padding-top: 220px;
 }
 
 .avatarProfile{
@@ -13515,9 +13515,12 @@ textarea.form-control-lg {
     color: var(--black);
 }
 
-.stastic-height{
-    height: 400px;
+@media screen and (max-width: 575px) {
+    .authorProfile-padding-top{
+        padding-top: 40px;
+    }
 }
+
 
 
 /* import styles bundle */

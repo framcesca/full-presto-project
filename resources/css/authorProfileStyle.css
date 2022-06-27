@@ -1,5 +1,5 @@
 .authorProfile-padding-top{
-    padding-top: 200px;
+    padding-top: 220px;
 }
 
 .avatarProfile{
@@ -37,6 +37,8 @@
     color: var(--black);
 }
 
-.stastic-height{
-    height: 400px;
+@media screen and (max-width: 575px) {
+    .authorProfile-padding-top{
+        padding-top: 40px;
+    }
 }
