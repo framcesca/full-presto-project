@@ -13455,6 +13455,18 @@ textarea.form-control-lg {
     background: red !important;
 }
 
+.btn-newads{
+    padding: 10px 15px;
+    border: none;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    background-color: var(--primaryColor);
+    transition: 0.3s;
+}
+
+.btn-newads:hover{
+    box-shadow: none;
+}
 .swiper-home-section{
     margin-top: 150px;
 }
@@ -13496,6 +13508,7 @@ textarea.form-control-lg {
     color: var(--black);
     cursor: pointer;
 }
+
 
 
 /* import styles bundle */
