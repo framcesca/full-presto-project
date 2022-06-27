@@ -18,7 +18,7 @@
         </div>   
         @endif
       </div>
-      <div class="col-12 col-md-4 col-lg-4 offset-md-4 bg-register-form d-flex justify-content-center pt-4 pb-5">
+      <div class="col-12 col-md-4 col-lg-4 offset-md-4 form-box d-flex justify-content-center pt-4 pb-5">
                 <div class="register-form-container">
                   <form action="{{route('login')}}" method="POST">
                       @csrf
@@ -33,6 +33,7 @@
                             <label  for="registerPassword" class="form-label text-black-50">{{__('ui.log-pas')}}</label>
                           </div>
                           <button type="submit" class="form-btn w-100">{{__('ui.logenter')}}</button>
+                          <p class="pt-3 px-1">Non sei ancora registrato?<a class="text-decoration-none" href="{{route('register')}}"> Unisciti alla famiglia Presto!</a></p>
                   </form>
                 </div>
               </div>
