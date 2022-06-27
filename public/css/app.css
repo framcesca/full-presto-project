@@ -13441,5 +13441,27 @@ textarea.form-control-lg {
     color: var(--black);
     font-size: 35px;
 }
+.authorProfile-padding-top{
+    padding-top: 200px;
+}
+
+.avatarProfile{
+    border-radius: 50%;
+    width: 100px;
+}
+
+.authorProfile-boxModel{
+    border-radius: 10px;
+    box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.2);
+
+}
+
+.authorAd-link{
+    text-decoration: none;
+    color: var(--black);
+    cursor: pointer;
+}
+
+
 /* import styles bundle */
 /* @import '~swiper/swiper-bundle.css'; */

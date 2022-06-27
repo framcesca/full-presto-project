@@ -1,0 +1,75 @@
+<x-layout>
+    <x-slot name='title'>Profilo di {{$author->name}}</x-slot>
+
+    {{-- Container View --}}
+    <div class="container">
+
+        {{-- Padding Top --}}
+        <div class="authorProfile-padding-top">
+
+            {{-- Main Row --}}
+            <div class="row">
+
+                {{-- Left Col --}}
+                <div class="col-12 col-md-4">
+
+                    {{-- Section Basic Informations --}}
+                    <section class="row authorProfile-boxModel d-flex px-4 py-3 m-0">
+                        <div class="col-12 col-lg-4 authorProfile-image d-flex justify-content-center">
+                            <img class="avatarProfile" src="/media/avatarProfile.jpg">
+                        </div>
+                        <div class="col-12 col-lg-8 authorProfile-details d-flex flex-column justify-content-center mt-3 mt-lg-0">
+                            <h5 class="m-0 fw-bold text-center text-lg-start">{{$author->name}}</h5>
+                            <p class="m-0 text-center text-lg-start">Palermo, Sicilia</p>
+                        </div>
+                    </section>
+
+                    {{-- Section Bio --}}
+                    <section class="authorProfile-boxModel p-4 mt-4">
+                        <div class="authorProfile-bio">
+                            <h5 class="fw-bold">Bio</h5>
+                            <p class="m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, aspernatur iste consequatur ab mollitia autem quis nihil ducimus esse officiis.</p>
+                        </div>
+                    </section>
+
+                    {{-- Section Contacts --}}
+                    <section class="authorProfile-boxModel p-4 mt-4">
+                        <div class="authorProfile-contacts">
+                            <h5 class="fw-bold">Contatti</h5>
+                            <h6 class="mt-3"><span class="me-3"><i class="fa-solid fa-phone"></i></span>+39 358 482 8799</h6>
+                            <h6 class="mt-3"><span class="me-3"><i class="fa-solid fa-envelope"></i></span>{{$author->email}}</h6>
+                        </div>
+                    </section>
+
+                </div> {{-- End Left Col --}}
+
+                {{-- Right Col --}}
+                <div class="col-12 col-md-8">
+
+                    {{-- Section Ads --}}
+                    <section class="authorProfile-boxModel h-100">
+
+                        {{-- Title Section --}}
+                        <div>
+                            <h2 class="text-center py-2">Annunci pubblicati</h2>
+                        </div>
+
+                        {{-- Ads Section Container --}}
+                        <div class="container">
+
+                            {{-- Livewie Pagination --}}
+                            <livewire:author-ads :author="$author"></livewire:author-ads>
+
+                        </div> {{-- End Container --}}
+
+                    </section> {{-- End Section Ads --}}
+
+                </div> {{-- End Right Col --}}
+
+            </div> {{-- End Main Row --}}
+
+        </div> {{-- Padding Top --}}
+
+    </div> {{-- Container View --}}
+
+</x-layout>
