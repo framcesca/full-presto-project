@@ -34,6 +34,24 @@
                             </div>
                         @break
 
+                        @case("pt")
+                        <div class="row">
+                            <div class="col-12 d-flex flex-column">                                   
+                                <h3 class="cat-card2-title text-center"><i class="{{$category->category_icon}}"></i></h3>
+                                <small class="cat-card2-title text-center">{{$category->category_pt}}</small>
+                            </div>
+                        </div>
+                        @break
+
+                        @case("ke")
+                        <div class="row">
+                            <div class="col-12 d-flex flex-column">                                   
+                                <h3 class="cat-card2-title text-center"><i class="{{$category->category_icon}}"></i></h3>
+                                <small class="cat-card2-title text-center">{{$category->category_ke}}</small>
+                            </div>
+                        </div>
+                        @break
+
                         @default
                             <div class="row">
                                 <div class="col-12 d-flex flex-column">                                    

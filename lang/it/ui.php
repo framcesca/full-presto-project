@@ -5,10 +5,10 @@ return [
     // category // 
     'catadsin'        =>'I nostri annunci in',
     'catadsno'        =>'Non ci sono annunci per questa categoria',
-    'catadsnew'        =>'Nuovo annuncio', 
+    'catadsnew'       =>'Nuovo annuncio', 
      // create ad //
     'titlenew'        =>'Crea annuncio',
-    'createad'         =>'Crea il tuo annuncio',
+    'createad'        =>'Crea il tuo annuncio',
     //detail ad //
     'titledet'        =>'Dettagli annuncio',
     'soldby'          =>'Venduto da ',
@@ -72,7 +72,7 @@ return [
 
 
     //mail
-    'noii'             =>'Un utente ha richiesto di lavorare con noi',
+    'noii'            =>'Un utente ha richiesto di lavorare con noi',
     'dati'            =>'Dati dell\'utente:',
     'renrev'          =>'Per rendere revisore, clicca qui:',
     'potere'          =>'Rendi revisore',

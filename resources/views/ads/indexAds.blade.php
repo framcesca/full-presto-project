@@ -37,6 +37,14 @@
                             @case("es")
                                 <span class="adCard-cat">{{$ad->category->category_es}}</span>
                             @break
+                            
+                            @case("pt")
+                            <span class="adCard-cat">{{$ad->category->category_pt}}</span>
+                            @break
+                            
+                            @case("ke")
+                            <span class="adCard-cat">{{$ad->category->category_ke}}</span>
+                            @break
 
                             @case("fr")
                                 <span class="adCard-cat">{{$ad->category->category_fr}}</span>

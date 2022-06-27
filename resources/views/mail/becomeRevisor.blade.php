@@ -15,7 +15,7 @@
         <h2 style="font-family:Segoe UI; color: White;text-align:center;padding: 10px; text-shadow: 3px 3px 3px black;">{{__('ui.log-mail')}}: {{$user->email}}</p>
         <h2 style="font-family:Segoe UI; color: White;text-align:center;padding: 10px; text-shadow: 3px 3px 3px black;">{{__('ui.desc')}}: {{$description}}</p>
         <h2 style="font-family:Segoe UI; color: White;text-align:center;padding: 10px; text-shadow: 3px 3px 3px black;">{{__('ui.renrev')}}</p>
-        <button style="background-color: white; color: black; padding:10px; border-radius:15px; font-size: 25px; border: 2px black;" href="{{route('createRevisor', $user)}}">{{__('ui.potere')}}</button>
+        <a style="background-color: white; color: black; padding:10px; border-radius:15px; font-size: 25px; border: 1px black; text-decoration:none;" href="{{route('createRevisor', $user)}}">{{__('ui.potere')}}</a>
       </div>
    </body>
 </html>

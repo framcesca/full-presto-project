@@ -85,6 +85,14 @@
                                     @case("fr")
                                         {{$ad->category->category_fr}}
                                     @break
+
+                                    @case("pt")
+                                    {{$ad->category->category_pt}}
+                                    @break
+                                    
+                                    @case("ke")
+                                    {{$ad->category->category_ke}}
+                                    @break
         
                                     @default
                                         {{$ad->category->category_it}}

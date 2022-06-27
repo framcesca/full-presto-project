@@ -19,6 +19,14 @@
                 <h1 class="display-5">{{__('ui.catadsin')}} {{$category->category_fr}}</h1>
                 @break
                 
+                @case("pt")
+                <h1 class="display-5">{{__('ui.catadsin')}} {{$category->category_pt}}</h1>
+                @break
+
+                @case("ke")
+                <h1 class="display-5">{{__('ui.catadsin')}} {{$category->category_ke}}</h1>
+                @break
+
                 @default
                 <h1 class="display-5">{{__('ui.catadsin')}} {{$category->category_it}}</h1>
                 @break
@@ -54,6 +62,12 @@
                     
                     @case("es")
                     <span class="adCard-cat">{{$ad->category->category_es}}</span>
+                    @break
+                    @case("pt")
+                    <span class="adCard-cat">{{$ad->category->category_pt}}</span>
+                    @break
+                    @case("ke")
+                    <span class="adCard-cat">{{$ad->category->category_ke}}</span>
                     @break
                     
                     @case("fr")

@@ -20,7 +20,7 @@
                         </div>
                         <div class="col-12 col-xl-8 authorProfile-details d-flex flex-column justify-content-center mt-3 mt-xl-0">
                             <h5 class="m-0 fw-bold text-center text-xl-start">{{$author->name}}</h5>
-                            <p class="m-0 text-center text-xl-start">Palermo, Sicilia</p>
+                            <p class="m-0 text-center text-xl-start">Padova, Veneto</p>
                         </div>
                     </section>
 

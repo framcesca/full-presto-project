@@ -15,6 +15,14 @@
                             <h3 class="cat-card2-title">{{$category->category_es}}</h3>
                         @break
 
+                        @case("pt")
+                            <h3 class="cat-card2-title">{{$category->category_pt}}</h3>
+                        @break
+
+                        @case("ke")
+                            <h3 class="cat-card2-title">{{$category->category_ke}}</h3>
+                        @break
+
                         @case("fr")
                             <h3 class="cat-card2-title">{{$category->category_fr}}</h3>
                         @break

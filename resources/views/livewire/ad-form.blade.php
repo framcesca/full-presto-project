@@ -49,6 +49,13 @@
                                         <option value="{{$category->id}}">{{$category->category_fr}}</option>
                                     @break
 
+                                    @case("pt")
+                                        <option value="{{$category->id}}">{{$category->category_pt}}</option>
+                                    @break
+                                    @case("ke")
+                                        <option value="{{$category->id}}">{{$category->category_ke}}</option>
+                                    @break
+
                                     @default
                                         <option value="{{$category->id}}">{{$category->category_it}}</option>
                                     @break
@@ -133,6 +140,12 @@
 
                     @case("fr")
                         <span class="adCard-cat z-index-upper">{{App\Models\Category::find($this->category)->category_fr}}</span>
+                    @break
+                    @case("pt")
+                        <span class="adCard-cat z-index-upper">{{App\Models\Category::find($this->category)->category_pt}}</span>
+                    @break
+                    @case("ke")
+                        <span class="adCard-cat z-index-upper">{{App\Models\Category::find($this->category)->category_ke}}</span>
                     @break
 
                     @default

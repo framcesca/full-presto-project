@@ -18,7 +18,7 @@
                         <a href="{{route('login')}}" class="btn hero-btn">{{__('ui.entry')}}</a>
                     @else
                     {{-- fare traduzione in "Crea annuncio" --}}
-                        <a href="{{route('createAd')}}" class="btn hero-btn mt-3">Crea annuncio</a>
+                        <a href="{{route('createAd')}}" class="btn hero-btn mt-3">{{__('ui.titlenew')}}</a>
                     @endguest
                 </div>
 
@@ -78,6 +78,12 @@
             
                                         @case("fr")
                                             <span class="adCard-cat">{{$ad->category->category_fr}}</span>
+                                        @break
+                                        @case("pt")
+                                        <span class="adCard-cat">{{$ad->category->category_pt}}</span>
+                                        @break
+                                        @case("ke")
+                                        <span class="adCard-cat">{{$ad->category->category_ke}}</span>
                                         @break
             
                                         @default

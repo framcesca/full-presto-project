@@ -19,6 +19,8 @@ return new class extends Migration
             $table->char('category_en',40);
             $table->char('category_es',40);
             $table->char('category_fr',40);
+            $table->char('category_pt',40);
+            $table->char('category_ke',40);
             $table->string('category_icon');
             $table->timestamps();
         });
