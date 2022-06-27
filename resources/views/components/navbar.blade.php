@@ -143,7 +143,13 @@
                             <x-_locale lang="en" nation="gb"></x-_locale>
                         </li>
                         <li>
+                            <x-_locale lang="fr" nation="fr"></x-_locale>
+                        </li>
+                        <li>
                             <x-_locale lang="es" nation="es"></x-_locale>
+                        </li> 
+                        <li>
+                            <x-_locale lang="pt" nation="pt"></x-_locale>
                         </li>
                     </ul>
                 </li>
