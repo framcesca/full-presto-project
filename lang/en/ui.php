@@ -68,6 +68,6 @@ return [
     'accettata'       =>'Your request has been accepted!',
     'selodicitu'      =>'Welcome in our family, Presto',
     'ecco'            =>'Login now and start now to inspect ads',
-    'titlee'          =>'Presto.us',
+    'titlee'          =>'Presto.it/us',
 
 ];

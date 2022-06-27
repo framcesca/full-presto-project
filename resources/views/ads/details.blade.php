@@ -31,7 +31,7 @@
                             @else
                             @foreach ($ad->images()->get() as $img)
                             <div class="swiper-slide">
-                                <img src="/../storage/{{$img->path}}" />
+                                <img src="{{$img->getUrl(300,300)}}" />
                             </div> 
                             @endforeach
                             @endif
@@ -73,7 +73,23 @@
                         <div>
                             <a class='text a-details btn rounded-pill' href='{{route('categoryAds', $ad->category)}}'>
                                 <i class="fa-solid fa-tag"></i>
-                                {{$ad->category->category}}
+                                @switch(Lang::locale())
+                                    @case("en")
+                                        {{$ad->category->category_en}}
+                                    @break
+        
+                                    @case("es")
+                                        {{$ad->category->category_es}}
+                                    @break
+        
+                                    @case("fr")
+                                         {{$ad->category->category_fr}}
+                                    @break
+        
+                                    @default
+                                        {{$ad->category->category_it}}
+                                    @break
+                                @endswitch
                             </a>
                             <h2 class='text fw-bolder d-none d-md-block'>{{$ad->title}}</h4>
                             <h5 class='text'>{{__('ui.soldby')}}<a href="{{route("authorProfile", $ad->user_id)}}" class="fst-italic fw-bold">{{$ad->user->name}}</a></h5>

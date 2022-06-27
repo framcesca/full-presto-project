@@ -100,7 +100,7 @@ return [
     'required_with'        => "':attribute' è richiesto quando :values è presente.",
     'required_with_all'    => "':attribute' è richiesto quando sono presenti :values.",
     'required_without'     => "':attribute' è richiesto quando :values non è presente.",
-    'required_without_all' => "':attribute' è richiesto quanto nessuno di :values è presente.",
+    'required_without_all' => "':attribute' è richiesto quando nessuno di :values è presente.",
     'same'                 => "':attribute' e :other devono corrispondere.",
     'size'                 => [
                  'numeric' => "':attribute' deve essere :size.",

@@ -22,7 +22,7 @@ return [
     'reg-confirm'     =>'Confirmar contraseña',
     'fatto'           =>'Es Presto hecho!',
     'sell'            =>'Comprar y Vender las cosas que ya no usas.',
-    'entry'           =>'Entra en presto',
+    'entry'           =>'Entra en Presto',
     'categ'           =>'Las categorias',
     'discover'        =>'Consulta los últimos anuncios',
     
@@ -35,7 +35,7 @@ return [
     
     //nav
     'profile'         =>'profilo',
-    'miei'            =>'i miei annunci',
+    'miei'            =>'mi anuncios',
     'revisorig'       =>'para ser revisado!',
     'lang'            =>'Idiomas',
     'out'             =>'Salir',
@@ -74,7 +74,7 @@ return [
     'accettata'       =>'¡Tu petición ha sido aceptada!',
     'selodicitu'      =>'Bienvenido a la familia de Presto',
     'ecco'            =>'Inicie sesión y comience a revisar los anuncios de inmediato',
-    'titlee'          =>'Presto.es'
+    'titlee'          =>'Presto.it/es'
 
 
 

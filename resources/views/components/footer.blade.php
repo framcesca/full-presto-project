@@ -1,5 +1,5 @@
 <!-- FOOTER -->
-<section class="container-fluid p-footer h-100">
+<section class="container-fluid p-footer h-100 mb-5 mb-sm-0">
     <div class="row align-items-center justify-content-center h-100">
         <div class="col-12 d-flex align-items-center justify-content-center mt-5">
             <ul class="nav d-flex align-items-center justify-content-center">

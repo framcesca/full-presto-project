@@ -4,8 +4,10 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use App\Models\Category;
+use App\Jobs\ResizeImage;
 use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Request;
 
 class AdForm extends Component
@@ -92,15 +94,21 @@ class AdForm extends Component
             
             if(count($this->images)){
                 foreach($this->images as $image){
-                    $ad->images()->create(['path'=>$image->store('images','public')]);
+                    // $ad->images()->create(['path'=>$image->store('images','public')]);
+                    $newFileName = "ads/{$ad->id}";
+                    $newImage = $ad->images()->create(['path'=>$image->store($newFileName,'public')]);
+                    dispatch(new ResizeImage($newImage->path,300,300));
                 }
+
+
+                File::deleteDirectory(storage_path('/app/livewire-tmp'));
             }
             Auth::user()->ads()->save($ad);
             session()->flash('message','Grazie, il tuo annuncio sarà sottoposto a revisione.');
             $this->formCleaner();
         }else
         {
-            session()->flash('message','Inserire almeno un immagine');
+            session()->flash('alert','Inserire almeno un immagine');
         }
     }
     public function formCleaner() {

@@ -27,9 +27,25 @@
                         @if (!$ad->images()->first())
                         <img src="https://picsum.photos/180/180" class="card-img rounded-0">
                         @else
-                        <img src="./storage/{{$ad->images()->first()->path}}" class="card-img rounded-0">
+                        <img src="{{$ad->images()->first()->getUrl(300,300)}}" class="card-img rounded-0">
                         @endif
-                        <span class="adCard-cat">{{$ad->category->category}}</span>
+                        @switch(Lang::locale())
+                            @case("en")
+                                <span class="adCard-cat">{{$ad->category->category_en}}</span>
+                            @break
+
+                            @case("es")
+                                <span class="adCard-cat">{{$ad->category->category_es}}</span>
+                            @break
+
+                            @case("fr")
+                                <span class="adCard-cat">{{$ad->category->category_fr}}</span>
+                            @break
+
+                            @default
+                                <span class="adCard-cat">{{$ad->category->category_it}}</span>
+                            @break
+                        @endswitch
                         <div class="card-item d-flex justify-content-between">
                             <small class="adCard-title">{{$ad->title}}</small> 
                             <small class="adCard-price text-end">{{$ad->price}}€</small>
