@@ -11,7 +11,7 @@
             <div class="row">
 
                 {{-- Left Col --}}
-                <div class="col-12 col-md-4">
+                <div class="col-12 col-lg-4">
 
                     {{-- Section Basic Informations --}}
                     <section class="row authorProfile-boxModel d-flex px-4 py-3 m-0">
@@ -44,7 +44,7 @@
                 </div> {{-- End Left Col --}}
 
                 {{-- Right Col --}}
-                <div class="col-12 col-md-8">
+                <div class="col-12 col-lg-8 mt-5 mt-lg-0">
 
                     {{-- Section Ads --}}
                     <section class="authorProfile-boxModel h-100">
@@ -54,13 +54,8 @@
                             <h2 class="text-center py-2">Annunci pubblicati</h2>
                         </div>
 
-                        {{-- Ads Section Container --}}
-                        <div class="container">
-
                             {{-- Livewie Pagination --}}
                             <livewire:author-ads :author="$author"></livewire:author-ads>
-
-                        </div> {{-- End Container --}}
 
                     </section> {{-- End Section Ads --}}
 

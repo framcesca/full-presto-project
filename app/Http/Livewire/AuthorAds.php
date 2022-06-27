@@ -5,6 +5,7 @@ use App\Models\Ad;
 use App\Models\User;
 use Livewire\Component;
 use Livewire\WithPagination;
+use Illuminate\Support\Carbon;
 
 class AuthorAds extends Component
 {
@@ -12,6 +13,10 @@ class AuthorAds extends Component
     use WithPagination;
 
     public $author;
+    public $hour;
+    public $day;
+    public $month;
+    public $year;
 
     // Da visionare!!!
     // public function mount($author) {
@@ -22,9 +27,10 @@ class AuthorAds extends Component
 
     public function render()
     {
+        $this->now = Carbon::now();
         $id = $this->author->id;
         return view('livewire.author-ads', [
-            "ads" => Ad::where("user_id", $id)->paginate(6)
+            "ads" => Ad::where("user_id", $id)->where("is_accepted", 1)->paginate(6)
         ]);
     }
 

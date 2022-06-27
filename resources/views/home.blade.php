@@ -8,26 +8,35 @@
     </div>
 @endif
     {{-- hero --}}
-    <section class="container-fluid hero-welcome">
-        <div class="container">
-            <div class="row align-items-center justify-content-center vh-100">
-                <div class="col-12">
-                    <h1 class="display-2 fw-semibold">{{__('ui.fatto')}}</h1>
+    <section class="container-fluid hero-welcome position-relative">
+        <div class="container ">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-12 hero-body ps-5">
                     <h2 class="fs-3 fw-semibold">{{__('ui.sell')}}</h2>
-                    <a href="{{route('createAd')}}" class="btn hero-btn">{{__('ui.entry')}}</a>
+                    <h1 class="display-2 fw-bold">{{__('ui.fatto')}}</h1>
+                    @guest
+                        <a href="{{route('login')}}" class="btn hero-btn">{{__('ui.entry')}}</a>
+                    @else
+                    {{-- fare traduzione in "Crea annuncio" --}}
+                        <a href="{{route('createAd')}}" class="btn hero-btn mt-3">Crea annuncio</a>
+                    @endguest
                 </div>
 
-                <div class="col-12 align-self-end text-center mt-0 pt-0">
-                    <h2 class="cat-title">{{__('ui.categ')}}</h2>
+                <div class="col-12 position-absolute bottom-0 category-header">
+                    <h2 class="text-center">{{__('ui.categ')}}</h2>
                 </div>
             </div>
-
+            
         </div>
     </section>
-
-
-    <section class="container-fluid">
+    
+    
+    <section class="container-fluid category-web">
          <livewire:category-selector/>
+    </section>
+
+    <section class="container-fluid category-mobile">
+         <livewire:category-selector-icon/>        
     </section>
 
     {{-- Swiper Section --}}
