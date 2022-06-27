@@ -1,10 +1,10 @@
 <div class="row">
     @foreach ($categories as $category)     
-    <div class="col-12 col-md-6 col-lg-3 p-0 cat-card">
+    <div class="col-6 col-lg-3 p-0 cat-card">
         <a href="{{route('categoryAds',compact('category'))}}">
-            <div class="cat-card1" style="background: url({{$category->img}});">
+            <div class="cat-card1" style="background: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)),url({{$category->img}}); background-position: center; background-repeat: no-repeat; background-size: cover;">
                 {{-- <img src="media/categoryLibri.png" alt="" class="category-card-img"> --}}
-                <div class="cat-card2" style="background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url({{$category->img}});">
+                <div class="cat-card2" >
                     {{-- inserire categoria --}}
                     @switch(Lang::locale())
                         @case("en")

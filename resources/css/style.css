@@ -48,7 +48,7 @@
 
 /* HOME */
 
-.hero-welcome{
+/* .hero-welcome{
     background: url('/../media/bgHeroHomepage.png');
     height: 100vh;
     background-position: center;
@@ -66,23 +66,23 @@
 
 .hero-btn:hover{
     box-shadow: none;
-}
+} */
 
 /* categorie */
 
-.cat-card1 {
+/* .cat-card1 {
     position: relative;
     height: 350px;
     transition: .6s;
-    /* background: url("/../media/categoryLibri.png"); */
+    
     overflow: hidden;
 
-}
+} */
 /* .cat-card1:hover {
     background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5));
 } */
 
-.cat-card2{
+/* .cat-card2{
     height: 100%;
     position: absolute;
     width: 100%;
@@ -104,7 +104,7 @@
     top: 50%;
     left: 50%;
     transition: .6s; 
-}
+} */
 
 /* carousel */
 .swiper-home{
