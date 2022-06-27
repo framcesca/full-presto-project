@@ -7,7 +7,6 @@
         </ul>
     </div>
 @endif
-
     {{-- hero --}}
     <section class="container-fluid hero-welcome">
         <div class="container">
@@ -28,23 +27,7 @@
 
 
     <section class="container-fluid">
-        <div class="row">
-
-            @foreach ($categories as $category)     
-            <div class="col-12 col-md-6 col-lg-3 p-0 cat-card">
-                <a href="{{route('categoryAds',compact('category'))}}">
-                    <div class="cat-card1" style="background: url({{$category->img}});">
-                        {{-- <img src="media/categoryLibri.png" alt="" class="category-card-img"> --}}
-                        <div class="cat-card2" style="background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url({{$category->img}});">
-                            {{-- inserire categoria --}}
-                           <h3 class="cat-card2-title">{{$category->category}}</h3> 
-                        </div>
-                    </div>
-                </a>
-            </div>
-            @endforeach
-            
-        </div>
+         <livewire:category-selector/>
     </section>
 
     {{-- Swiper Section --}}
@@ -72,9 +55,27 @@
                                     @if (!$ad->images()->first())
                                     <img src="https://picsum.photos/180/180" class="card-img rounded-0">
                                     @else
-                                    <img src="./storage/{{$ad->images()->first()->path}}" class="card-img rounded-0">
+                                    <img src="{{$ad->images()->first()->getUrl(300,300)}}" class="card-img rounded-0">
                                     @endif
-                                    <span class="adCard-cat">{{$ad->category->category}}</span>
+
+                                    @switch(Lang::locale())
+                                        @case("en")
+                                            <span class="adCard-cat">{{$ad->category->category_en}}</span>
+                                        @break
+            
+                                        @case("es")
+                                            <span class="adCard-cat">{{$ad->category->category_es}}</span>
+                                        @break
+            
+                                        @case("fr")
+                                            <span class="adCard-cat">{{$ad->category->category_fr}}</span>
+                                        @break
+            
+                                        @default
+                                            <span class="adCard-cat">{{$ad->category->category_it}}</span>
+                                        @break
+                                    @endswitch
+                                    
                                     <div class="card-item d-flex justify-content-between">
                                         <small class="adCard-title">{{$ad->title}}</small> 
                                         <small class="adCard-price text-end">{{$ad->price}}€</small>

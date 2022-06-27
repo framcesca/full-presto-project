@@ -108,7 +108,7 @@ class AdForm extends Component
             $this->formCleaner();
         }else
         {
-            session()->flash('message','Inserire almeno un immagine');
+            session()->flash('alert','Inserire almeno un immagine');
         }
     }
     public function formCleaner() {
