@@ -33,6 +33,10 @@ class CategorySeeder extends Seeder
             '/../media/categoryElettronica.png','/../media/categoryMotori.png','/../media/categoryPerLaCasa.png','/../media/categoryModa.png','/../media/categorySport.png','/../media/categoryBricolage.png','/../media/categoryLibri.png','/../media/categoryVideogiochi.png'
         ];
 
+        $icons=[
+            'fa-solid fa-laptop fa-2x', 'fa-solid fa-car-rear fa-2x', 'fa-solid fa-house-chimney fa-2x', 'fa-solid fa-vest-patches fa-2x', 'fa-solid fa-dumbbell fa-2x', 'fa-solid fa-screwdriver-wrench fa-2x', 'fa-solid fa-headphones-simple fa-2x', 'fa-solid fa-gamepad fa-2x' 
+        ];
+
         $index=0;
 
         foreach($categories_it as $category){
@@ -43,6 +47,7 @@ class CategorySeeder extends Seeder
                 'category_es' =>$categories_es[$index],
                 'category_fr' =>$categories_fr[$index],
                 'img' =>$imgs[$index],
+                'category_icon' => $icons[$index],
                 'created_at'=>Carbon::now(),
                 'updated_at'=>Carbon::now(),
             ]);
