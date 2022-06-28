@@ -30,9 +30,28 @@
                             </div>
                             @else
                             @foreach ($ad->images()->get() as $img)
-                            <div class="swiper-slide">
-                                <img src="{{$img->getUrl(300,300)}}" />
-                            </div> 
+                                    <div id="revisorCarUp" class="swiper-slide">
+                                        <div class="col-3">
+                                            <small class="d-block">Tags</small>
+                                            @if ($img->labels)
+                                                @foreach($img->labels as $label)
+                                                    <small class="d-inline">{{$label}},</small>
+                                                @endforeach
+                                            @endif    
+                                        </div>
+                                        <div class="col-3">
+                                            <small class="fw-bold">Reviosione</small>
+                                            <small class="d-block">Adulti: <span class="{{$img->adult}}"></span> </small>
+                                            <small class="d-block">Satira: <span class="{{$img->spoof}}"></span> </small>
+                                            <small class="d-block">Medicina: <span class="{{$img->medical}}"></span> </small>
+                                            <small class="d-block">Violenza: <span class="{{$img->violence}}"></span> </small>
+                                            <small class="d-block">Hot: <span class="{{$img->racy}}"></span> </small>
+                                        </div>
+                                        <div class="col-6">
+                                            <img src="{{$img->getUrl(300,300)}}" />
+                                        </div>
+                                    
+                                    </div>
                             @endforeach
                             @endif
                         </div>
@@ -57,7 +76,7 @@
                             @else
                             @foreach ($ad->images()->get() as $img)
                             <div class="swiper-slide">
-                                <img src="/../storage/{{$img->path}}" />
+                                <img src="{{$img->getUrl(300,300)}}" />
                             </div> 
                             @endforeach
                             @endif

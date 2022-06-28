@@ -81,3 +81,7 @@
 .btn-newads:hover{
     box-shadow: none;
 }
+
+#revisorCarUp{
+    width: 600px;
+}

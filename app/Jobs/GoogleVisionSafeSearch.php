@@ -2,7 +2,7 @@
 
 namespace App\Jobs;
 
-use Spatie\Image\Image;
+use App\Models\Image;
 use Illuminate\Bus\Queueable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
@@ -11,7 +11,7 @@ use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Contracts\Queue\ShouldBeUnique;
 use Google\Cloud\Vision\V1\ImageAnnotatorClient;
 
-class GoogleVisionSearch implements ShouldQueue
+class GoogleVisionSafeSearch implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
@@ -23,7 +23,7 @@ class GoogleVisionSearch implements ShouldQueue
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($ad_image_id)
     {
         $this->ad_image_id = $ad_image_id; 
     }
@@ -35,7 +35,7 @@ class GoogleVisionSearch implements ShouldQueue
      */
     public function handle()
     {
-        $i = Image::find(this->ad_image_id);
+        $i = Image::find($this->ad_image_id);
         if (!$i) {
             return;
         }
@@ -43,9 +43,10 @@ class GoogleVisionSearch implements ShouldQueue
 
         putenv('GOOGLE_APPLICATION_CREDENTIALS=' . base_path('google_credential.json'));
 
+
         $imageAnnotator = new ImageAnnotatorClient();
         $response = $imageAnnotator->safeSearchDetection($image);
-        $imageAnnotator->clone();
+        $imageAnnotator->close();
 
         $safe = $response->getSafeSearchAnnotation();
 
@@ -56,7 +57,7 @@ class GoogleVisionSearch implements ShouldQueue
         $racy = $safe->getRacy();
 
         $likelihoodName = [
-            'text-secondary fas fa-circle', 'text-success fas fa-circle', 'text-success fas fa-circle', 'text-warning fas fa-circle' , 'text-warning fas fa-circle', 'text-danger' , 'fas fa-circle'
+            'text-secondary fas fa-circle', 'text-success fas fa-circle', 'text-success fas fa-circle', 'text-warning fas fa-circle' , 'text-warning fas fa-circle', 'text-danger fas fa-circle'
         ]; 
 
             $i->adult = $likelihoodName[$adult];
