@@ -18,4 +18,8 @@ yarn-error.log
 /storage/ads.index-wal
 /storage/ads.index
 /storage/*.index
+<<<<<<< HEAD
 
+=======
+google_credential.json
+>>>>>>> d4e473dedb01040dd69309282334ec3b7905e44f
