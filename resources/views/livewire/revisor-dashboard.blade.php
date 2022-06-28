@@ -23,7 +23,7 @@
 
         {{-- tabella da revisionare --}}
         <div class="row my-4">
-            <div class="col-10 offset-md-1 revisor-card my-5 py-3">
+            <div class="col-10 offset-md-1 table-responsive revisor-card my-5 py-3">
                 <div class="card-body">
                     <table class="table margin-up">
                         @if (App\Models\Ad::toBeRevisionedCount()>0)
@@ -65,7 +65,7 @@
     </div>
     {{-- tabella annunci rifiutati --}}
         <div class="row my-4">
-            <div class="col-10 offset-md-1  revisor-card py-3 my-5">
+            <div class="col-10 offset-md-1 table-responsive revisor-card py-3 my-5">
                 <div class="card-body">
 
                     <table class="table margin-up">
@@ -75,7 +75,7 @@
                                 {{-- <th scope="col">icona</th> --}}
                                 <th scope="col" class="w-title">{{__('ui.tit')}}</th>
                                 <th scope="col" class="w-user">{{__('ui.user')}}</th>
-                                <th scope="col" class="w-date"{{__('ui.data')}}></th>
+                                <th scope="col" class="w-date">{{__('ui.data')}}</th>
                                 <th scope="col" class="w-botton"></th>
                             </tr>
                         </thead>
@@ -92,7 +92,8 @@
                                     <p>{{$ad->created_at}}</p>
                                 </td>
                                 <td>
-                                    <button wire:click.prevent="setToRevise({{$ad}})" class="btn btn-warning">{{__('ui.nono')}}</button>
+                                    <button wire:click.prevent="setToRevise({{$ad}})" class="btn btn-warning btn-web">{{__('ui.nono')}}</button>
+                                    <button wire:click.prevent="setToRevise({{$ad}})" class="btn btn-warning btn-mobile"><i class="fa-solid fa-backward"></i></button>
                                 </td>
                             </tr>
                             @empty
@@ -108,7 +109,7 @@
         </div>
     {{-- tabella annunci accettati --}}
         <div class="row my-4">
-            <div class="col-10 offset-md-1  revisor-card py-3 my-5">
+            <div class="col-10 offset-md-1 table-responsive revisor-card py-3 my-5">
                 <div class="card-body">
                     <table class="table margin-up">
                         <h2 class="text-center">{{__('ui.accet')}}</h2>
@@ -134,7 +135,8 @@
                                     <p>{{$ad->created_at}}</p>
                                 </td>
                                 <td>
-                                    <button wire:click.prevent="setToRevise({{$ad}})" class="btn btn-warning">{{__('ui.nono')}}</button>
+                                    <button wire:click.prevent="setToRevise({{$ad}})" class="btn btn-warning btn-web">{{__('ui.nono')}}</button>
+                                    <button wire:click.prevent="setToRevise({{$ad}})" class="btn btn-warning btn-mobile"><i class="fa-solid fa-backward"></i></button>
                                 </td>
                             </tr>
                             @empty

@@ -201,6 +201,33 @@
     margin-top: 100px;
 }
 
+/* MEDIA QUERIES TABLES */
+
+@media screen and (max-width:576px) {
+    .table-responsive{
+        align-items: center;
+        font-size: x-small;
+        margin: auto;
+    }  
+    .margin-up{
+        margin-top: 45px !important;
+    }
+    .btn-web{
+        display: none;
+    }
+    .btn-mobile{
+        display: block;
+    }
+}
+@media screen and (min-width:576px) {
+    .btn-web{
+        display: block;
+    }
+    .btn-mobile{
+        display: none;
+    }
+}
+
 /* MEDIA QUERIES NAVBAR */
 
 @media screen and (max-width:576px) {
