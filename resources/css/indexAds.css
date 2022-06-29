@@ -25,7 +25,7 @@
 }
 
 .padding{
-    padding-top: 100px;
+    padding-top: 11vh;
 }
 .card{
     position: relative;
@@ -55,9 +55,16 @@
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-.page-link:hover {
+.page-link:hover, .page-link:focus {
     z-index: 2;
     color: var(--black);
     background-color: #e9ecef;
     border-color: #dee2e6;
+    box-shadow: none;
+}
+
+@media screen and (max-width: 576px) {
+    .padding{
+        padding-top: 6vh;
+    }
 }

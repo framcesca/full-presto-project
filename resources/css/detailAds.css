@@ -111,3 +111,9 @@
 .a-details:focus{
     box-shadow: none;
 }
+
+@media screen and (max-width: 576px) {
+    .padding-top{
+        padding-top: 5vh;
+    }
+}

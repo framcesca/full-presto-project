@@ -108,8 +108,8 @@
             </div>
         </div>
     {{-- tabella annunci accettati --}}
-        <div class="row my-4">
-            <div class="col-10 offset-md-1 table-responsive revisor-card py-3 my-5">
+        <div class="row my-4 ">
+            <div class="col-10 offset-md-1 table-responsive revisor-card py-3 my-5 m-bottom">
                 <div class="card-body">
                     <table class="table margin-up">
                         <h2 class="text-center">{{__('ui.accet')}}</h2>

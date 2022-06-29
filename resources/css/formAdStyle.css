@@ -54,7 +54,7 @@
 
 .bg-container-fluid{
     background-image: url("/../media/bgCreaAnnuncio.png");
-    height: 950px;
+    height: 100vh;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -67,4 +67,14 @@
 
 .z-index-upper{
     z-index: 999;
+}
+
+@media screen and (max-width: 576px) {
+    .bg-container-fluid{
+        height: max-content;
+    }
+
+    .container-ad-form {
+        padding-top: 6vh;
+    }
 }

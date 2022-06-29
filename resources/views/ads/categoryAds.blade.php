@@ -2,7 +2,7 @@
     <x-slot name='title'>{{$category->category}}</x-slot>
     
     
-    
+    {{-- Title category--}}
     <div class="container mt-5">
         <div class="row mt-100">
             <div class="col-12 text-center">
@@ -32,7 +32,7 @@
                 @break
                 @endswitch
             </div>
-            <!-- search bar -->
+            <!-- Search bar -->
             <div class="col-12 col-md-6 offset-md-3 mt-2">
                 <form action="{{route('searchCategoryAds',compact('category'))}}" method="get" role="search">
                     <div class="input-group">
@@ -43,12 +43,14 @@
                     </div>
                 </form>
             </div>
-        </div>    
+        </div> 
+        
+        {{-- Cards --}}
         <div class="row mt-5 ">
             @forelse ($ads as $ad)
             {{-- @dd($ad->images()->first()->path) --}}
             <div class="col-12 col-md-3 my-3">
-                <a href="{{route("detailsAd", $ad)}}" class="card adCard rounded-0">
+                <a href="{{route("detailsAd", $ad)}}" class="card adCard rounded-0  mx-auto">
                     @if (!$ad->images()->first())
                     <img src="https://picsum.photos/180/180" class="card-img rounded-0">
                     @else
@@ -87,7 +89,7 @@
                         <small class="adCard-author">{{$ad->user->name}}</small>                        
                     </div>
                 </a>
-            </div>
+            {{-- if no ads --}}
             @empty
             @if (Request::url()==route('searchCategoryAds',compact('category')))
             <div class="col-12 d-flex flex-column align-items-center">
@@ -96,6 +98,7 @@
                 <img src="/../media/categoryAds.png" alt="..." width="900px" height="700px" >
             </div>
             @else
+            {{-- if no ads in category --}}
             <div class="col-12 d-flex flex-column align-items-center">
                 <h2 class="mt-5">{{__('ui.catadsno')}}</h2>
                 <a class="btn btn-newads mt-2 mb-5" href="{{route('createAd')}}">{{__('ui.catadsnew')}}</a>

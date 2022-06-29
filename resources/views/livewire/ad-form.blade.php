@@ -3,6 +3,7 @@
     <div class="form-box col-12 col-md-6 col-lg-5 col-xl-4 ms-auto">
         <div class="w-100">
             <div>
+                {{-- Alert --}}
                 @if (session('message'))
                     <div class="alert alert-success">
                         <small>{{session('message')}}</small>
@@ -157,21 +158,21 @@
             <div class="card-item d-flex justify-content-between" style="height: 27px;">
                 {{-- Ad Title --}}
                 @if (!$this->title)
-                    <small class="adCard-title"></small>
+                    <small class="adCard-title">{{__('ui.tit')}}</small>
                 @else
                     <small class="adCard-title">{{$title}}</small>
                 @endif
                 
                 {{-- Ad Price --}}
                 @if (!$this->price)
-                    <small class="adCard-price text-end"></small>
+                    <small class="adCard-price text-end">0€</small>
                 @else
                     <small class="adCard-price text-end">{{$price}}€</small>
                 @endif
             </div>
 
             {{-- Ad Author --}}
-            <div class="card-item text-start" style="height: 24px;">
+            <div class="card-item text-start" style="height: 38px; padding-top: 6px;">
                 <small class="adCard-author">{{Auth::user()->name}}</small>                        
             </div>
 

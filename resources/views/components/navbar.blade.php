@@ -33,9 +33,9 @@
                         {{Auth::user()->name}}
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        {{-- <li><a class="dropdown-item" href="#">{{__('ui.profile')}}</a></li>
+                        <li><a class="dropdown-item" href="#{{route('privateProfile')}}">{{__('ui.profile')}}</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">{{__('ui.miei')}}</a></li>
+                        {{-- <li><a class="dropdown-item" href="#">{{__('ui.miei')}}</a></li>
                         <li><hr class="dropdown-divider"></li> --}}
                         @if (Auth::user()->is_revisor)                           
                         <li><a class="dropdown-item position-relative" href="{{route('revisorDashboard')}}">{{__('ui.revisoring')}}

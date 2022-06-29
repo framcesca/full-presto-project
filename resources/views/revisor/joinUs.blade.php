@@ -18,7 +18,7 @@
         </div>   
         @endif
       </div>
-      <div class="col-12 col-md-4 col-lg-4 offset-md-4 form-box d-flex justify-content-center pt-4 pb-5">
+      <div class="col-11 col-md-4 col-lg-4 offset-md-4 form-box d-flex justify-content-center pt-4 pb-5 mx-auto">
                 <div class="register-form-container">
                   <form @if(Auth::user()->is_revisor) action="{{session()->flash('alert','sei già revisore')}}" @else action="{{route('becameRevisor')}} @endif" >
                       @csrf

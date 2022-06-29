@@ -85,3 +85,9 @@
 #revisorCarUp{
     width: 600px;
 }
+
+@media screen and (max-width: 576px) {
+    .m-bottom{
+        margin-bottom: 10vh !important;
+    }
+}

@@ -17,11 +17,11 @@
                     @guest
                         <a href="{{route('login')}}" class="btn hero-btn">{{__('ui.entry')}}</a>
                     @else
-                    {{-- fare traduzione in "Crea annuncio" --}}
+                    {{-- cta --}}
                         <a href="{{route('createAd')}}" class="btn hero-btn mt-3">{{__('ui.titlenew')}}</a>
                     @endguest
                 </div>
-
+                {{-- category title --}}
                 <div class="col-12 position-absolute bottom-0 category-header">
                     <h2 class="text-center">{{__('ui.categ')}}</h2>
                 </div>
@@ -30,15 +30,16 @@
         </div>
     </section>
     
-    
+    {{-- category web --}}
     <section class="container-fluid category-web">
          <livewire:category-selector/>
     </section>
-
+{{-- category mobile --}}
     <section class="container-fluid category-mobile">
          <livewire:category-selector-icon/>        
     </section>
 
+    {{-- last ad carousel --}}
     {{-- Swiper Section --}}
     <section class="container swiper-home-section">
 
@@ -60,6 +61,7 @@
                         {{-- Swiper Pages --}}
                         @foreach ($ads as $ad)
                             <div class="swiper-slide">
+                                {{-- adCard --}}
                                 <a href="{{route("detailsAd", $ad)}}" class="card adCard rounded-0 w-100">
                                     @if (!$ad->images()->first())
                                     <img src="https://picsum.photos/180/180" class="card-img rounded-0" style="    background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 4.63%, rgba(0, 0, 0, 0) 100%);">

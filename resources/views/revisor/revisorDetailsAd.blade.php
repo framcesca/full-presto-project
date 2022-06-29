@@ -8,8 +8,8 @@
             {{-- Row --}}
             <div class="row justify-content-center">
 
-                {{-- Left Col --}}
-                <div class="col-12 col-sm-8 offset-md-0 col-md-6 col-lg-5 col-xl-4 m-md-0">
+                {{-- Left Col: carousel --}}
+                <div class="col-12 col-md-8 offset-md-0 col-lg-6 col-xl-5  m-md-0">
 
                     {{-- Swiper 1 --}}
                     <h2 class='text fw-bolder d-md-none'>{{$ad->title}}</h4>
@@ -31,6 +31,7 @@
                             @else
                             @foreach ($ad->images()->get() as $img)
                                     <div id="revisorCarUp" class="swiper-slide">
+                                        {{-- col tags --}}
                                         <div class="col-3">
                                             <small class="d-block">Tags</small>
                                             @if ($img->labels)
@@ -39,6 +40,7 @@
                                                 @endforeach
                                             @endif    
                                         </div>
+                                        {{-- col revisione --}}
                                         <div class="col-3">
                                             <small class="fw-bold">{{__('ui.revis')}}</small>
                                             <small class="d-block">{{__('ui.adults')}}<span class="{{$img->adult}}"></span> </small>
@@ -47,6 +49,7 @@
                                             <small class="d-block">{{__('ui.viole')}} <span class="{{$img->violence}}"></span> </small>
                                             <small class="d-block">{{__('ui.hot')}} <span class="{{$img->racy}}"></span> </small>
                                         </div>
+                                        {{-- col img --}}
                                         <div class="col-6">
                                             <img src="{{$img->getUrl(300,300)}}" />
                                         </div>
@@ -57,7 +60,7 @@
                         </div>
                     </div>
 
-                    {{-- Swiper 2 --}}
+                    {{-- Swiper 2: below --}}
                     <div thumbsSlider="" class="swiper mySwiper mt-3">
                         <div class="swiper-wrapper">
                             @if (!$ad->images()->first())
@@ -83,10 +86,11 @@
                         </div>
                     </div>
 
-                </div> {{-- End Left Col --}}
+                </div> 
+                {{-- End Left Col --}}
 
                 {{-- Right Col --}}
-                <div class="col-12 col-sm-8 offset-md-0 col-md-6 col-lg-5 col-xl-4 d-flex align-items-center mt-5 m-md-0">
+                <div class="col-12 col-md-8 offset-md-0 col-lg-6 col-xl-5  d-flex align-items-center mt-5 m-md-0">
 
                     <div class="ps-0 ps-md-4 mt-3">
                         <div>
