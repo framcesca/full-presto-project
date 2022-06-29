@@ -75,7 +75,7 @@
          <a class="btn-email" href="{{route('createRevisor', $user)}}">{{__('ui.potere')}}</a>
       </div>
       <div>
-         <img class="img-responsive" src="<?php echo $message->embed(public_path().'\media\email2.png'); ?>">
+         <img class="img-responsive" src="<?php echo $message->embed(public_path().'/media/email2.png'); ?>">
       </div>
    </div>
    

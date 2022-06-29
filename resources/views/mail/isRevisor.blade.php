@@ -75,7 +75,7 @@
             <a class="btn-email" href="{{route('revisorDashboard', $user)}}"><img src="<?php echo $message->embed(public_path().'\media\logo.png'); ?>" width="120px" height="29px" alt=""></a>
         </div>
         <div>
-            <img class="img-responsive" src="<?php echo $message->embed(public_path().'\media\email1.png'); ?>">
+            <img class="img-responsive" src="<?php echo $message->embed(public_path().'/media/email1.png'); ?>">
         </div>
     </div>
     

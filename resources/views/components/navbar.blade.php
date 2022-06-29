@@ -1,6 +1,6 @@
 {{-- NAVBAR DESKTOP --}}
 
-<nav class="navbar navbar-expand-lg @if(Request::url()==route('revisorDashboard')) presto-nav-yellow @else presto-nav @endif web-nav navbar-light fixed-top">
+<nav class="navbar navbar-expand-lg @if(Request::url()==route('revisorDashboard')|| Request::routeIs('revisorDetailAd')) presto-nav-yellow @else presto-nav @endif web-nav navbar-light fixed-top">
     <div class="container">
         <a class="navbar-brand py-3" href="/">
             <img src="/../media/logo.svg" alt="" width="120">        
@@ -36,7 +36,7 @@
                     </a>
                     @else
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="/media/avatarProfile.jpg" class="avatarProfileNav">
+                        <img src="/media/avatarProfile.jpg" class="avatarProfileNav"> <span>{{Auth::user()->name}}</span>
                     </a>                 
                     @endif
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
