@@ -44,10 +44,26 @@ class AddWaterMarkLogo implements ShouldQueue
 
         $image = SpatieImage::load($srcPath);
 
-        $image->watermark(base_path('public/media/pittogrammaPresto.png'))
-              ->watermarkPosition(Manipulations::POSITION_CENTER)
-              ->watermarkHeight(15,Manipulations::UNIT_PERCENT)
-              ->watermarkWidth(25,Manipulations::UNIT_PERCENT);
+        $image->watermark(base_path('public/media/Watermark_Presto.png'))
+              ->watermarkPosition(Manipulations::POSITION_TOP)
+              ->watermarkHeight(25,Manipulations::UNIT_PERCENT)
+              ->watermarkWidth(50,Manipulations::UNIT_PERCENT)
+              ->apply()
+              ->watermark(base_path('public/media/Watermark_Presto.png'))
+              ->watermarkPosition(Manipulations::POSITION_LEFT)
+              ->watermarkHeight(25,Manipulations::UNIT_PERCENT)
+              ->watermarkWidth(50,Manipulations::UNIT_PERCENT)
+              ->apply()
+              ->watermark(base_path('public/media/Watermark_Presto.png'))
+              ->watermarkPosition(Manipulations::POSITION_RIGHT)
+              ->watermarkHeight(25,Manipulations::UNIT_PERCENT)
+              ->watermarkWidth(50,Manipulations::UNIT_PERCENT)
+              ->apply()
+              ->watermark(base_path('public/media/Watermark_Presto.png'))
+              ->watermarkPosition(Manipulations::POSITION_BOTTOM)
+              ->watermarkHeight(25,Manipulations::UNIT_PERCENT)
+              ->watermarkWidth(50,Manipulations::UNIT_PERCENT)
+              ->apply();
         
         $image->save();
 

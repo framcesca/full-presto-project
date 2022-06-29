@@ -116,8 +116,8 @@ class AdForm extends Component
                 File::deleteDirectory(storage_path('/app/livewire-tmp'));
             }
             Auth::user()->ads()->save($ad);
-            session()->flash('message','Grazie, il tuo annuncio sarà sottoposto a revisione.');
             $this->formCleaner();
+            return redirect('createAd')->with('message','Grazie, il tuo annuncio sarà sottoposto a revisione.');
         }else
         {
             session()->flash('alert','Inserire almeno un immagine');
