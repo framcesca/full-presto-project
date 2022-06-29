@@ -15,12 +15,16 @@
 
                     {{-- Section Basic Informations --}}
                     <section class="row authorProfile-boxModel d-flex px-4 py-3 m-0">
-                        <div class="col-12 col-xl-4 authorProfile-image d-flex justify-content-center">
-                            <img class="avatarProfile" src="/media/avatarProfile.jpg">
+                        <div class="col-12 col-xl-4 d-flex justify-content-center">
+                            @if($author->profile != null && $author->profile->avatar_profile)
+                                <img class="avatarAuthorProfile" src="/storage/{{$author->profile->avatar_profile}}">
+                            @else
+                                <img class="avatarAuthorProfile" src="/media/avatarProfile.jpg">
+                            @endif
                         </div>
                         <div class="col-12 col-xl-8 authorProfile-details d-flex flex-column justify-content-center mt-3 mt-xl-0">
                             <h5 class="m-0 fw-bold text-center text-xl-start">{{$author->name}}</h5>
-                            <p class="m-0 text-center text-xl-start">Padova, Veneto</p>
+                            <p class="m-0 text-center text-xl-start">{{$author->profile->city}}, {{$author->profile->country}}</p>
                         </div>
                     </section>
 

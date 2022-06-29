@@ -50,3 +50,15 @@ Route::post("/lingua/{lang}", [PublicController::class, "setLanguage"])->name("s
 
 // Author Profile
 Route::get("/authorProfile/{id}", [ProfileController::class, "toAuthorProfile"])->name("authorProfile");
+
+// Private Profile
+Route::get("/privateProfile", [ProfileController::class, "toPrivateProfile"])->name("privateProfile");
+
+// Edit Basic Profile Settings
+Route::post("/editBasicSettings/{user}", [ProfileController::class, "editBasics"])->name("editBasicSettings");
+
+// Add Extra Profile Settings
+Route::put("/addExtraSettings/{user}", [ProfileController::class, "addExtra"])->name("addExtraSettings");
+
+// Edit Extra Profile Settings
+Route::post("/editExtraSettings/{user}", [ProfileController::class, "editExtra"])->name("editExtraSettings");

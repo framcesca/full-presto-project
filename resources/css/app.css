@@ -8,7 +8,8 @@
 @import './revisor';
 @import './home';
 @import './swiperHome.css';
-@import './authorProfileStyle.css'
+@import './authorProfileStyle.css';
+@import './privateProfileStyle.css';
 
 
 /* import styles bundle */
