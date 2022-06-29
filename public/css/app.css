@@ -11328,6 +11328,14 @@ textarea.form-control-lg {
     box-shadow: none;
 }
 
+.avatarProfileNav{
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    box-sizing: border-box;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+}
+
 /* NAVBAR YELLOW */
 
 .presto-nav-yellow{
@@ -11749,6 +11757,10 @@ textarea.form-control-lg {
 
 
 /* paginate */
+.pagination{
+    margin-top: 10px;
+}
+
 .page-item.active .page-link {
     z-index: 3;
     color: var(--black);
@@ -11851,7 +11863,7 @@ textarea.form-control-lg {
     z-index: 999;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
     .bg-container-fluid{
         height: -webkit-max-content;
         height: -moz-max-content;

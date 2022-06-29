@@ -34,9 +34,9 @@ return [
     'lavnoi'          =>'Únete a nosotras',
     
     //nav
-    'profile'         =>'profilo',
-    'miei'            =>'mi anuncios',
-    'revisorig'       =>'para ser revisado!',
+    'profile'         =>'Profilo',
+    'miei'            =>'Mi anuncios',
+    'revisorig'       =>'Para ser revisado!',
     'lang'            =>'Idiomas',
     'out'             =>'Salir',
 

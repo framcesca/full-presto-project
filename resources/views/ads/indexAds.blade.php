@@ -70,7 +70,9 @@
                 <img src="/../media/categoryAds.png" alt="..." width="900px" height="700px" >
             </div>
             @endforelse
-            {{$ads->links()}}
+            <div class="d-flex justify-content-center">
+                {{$ads->links()}}
+            </div>
         </div>
     </div>
 </x-layout>

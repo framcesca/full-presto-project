@@ -39,8 +39,8 @@ return [
     'noi'             =>'A propos de nous',
     'lavnoi'          =>'Travailler avec nous',
     //nav
-    'profile'         =>'profil',
-    'miei'            =>'mes listes',
+    'profile'         =>'Profil',
+    'miei'            =>'Mes listes',
     'revisoring'      =>'A revoir',
     'lang'            =>'Langues',
     'out'             =>'Sortie',

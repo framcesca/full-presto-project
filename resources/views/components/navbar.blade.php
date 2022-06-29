@@ -10,7 +10,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-                <li class="nav-item">
+                <li class="nav-item d-flex align-items-center">
                     <a class="nav-link" href="{{route('indexAds')}}">{{__('ui.indexads')}}</a>
                 </li>
             </ul>
@@ -18,22 +18,29 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 @guest    
-                <li class="nav-item">
+                <li class="nav-item d-flex align-items-center">
                     <a class="nav-link" href="{{route('register')}}">{{__('ui.reg')}}</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item d-flex align-items-center">
                     <a class="nav-link" href="{{route('login')}}">{{__('ui.log-in')}}</a>
                 </li>
                 @else
-                <li class="nav-item">
+                <li class="nav-item d-flex align-items-center">
                     <a class="nav-link" href="{{route('createAd')}}">{{__('ui.catadsnew')}}</a>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item d-flex align-items-center dropdown">
+                    {{-- avatar profile --}}
+                    @if (Auth::user()->profile)
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        {{Auth::user()->name}}
+                        <img src="/storage/{{Auth::user()->profile->avatar_profile}}" class="avatarProfileNav"> <span>{{Auth::user()->name}}</span>
                     </a>
+                    @else
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="/media/avatarProfile.jpg" class="avatarProfileNav">
+                    </a>                 
+                    @endif
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#{{route('privateProfile')}}">{{__('ui.profile')}}</a></li>
+                        <li><a class="dropdown-item" href="{{route('privateProfile')}}">{{__('ui.profile')}}</a></li>
                         <li><hr class="dropdown-divider"></li>
                         {{-- <li><a class="dropdown-item" href="#">{{__('ui.miei')}}</a></li>
                         <li><hr class="dropdown-divider"></li> --}}
@@ -51,7 +58,7 @@
                     </ul>
                 </li>
                 @endguest
-                <li class="nav-item dropdown">
+                <li class="nav-item d-flex align-items-center dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         {{__('ui.lang')}}
                     </a>
@@ -93,7 +100,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-                <li class="nav-item">
+                <li class="nav-item d-flex align-items-center">
                     <a class="nav-link" href="{{route('indexAds')}}"><i class="fa-solid fa-rectangle-list fa-xl"></i></a>
                 </li>
             </ul>
@@ -101,20 +108,27 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 @guest    
-                <li class="nav-item">
+                <li class="nav-item d-flex align-items-center">
                     <a class="nav-link px-3" href="{{route('register')}}"><i class="fa-solid fa-address-card fa-xl"></i></a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item d-flex align-items-center">
                     <a class="nav-link px-3" href="{{route('login')}}"><i class="fa-solid fa-user fa-xl"></i></a>
                 </li>
                 @else
-                <li class="nav-item">
+                <li class="nav-item d-flex align-items-center">
                     <a class="nav-link px-3" href="{{route('createAd')}}"><i class="fa-solid fa-circle-plus fa-xl"></i></a>
                 </li>
-                <li class="nav-item dropup">
+                <li class="nav-item d-flex align-items-center dropup">
+                    {{-- avatar profile --}}
+                    @if (Auth::user()->profile)
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        {{Auth::user()->name}}
+                        <img src="/storage/{{Auth::user()->profile->avatar_profile}}" class="avatarProfileNav">
                     </a>
+                    @else
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="/media/avatarProfile.jpg" class="avatarProfileNav">
+                    </a>                 
+                    @endif
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                         {{-- <li><a class="dropdown-item" href="#">{{__('ui.profile')}}</a></li>
                         <li><hr class="dropdown-divider"></li>
@@ -134,7 +148,7 @@
                     </ul>
                 </li>
                 @endguest
-                <li class="nav-item dropup">
+                <li class="nav-item d-flex align-items-center dropup dropup">
                     <a class="nav-link dropdown-toggle px-3" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="fa-solid fa-flag fa-xl"></i>
                     </a>

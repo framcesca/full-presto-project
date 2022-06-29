@@ -38,6 +38,10 @@
 
 
 /* paginate */
+.pagination{
+    margin-top: 10px;
+}
+
 .page-item.active .page-link {
     z-index: 3;
     color: var(--black);

@@ -39,8 +39,8 @@ return [
     'noi'             =>'Kuhusu sisi',
     'lavnoi'          =>'fanya kazi nasi',
     //nav
-    'profile'         =>'wasifu',
-    'miei'            =>'orodha zangu',
+    'profile'         =>'Wasifu',
+    'miei'            =>'Orodha zangu',
     'revisoring'      =>'Ili kukagua',
     'lang'            =>'Lugha',
     'out'             =>'Utgång',
