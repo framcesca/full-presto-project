@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use App\Jobs\AddWaterMarkLogo;
 use Livewire\Component;
 use App\Models\Category;
 use App\Jobs\ResizeImage;
@@ -102,9 +103,10 @@ class AdForm extends Component
                     $newFileName = "ads/{$ad->id}";
                     $newImage = $ad->images()->create(['path'=>$image->store($newFileName,'public')]);
                     RemoveFaces::withChain([
+                        new AddWaterMarkLogo($newImage->id),
                         new ResizeImage($newImage->path,300,300),
                         new GoogleVisionSafeSearch($newImage->id),
-                        new GoogleVisionLabelImage($newImage->id)
+                        new GoogleVisionLabelImage($newImage->id),
 
                     ])->dispatch($newImage->id);
 
