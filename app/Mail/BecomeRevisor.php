@@ -32,7 +32,9 @@ class BecomeRevisor extends Mailable
      */
     public function build()
     {
-        $description=Request::input('description');
-        return $this->from('presto@noreply.com')->view('mail.becomeRevisor', compact('description'));
+    
+            $description=Request::input('description');
+            return $this->from('presto@noreply.com')->view('mail.becomeRevisor', compact('description'));
+        
     }
 }

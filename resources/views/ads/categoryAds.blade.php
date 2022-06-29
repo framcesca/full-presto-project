@@ -33,16 +33,16 @@
                 @endswitch
             </div>
             <!-- search bar -->
-            {{-- <div class="col-12 col-md-6 offset-md-3 mt-2">
+            <div class="col-12 col-md-6 offset-md-3 mt-2">
                 <form action="{{route('searchCategoryAds',compact('category'))}}" method="get" role="search">
                     <div class="input-group">
-                        <input type="text" name="searched" class="form-control" placeholder="Cerca in {{$category->category}}" aria-label="titolo annuncio" aria-describedby="basic-addon2" id="searchBar">
+                        <input type="text" name="searched" class="form-control" placeholder="Cerca.." aria-label="titolo annuncio" aria-describedby="basic-addon2" id="searchBar">
                         <button type="submit" class="input-group-text" id="searchBtn">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </button>
                     </div>
                 </form>
-            </div> --}}
+            </div>
         </div>    
         <div class="row mt-5 ">
             @forelse ($ads as $ad)
@@ -89,11 +89,19 @@
                 </a>
             </div>
             @empty
+            @if (Request::url()==route('searchCategoryAds',compact('category')))
+            <div class="col-12 d-flex flex-column align-items-center">
+                <h2 class="mt-5">La ricerca non ha prodotto risultati..</h2>
+                <a class="btn btn-newads mt-2 mb-5" href="{{route('categoryAds',compact('category'))}}">Torna a {{$category->category_it}}</a>
+                <img src="/../media/categoryAds.png" alt="..." width="900px" height="700px" >
+            </div>
+            @else
             <div class="col-12 d-flex flex-column align-items-center">
                 <h2 class="mt-5">{{__('ui.catadsno')}}</h2>
                 <a class="btn btn-newads mt-2 mb-5" href="{{route('createAd')}}">{{__('ui.catadsnew')}}</a>
                 <img src="/../media/categoryAds.png" alt="..." width="900px" height="700px" >
             </div>
+            @endif
             @endforelse
         </div>
     </div>

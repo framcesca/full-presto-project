@@ -20,8 +20,13 @@
       </div>
       <div class="col-12 col-md-4 col-lg-4 offset-md-4 form-box d-flex justify-content-center pt-4 pb-5">
                 <div class="register-form-container">
-                  <form action="{{route('becameRevisor')}}" >
+                  <form @if(Auth::user()->is_revisor) action="{{session()->flash('alert','sei già revisore')}}" @else action="{{route('becameRevisor')}} @endif" >
                       @csrf
+                          @if (session('alert'))
+                            <div class="alert alert-danger">
+                                <small>{{session('alert')}}</small>
+                            </div>
+                          @endif
                           <h5 class="mt-3 fw-bold">{{__('ui.desc')}}</h5>
                           <div class="form-floating mb-3">
                             <input type="text" id="revisorForm" class="form-control input-register" name="description" placeholder=" ">
