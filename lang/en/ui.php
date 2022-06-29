@@ -89,4 +89,24 @@ return [
     'hot:'            =>'Hot:',
     'torna'           =>'get back to',
     'tornaa'          =>'back to Annonuncements',
+    'nondesc'         =>'You didn\'t enter any description of you.',
+    'nonspec'         =>'Not specified',
+    'nonnum'          =>'Number not available',
+    'annpub'          =>'Ads posted',
+    'tuoiann'         =>'Your ads',
+    'salimp'          =>'Save settings',
+    'sceava'          =>'Choose your avatar',
+    'insimposta'      =>'Enter settings',
+    'tumail'          =>'Your email',
+    'tuprofi'         =>'Your profile',
+    'profdi'          =>'Profile of ',
+    'contactss'       =>'Contacts',
+    'bio'             =>'Bio',
+
+
+
+
+
+
+
 ];

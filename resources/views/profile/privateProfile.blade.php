@@ -1,5 +1,5 @@
 <x-layout>
-    <x-slot name='title'>Il tuo profilo</x-slot>
+    <x-slot name='title'>{{__('ui.tuprofi')}}</x-slot>
 
     <div class="container">
 
@@ -40,14 +40,14 @@
                                 {{-- User Email --}}
                                 <div class="col-12">
                                     <div class="pt-3">
-                                        <h6 class="text-center text-lg-start fw-bold">La tua email</h6>
+                                        <h6 class="text-center text-lg-start fw-bold">{{__('ui.tumail')}}</h6>
                                         <p class="privateProfile-input-form">{{$user->email}}</p>
                                     </div>
                                 </div>
 
                                 {{-- Form Button --}}
                                 <div class="col-12 d-flex justify-content-center pt-4">
-                                    <button class="privateProfile-button-form" type="submit">Salva impostazioni</button>
+                                    <button class="privateProfile-button-form" type="submit">{{__('ui.salimp')}}</button>
                                 </div>
 
                             </div> {{-- End Row --}}
@@ -65,7 +65,7 @@
                             <div class="row">
                                 <div class="col-12">
                                     <div class="my-2">
-                                        <h6 class="mb-1 fw-bold">Scegli il tuo avatar</h6>
+                                        <h6 class="mb-1 fw-bold">{{__('ui.sceava')}}</h6>
                                         <input class="privateProfile-input-form" type="file" name="avatar_profile">
                                     </div>
                                     <input class="privateProfile-input-form my-2" type="text" name="city" placeholder="Città">
@@ -75,7 +75,7 @@
                                     <input class="privateProfile-input-form my-2" type="number" name="phone_number" placeholder="Numero di telefono">
                                     <input class="privateProfile-input-form my-2" type="text" name="bio" placeholder="Bio">
                                     <div class="d-flex justify-content-center pt-4">
-                                        <button class="privateProfile-button-form" type="submit">Inserisci impostazioni</button>
+                                        <button class="privateProfile-button-form" type="submit">{{__('ui.insimposta')}}</button>
                                     </div>
                                 </div>
                             </div>
@@ -86,7 +86,7 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="my-2">
-                                            <h6 class="mb-1 fw-bold">Scegli il tuo avatar</h6>
+                                            <h6 class="mb-1 fw-bold">{{__('ui.sceava')}}</h6>
                                             <input class="privateProfile-input-form" type="file" name="avatar_profile">
                                         </div>
                                         <input class="privateProfile-input-form my-2" type="text" value="{{$user->profile->city}}" name="city" placeholder="Città">
@@ -96,7 +96,7 @@
                                         <input class="privateProfile-input-form my-2" type="number" value="{{$user->profile->phone_number}}" name="phone_number" placeholder="Numero di telefono">
                                         <input class="privateProfile-input-form my-2" type="text" value="{{$user->profile->bio}}" name="bio" placeholder="Bio">
                                         <div class="d-flex justify-content-center pt-4">
-                                            <button class="privateProfile-button-form" type="submit">Salva impostazioni</button>
+                                            <button class="privateProfile-button-form" type="submit">{{__('ui.salimp')}}</button>
                                         </div>
                                     </div>
                                 </div>
@@ -112,7 +112,7 @@
 
                         {{-- Title Section --}}
                         <div>
-                            <h2 class="text-center pt-4 pb-1">I tuoi annunci</h2>
+                            <h2 class="text-center pt-4 pb-1">{{__('ui.tuoiann')}}</h2>
                         </div>
 
                             {{-- Livewire Component --}}

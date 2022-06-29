@@ -104,5 +104,18 @@ return [
     'hot:'            =>'Quente:',
     'torna'           =>'volta para',
     'tornaa'          =>'voltar para Avisos',
+    'nondesc'         =>'não entrou em nenhuma descrição de si mesmo.',
+    'nonspec'         =>'Não especificado',
+    'nonnum'          =>'Número não disponível',
+    'annpub'          =>'Anúncios postados',
+    'tuoiann'         =>'Seus anúncios',
+    'salimp'          =>'Salvar configurações',
+    'sceava'          =>'Escolha seu avatar',
+    'insimposta'      =>'Insira as configurações',
+    'tumail'          =>'Seu email',
+    'tuprofi'         =>'Seu perfil',
+    'profdi'          =>'Perfil de ',
+    'contactss'       =>'Contatos',
+    'bio'             =>'Biografia',
     
 ];

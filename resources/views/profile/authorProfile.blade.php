@@ -1,5 +1,5 @@
 <x-layout>
-    <x-slot name='title'>Profilo di {{$author->name}}</x-slot>
+    <x-slot name='title'>{{__('ui.profdi')}} {{$author->name}}</x-slot>
 
     {{-- Container View --}}
     <div class="container">
@@ -32,10 +32,10 @@
                                 @elseif($author->profile->city == null && $author->profile->country)
                                     <p class="m-0 text-center text-xl-start">{{$author->profile->country}}</p>
                                 @elseif($author->profile->city == null && $author->profile->country == null)
-                                    <p class="m-0 text-center text-xl-start">Non specificato</p>
+                                    <p class="m-0 text-center text-xl-start">{{__('ui.nonspec')}}</p>
                                 @endif
                             @elseif($author->profile == null)
-                                <p class="m-0 text-center text-xl-start">Non specificato</p>
+                                <p class="m-0 text-center text-xl-start">{{__('ui.nonspec')}}</p>
                             @endif
                         </div>
                     </section>
@@ -43,15 +43,15 @@
                     {{-- Section Bio --}}
                     <section class="revisor-card p-4 mt-4">
                         <div class="authorProfile-bio">
-                            <h5 class="fw-bold">Bio</h5>
+                            <h5 class="fw-bold">{{__('ui.bio')}}</h5>
                             @if($author->profile)
                                 @if($author->profile->bio)
                                     <p class="m-0">{{$author->profile->bio}}</p>
                                 @else
-                                    <p class="m-0">{{$author->name}} non ha inserito alcuna descrizione di se.</p>
+                                    <p class="m-0">{{$author->name}} {{__('ui.nondesc')}}</p>
                                 @endif
                             @elseif($author->profile == null)
-                                <p class="m-0">{{$author->name}} non ha inserito alcuna descrizione di se.</p>
+                                <p class="m-0">{{$author->name}} {{__('ui.nondesc')}}</p>
                             @endif
                         </div>
                     </section>
@@ -59,15 +59,15 @@
                     {{-- Section Contacts --}}
                     <section class="revisor-card p-4 mt-4">
                         <div class="authorProfile-contacts">
-                            <h5 class="fw-bold">Contatti</h5>
+                            <h5 class="fw-bold">{{__('ui.contactss')}}</h5>
                             @if($author->profile)
                                 @if($author->profile->phone_number)
                                     <h6 class="mt-3"><span class="me-3"><i class="fa-solid fa-phone"></i></span>{{$author->profile->phone_number}}</h6>
                                 @else
-                                    <h6 class="mt-3"><span class="me-3"><i class="fa-solid fa-phone"></i></span>Numero non disponibile</h6>                                    
+                                    <h6 class="mt-3"><span class="me-3"><i class="fa-solid fa-phone"></i></span>{{__('ui.nonnum')}}</h6>                                    
                                 @endif
                             @elseif($author->profile == null)
-                                <h6 class="mt-3"><span class="me-3"><i class="fa-solid fa-phone"></i></span>Numero non disponibile</h6>
+                                <h6 class="mt-3"><span class="me-3"><i class="fa-solid fa-phone"></i></span>{{__('ui.nonnum')}}</h6>
                             @endif
                             <h6 class="mt-3"><span class="me-3"><i class="fa-solid fa-envelope"></i></span>{{$author->email}}</h6>
                         </div>
@@ -83,7 +83,7 @@
 
                         {{-- Title Section --}}
                         <div>
-                            <h2 class="text-center pt-4">Annunci pubblicati</h2>
+                            <h2 class="text-center pt-4">{{__('ui.annpub')}}</h2>
                         </div>
 
                             {{-- Livewie Pagination --}}
