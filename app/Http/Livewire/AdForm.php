@@ -9,6 +9,7 @@ use Livewire\WithFileUploads;
 use App\Jobs\GoogleVisionLabelImage;
 use App\Jobs\GoogleVisionSafeSearch;
 use App\Jobs\GoogleVisionSearch;
+use App\Jobs\RemoveFaces;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Request;
@@ -100,9 +101,13 @@ class AdForm extends Component
                     // $ad->images()->create(['path'=>$image->store('images','public')]);
                     $newFileName = "ads/{$ad->id}";
                     $newImage = $ad->images()->create(['path'=>$image->store($newFileName,'public')]);
-                    dispatch(new ResizeImage($newImage->path,300,300));
-                    dispatch(new GoogleVisionSafeSearch($newImage->id));
-                    dispatch(new GoogleVisionLabelImage($newImage->id));
+                    RemoveFaces::withChain([
+                        new ResizeImage($newImage->path,300,300),
+                        new GoogleVisionSafeSearch($newImage->id),
+                        new GoogleVisionLabelImage($newImage->id)
+
+                    ])->dispatch($newImage->id);
+
                 }
 
 
