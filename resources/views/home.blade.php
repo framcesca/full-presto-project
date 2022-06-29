@@ -62,7 +62,7 @@
                             <div class="swiper-slide">
                                 <a href="{{route("detailsAd", $ad)}}" class="card adCard rounded-0 w-100">
                                     @if (!$ad->images()->first())
-                                    <img src="https://picsum.photos/180/180" class="card-img rounded-0">
+                                    <img src="https://picsum.photos/180/180" class="card-img rounded-0" style="    background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 4.63%, rgba(0, 0, 0, 0) 100%);">
                                     @else
                                     <img src="{{$ad->images()->first()->getUrl(300,300)}}" class="card-img rounded-0">
                                     @endif

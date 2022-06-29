@@ -8,18 +8,18 @@
     <div class="row">
       <div class="col-12 text-center">
         <h1 class="mt-150 mb-4 fw-bold">{{__('ui.log-in')}}</h1>           
-        @if($errors->any())
-        <div class="alert alert-danger">
-          <ul>
-            @foreach ($errors->all() as $error)
-            <li>{{ $error }}</li>
-            @endforeach
-          </ul>
-        </div>   
-        @endif
       </div>
-      <div class="col-12 col-md-4 col-lg-4 offset-md-4 form-box d-flex justify-content-center pt-4 pb-5">
-                <div class="register-form-container">
+      <div class="col-12 col-md-6 col-lg-4 offset-md-2 offset-lg-4 form-box d-flex justify-content-center pt-4 pb-5">
+        <div class="register-form-container">
+                  @if($errors->any())
+                  <div class="alert alert-danger">
+                    <ul>
+                      @foreach ($errors->all() as $error)
+                      <li>{{ $error }}</li>
+                      @endforeach
+                    </ul>
+                  </div>   
+                  @endif
                   <form action="{{route('login')}}" method="POST">
                       @csrf
                           <h5 class="mt-3 fw-bold">{{__('ui.log-mail')}}</h5>

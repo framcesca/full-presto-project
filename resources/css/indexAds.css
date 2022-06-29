@@ -35,3 +35,29 @@
     position: absolute;
     top: 20px;
 }
+
+
+/* paginate */
+.page-item.active .page-link {
+    z-index: 3;
+    color: var(--black);
+    background-color: var(--primaryColor);
+    border-color: var(--primaryColor);
+}
+
+.page-link {
+    position: relative;
+    display: block;
+    color: var(--black);
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.page-link:hover {
+    z-index: 2;
+    color: var(--black);
+    background-color: #e9ecef;
+    border-color: #dee2e6;
+}

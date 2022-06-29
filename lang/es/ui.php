@@ -77,11 +77,22 @@ return [
     'titlee'          =>'Presto.it/es',
     'nonanc'          =>'Todavía no estas registrado?',
     'unipr'           =>'¡Únete a la familia Presto!',
-
-
-
-
-
-
-    
+    'publi'           =>'Publicado',
+    'sfa'             =>'hace segundos',
+    'mfa'             =>'hace un minuto',
+    'msfa'            =>'hace minutos',
+    'ofa'             =>'hora atras',
+    'osfa'            =>'horas atras',
+    'dfa'             =>'hace un dia',
+    'dsfa'            =>'hace días',
+    'yfa'             =>'Hace año',
+    'ysfa'            =>'Hace años', 
+    'revis'           =>'Revisión',
+    'adults'          =>'Adultos:',
+    'satira'          =>'Sátiras:',
+    'medic'           =>'Medicamentos:',
+    'viole'           =>'Violencia:',
+    'hot:'            =>'Caliente:',
+    'torna'           =>'regresa a',  
+    'tornaa'          =>'volver a Anuncios',
 ];

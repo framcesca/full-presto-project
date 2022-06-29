@@ -5,23 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{__('ui.titlee')}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Simple Transactional Email</title>
+    <style>
+        
+        body{
+            font-family: Segoe UI;
+        }
+        
+        .btn-email{
+            padding: 30px 25px 15px 25px;
+            min-height: 32px;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 10px 24px 54px rgba(32, 30, 52, 0.16);
+            background-color: rgb(249, 212, 1);
+            transition: 0.3s;
+            text-decoration: none;
+            color: black;
+        }
+        .btn-email:hover{
+            box-shadow: none;
+        }
+        
+        .email-body{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 60px; 
+            text-align: center;
+        }
+        .padding-email{
+            padding-top: 15px;
+        }
+        .padding-bottom-email{
+            padding-bottom: 10px;
+        }
+        
+        
+        @media screen and (min-width: 768px){
+            .img-responsive{
+                height: 600px;
+                width: 800px;
+            }
+        }
+        @media screen and (max-width: 768px){
+            .img-responsive{
+                height: 500px;
+                width: 600px;
+            }
+        }
+        @media screen and (max-width: 480px){
+            .img-responsive{
+                height: 200px;
+                width: 270px;
+            }
+        }
+        
+        
+    </style>
 </head>
-<body style='background: url(https://images.unsplash.com/photo-1504309092620-4d0ec726efa4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80); background-repeat: no-repeat; background-position: center; background-size: auto;'>
-  <div>
-      <h1 style="font-family:Segoe UI; color: White;text-align:center; margin-top: 50px; padding-start:10px; text-shadow: 1px 1px 1px black;">{{__('ui.congrats')}} {{$user->name}}{{__('ui.accettata')}}</h1>
-        <br>
-        <h2 style="font-family:Segoe UI; color: White;text-align:center;padding: 10px; text-shadow: 1px 1px 1px black;">{{__('ui.selodicitu')}}: {{$user->email}}</p>
-        <br>
-        <a style="background-color: white; color: black; padding:10px; border-radius:15px; font-size: 25px; border: 2px black;" href="{{route('login')}}">{{__('ui.ecco')}}</a>
-        {{-- <a href="{{route('login')}}">{{__('ui.ecco')}}</a> --}}
+<body>
+    <div class="email-body">
+        <div>
+            <h1>{{__('ui.congrats')}} {{$user->name}} {{__('ui.accettata')}}</h1>
+            <h2 class="padding-email">{{__('ui.selodicitu')}}: {{$user->email}}</h2>
+            <p class="padding-bottom-email">{{__('ui.ecco')}}:</p>
+            <a class="btn-email" href="{{route('revisorDashboard', $user)}}"><img src="<?php echo $message->embed(public_path().'\media\logo.png'); ?>" width="120px" height="29px" alt=""></a>
+        </div>
+        <div>
+            <img class="img-responsive" src="<?php echo $message->embed(public_path().'\media\email1.png'); ?>">
+        </div>
     </div>
+    
+    
 </body>
-{{-- </html>
-    <div>
-       <h4 style="font-family:Segoe UI; color: White;text-align:center;padding: 10px; text-shadow: 3px 3px 3px black;">{{__('ui.dati')}}</h2>
-       <h2 style="font-family:Segoe UI; color: White;text-align:center;padding: 10px; text-shadow: 3px 3px 3px black;">{{__('ui.reg-name')}}: {{$user->name}}</p>
-       <h2 style="font-family:Segoe UI; color: White;text-align:center;padding: 10px; text-shadow: 3px 3px 3px black;">{{__('ui.desc')}}: {{$description}}</p>
-       <h2 style="font-family:Segoe UI; color: White;text-align:center;padding: 10px; text-shadow: 3px 3px 3px black;">{{__('ui.renrev')}}</p>
-       
-    </body>
-     </div> --}}

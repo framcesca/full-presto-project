@@ -20,10 +20,10 @@
         </div>
 
         {{-- da qui va il foreach con dentro questa struttura --}}
-        <div class="row mt-5 ">
+        <div class="row mt-5">
             @forelse ($ads as $ad)
                 <div class="col-12 col-md-3 my-3">
-                    <a href="{{route("detailsAd", $ad)}}" class="card adCard rounded-0">
+                    <a href="{{route("detailsAd", $ad)}}" class="card adCard rounded-0  m-auto">
                         @if (!$ad->images()->first())
                         <img src="https://picsum.photos/180/180" class="card-img rounded-0">
                         @else
@@ -64,9 +64,11 @@
                     </a>
                 </div>
             @empty
-                <div class="col-12">
-                    <h2>{{__('ui.noresads')}}</h2>
-                </div>
+            <div class="col-12 d-flex flex-column align-items-center">
+                <h2 class="mt-5">{{__('ui.noresads')}}..</h2>
+                <a class="btn btn-newads mt-2 mb-5" href="{{route('indexAds')}}">{{__('ui.tornaa')}}</a>
+                <img src="/../media/categoryAds.png" alt="..." width="900px" height="700px" >
+            </div>
             @endforelse
             {{$ads->links()}}
         </div>

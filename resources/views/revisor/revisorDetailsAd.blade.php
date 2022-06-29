@@ -40,12 +40,12 @@
                                             @endif    
                                         </div>
                                         <div class="col-3">
-                                            <small class="fw-bold">Reviosione</small>
-                                            <small class="d-block">Adulti: <span class="{{$img->adult}}"></span> </small>
-                                            <small class="d-block">Satira: <span class="{{$img->spoof}}"></span> </small>
-                                            <small class="d-block">Medicina: <span class="{{$img->medical}}"></span> </small>
-                                            <small class="d-block">Violenza: <span class="{{$img->violence}}"></span> </small>
-                                            <small class="d-block">Hot: <span class="{{$img->racy}}"></span> </small>
+                                            <small class="fw-bold">{{__('ui.revis')}}</small>
+                                            <small class="d-block">{{__('ui.adults')}}<span class="{{$img->adult}}"></span> </small>
+                                            <small class="d-block">{{__('ui.satira')}}<span class="{{$img->spoof}}"></span> </small>
+                                            <small class="d-block">{{__('ui.medic')}}<span class="{{$img->medical}}"></span> </small>
+                                            <small class="d-block">{{__('ui.viole')}} <span class="{{$img->violence}}"></span> </small>
+                                            <small class="d-block">{{__('ui.hot')}} <span class="{{$img->racy}}"></span> </small>
                                         </div>
                                         <div class="col-6">
                                             <img src="{{$img->getUrl(300,300)}}" />
@@ -118,9 +118,9 @@
                                     @break
                                 @endswitch
                             </a>
-                            <h2 class='text fw-bolder d-none d-md-block'>{{$ad->title}}</h4>
-                            <h5 class='text'>{{__('ui.soldby')}}<span class="fst-italic fw-bold">{{$ad->user->name}}</span></h5>
-                            <p class='text fw-bold'>{{__('ui.detailart')}}</p>
+                            <h2 class='text mb-0 fw-bolder d-none d-md-block'>{{$ad->title}}</h4>
+                            <h5 class='text'>{{__('ui.soldby')}}<span class="fst-italic fw-bold text-decoration-none text-primary">{{$ad->user->name}}</span></h5>
+                            <p class='text fw-bold mb-0 mt-4'>{{__('ui.detailart')}}</p>
                             <p class="fw-normal">{{$ad->description}}</p>
                             <p class='price fw-bolder'>{{$ad->price}}€</p>
                             <div class="d-flex">

@@ -29,7 +29,7 @@
                     </section>
 
                     {{-- Section Bio --}}
-                    <section class="authorProfile-boxModel p-4 mt-4">
+                    <section class="revisor-card p-4 mt-4">
                         <div class="authorProfile-bio">
                             <h5 class="fw-bold">Bio</h5>
                             <p class="m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, aspernatur iste consequatur ab mollitia autem quis nihil ducimus esse officiis.</p>
@@ -37,7 +37,7 @@
                     </section>
 
                     {{-- Section Contacts --}}
-                    <section class="authorProfile-boxModel p-4 mt-4">
+                    <section class="revisor-card p-4 mt-4">
                         <div class="authorProfile-contacts">
                             <h5 class="fw-bold">Contatti</h5>
                             <h6 class="mt-3"><span class="me-3"><i class="fa-solid fa-phone"></i></span>+39 358 482 8799</h6>
@@ -51,11 +51,11 @@
                 <div class="col-12 col-lg-8 mt-5 mt-lg-0">
 
                     {{-- Section Ads --}}
-                    <section class="authorProfile-boxModel h-100">
+                    <section class="revisor-card h-100">
 
                         {{-- Title Section --}}
                         <div>
-                            <h2 class="text-center py-2">Annunci pubblicati</h2>
+                            <h2 class="text-center py-2 ">Annunci pubblicati</h2>
                         </div>
 
                             {{-- Livewie Pagination --}}

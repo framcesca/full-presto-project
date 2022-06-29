@@ -93,7 +93,7 @@
     <div class="col-12 col-md-6 col-lg-5 col-xl-4 m-auto mt-5 mt-md-auto">
 
         {{-- Card --}}
-        <div class="card adCard rounded-0 m-auto">
+        <div class="card adCard1 rounded-0 m-auto">
 
             @if(empty($images))
                 {{-- Place Holder Images Card Swiper --}}
@@ -119,7 +119,7 @@
                     <div class="swiper-wrapper">
                         @foreach($images as $key=> $image)
                         <div class="swiper-slide">
-                            <img class="h-100" style="height:300px !important; width:300px !important;" src="{{$image->temporaryUrl()}}" />
+                            <img class="h-100" style="height:300px !important; width:300px !important;" src="{{$image->temporaryUrl()}}" style="    background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 4.63%, rgba(0, 0, 0, 0) 100%);"/>
                         </div>
                         @endforeach
                     </div>
@@ -157,14 +157,14 @@
             <div class="card-item d-flex justify-content-between" style="height: 27px;">
                 {{-- Ad Title --}}
                 @if (!$this->title)
-                    <small class="adCard-title">Tavola da Surf</small>
+                    <small class="adCard-title"></small>
                 @else
                     <small class="adCard-title">{{$title}}</small>
                 @endif
                 
                 {{-- Ad Price --}}
                 @if (!$this->price)
-                    <small class="adCard-price text-end">267€</small>
+                    <small class="adCard-price text-end"></small>
                 @else
                     <small class="adCard-price text-end">{{$price}}€</small>
                 @endif

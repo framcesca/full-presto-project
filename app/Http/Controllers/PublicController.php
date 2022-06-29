@@ -41,11 +41,11 @@ class PublicController extends Controller
         $ads = Ad::search($request->searched)->where('is_accepted',true)->paginate(12);
         return view('ads.indexAds',compact('ads'));
     }
-    // public function searchCategoryAds(Request $request,Category $category)
-    // {   
-    //     $ads = Ad::search($request->searched)->where('is_accepted',true)->paginate(12);
-    //     return view('ads.categoryAds',compact('ads'),compact('category'));
-    // }
+    public function searchCategoryAds(Request $request,Category $category)
+    {   
+        $ads = Ad::search($request->searched)->where('is_accepted',true)->where('category_id',$category->id)->paginate(12);
+        return view('ads.categoryAds',compact('ads'),compact('category'));
+    }
 
     public function setLanguage($lang) {
         session()->put("locale", $lang);
