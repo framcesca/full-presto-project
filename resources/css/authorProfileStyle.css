@@ -8,11 +8,6 @@
     height: 100px;
     box-sizing: border-box;
     box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
-}
-
-.avatarAuthorProfile:hover{
-    transform: scale(1.1);
 }
 
 .authorProfile-boxModel{
@@ -36,7 +31,7 @@
     transition: 0.3s;
     text-decoration: none;
     color: var(--black);
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .authorAdCard:hover{

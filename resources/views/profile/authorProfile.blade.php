@@ -24,7 +24,19 @@
                         </div>
                         <div class="col-12 col-xl-8 authorProfile-details d-flex flex-column justify-content-center mt-3 mt-xl-0">
                             <h5 class="m-0 fw-bold text-center text-xl-start">{{$author->name}}</h5>
-                            <p class="m-0 text-center text-xl-start">{{$author->profile->city}}, {{$author->profile->country}}</p>
+                            @if($author->profile)
+                                @if($author->profile->city && $author->profile->country)
+                                    <p class="m-0 text-center text-xl-start">{{$author->profile->city}}, {{$author->profile->country}}</p>
+                                @elseif($author->profile->city && $author->profile->country == null)
+                                    <p class="m-0 text-center text-xl-start">{{$author->profile->city}}</p>
+                                @elseif($author->profile->city == null && $author->profile->country)
+                                    <p class="m-0 text-center text-xl-start">{{$author->profile->country}}</p>
+                                @elseif($author->profile->city == null && $author->profile->country == null)
+                                    <p class="m-0 text-center text-xl-start">Non specificato</p>
+                                @endif
+                            @elseif($author->profile == null)
+                                <p class="m-0 text-center text-xl-start">Non specificato</p>
+                            @endif
                         </div>
                     </section>
 
@@ -32,7 +44,15 @@
                     <section class="revisor-card p-4 mt-4">
                         <div class="authorProfile-bio">
                             <h5 class="fw-bold">Bio</h5>
-                            <p class="m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, aspernatur iste consequatur ab mollitia autem quis nihil ducimus esse officiis.</p>
+                            @if($author->profile)
+                                @if($author->profile->bio)
+                                    <p class="m-0">{{$author->profile->bio}}</p>
+                                @else
+                                    <p class="m-0">{{$author->name}} non ha inserito alcuna descrizione di se.</p>
+                                @endif
+                            @elseif($author->profile == null)
+                                <p class="m-0">{{$author->name}} non ha inserito alcuna descrizione di se.</p>
+                            @endif
                         </div>
                     </section>
 
@@ -40,7 +60,15 @@
                     <section class="revisor-card p-4 mt-4">
                         <div class="authorProfile-contacts">
                             <h5 class="fw-bold">Contatti</h5>
-                            <h6 class="mt-3"><span class="me-3"><i class="fa-solid fa-phone"></i></span>+39 358 482 8799</h6>
+                            @if($author->profile)
+                                @if($author->profile->phone_number)
+                                    <h6 class="mt-3"><span class="me-3"><i class="fa-solid fa-phone"></i></span>{{$author->profile->phone_number}}</h6>
+                                @else
+                                    <h6 class="mt-3"><span class="me-3"><i class="fa-solid fa-phone"></i></span>Numero non disponibile</h6>                                    
+                                @endif
+                            @elseif($author->profile == null)
+                                <h6 class="mt-3"><span class="me-3"><i class="fa-solid fa-phone"></i></span>Numero non disponibile</h6>
+                            @endif
                             <h6 class="mt-3"><span class="me-3"><i class="fa-solid fa-envelope"></i></span>{{$author->email}}</h6>
                         </div>
                     </section>

@@ -41,7 +41,7 @@
                                 <div class="col-12">
                                     <div class="pt-3">
                                         <h6 class="text-center text-lg-start fw-bold">La tua email</h6>
-                                        <input class="privateProfile-input-form" type="email" value="{{$user->email}}" name="email">
+                                        <p class="privateProfile-input-form">{{$user->email}}</p>
                                     </div>
                                 </div>
 
@@ -101,9 +101,18 @@
                 </div> {{-- End Left Col --}}
 
                 {{-- Right Col --}}
-                <div class="col-12 col-lg-8">
-                    <section class="privateProfile-boxModel p-2 h-100">
-                    </section>
+                <div class="col-12 col-lg-8 mt-5 my-lg-0">
+                    <section class="revisor-card">
+
+                        {{-- Title Section --}}
+                        <div>
+                            <h2 class="text-center py-2 ">I tuoi annunci</h2>
+                        </div>
+
+                            {{-- Livewire Component --}}
+                            <livewire:private-ads></livewire:private-ads>
+
+                    </section> {{-- End Section Ads --}}
                 </div>
 
             </div>

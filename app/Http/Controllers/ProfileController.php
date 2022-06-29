@@ -31,7 +31,6 @@ class ProfileController extends Controller
     public function editBasics(User $user, EditBasicsProfileRequest $request) {
         if(Auth::user()->id == $user->id) {
             $user->name = $request->name;
-            $user->email = $request->email;
             $user->save();
         }
         return redirect(route("privateProfile", compact("user")));

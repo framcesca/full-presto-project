@@ -1,4 +1,4 @@
-<div class="container mt-lg-5 mt-xl-0">
+<div class="container mt-lg-5 mt-xl-0 d-flex flex-column justify-content-center h-100">
 
     {{-- Main Row --}}
     <div class="row">
@@ -7,24 +7,32 @@
         @foreach ($ads as $ad)
 
             {{-- Ad Col --}}
-            <div class="col-12 col-lg-6">
+            <div class="col-12 col-xl-6">
 
                 {{-- Ad Card --}}
                 <a href="{{route("detailsAd", compact("ad"))}}" class="authorAdCard d-flex my-3">
+                    
+                    @if($ad->is_accepted === NULL)
+                        <span class="ads-status span-bg-yellow"><i class="fa-solid fa-hourglass-empty"></i></span>
+                    @elseif($ad->is_accepted === 0)
+                        <span class="ads-status span-bg-red"><i class="fa-solid fa-xmark"></i></span>
+                    @elseif($ad->is_accepted === 1)
+                        <span class="ads-status span-bg-green"><i class="fa-solid fa-check"></i></span>
+                    @endif
 
                     <div class="me-3">
                         <img class="authorAd-ad-image" src="{{$ad->images()->first()->getUrl(300,300)}}">
                     </div>
 
                     <div class="d-flex flex-column justify-content-center">
-                        <h5 class="fw-bold fs-5 authorAd-link d-block d-md-none d-lg-block d-xl-block d-xxl-none">
+                        <h5 class="fw-bold fs-6 authorAd-link d-block d-md-none d-xl-block d-xxl-none">
                             @if (strlen($ad->title) > 10)
                                 {{substr($ad->title, 0, 10)}}...
                             @else
                                 {{$ad->title}}
                             @endif
                         </h5>
-                        <h5 class="fw-bold fs-6 authorAd-link d-none d-md-block d-lg-none d-xxl-block">{{$ad->title}}</h5>
+                        <h5 class="fw-bold fs-6 authorAd-link d-none d-md-block d-xl-none d-xxl-block">{{$ad->title}}</h5>
                         <h5>{{$ad->price}}€</h5>
                         {{-- Seconds Check --}}
                         @if ($this->now->diffInSeconds($ad->updated_at) < 60)
@@ -46,7 +54,7 @@
                         {{-- Days Check --}}
                         @elseif ($this->now->diffInDays($ad->updated_at) >= 1 && $this->now->diffInYears($ad->updated_at) == 0)
                             @if ($this->now->diffInDays($ad->updated_at) == 1)
-                                <small class="text-muted">{{__('ui.publi')}} {{$this->now->diffInDays($ad->updated_at)}} g{{__('ui.dfa')}}</small>
+                                <small class="text-muted">{{__('ui.publi')}} {{$this->now->diffInDays($ad->updated_at)}} {{__('ui.dfa')}}</small>
                             @else
                                 <small class="text-muted">{{__('ui.publi')}} {{$this->now->diffInDays($ad->updated_at)}} {{__('ui.dsfa')}}</small>
                             @endif

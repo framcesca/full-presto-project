@@ -13841,11 +13841,6 @@ textarea.form-control-lg {
     height: 100px;
     box-sizing: border-box;
     box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
-}
-
-.avatarAuthorProfile:hover{
-    transform: scale(1.1);
 }
 
 .authorProfile-boxModel{
@@ -13869,7 +13864,7 @@ textarea.form-control-lg {
     transition: 0.3s;
     text-decoration: none;
     color: var(--black);
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .authorAdCard:hover{
@@ -13898,11 +13893,6 @@ textarea.form-control-lg {
     height: 100px;
     box-sizing: border-box;
     box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
-}
-
-.avatarPrivateProfile:hover{
-    transform: scale(1.1);
 }
 
 .privateProfile-input-form{
@@ -13925,6 +13915,37 @@ textarea.form-control-lg {
     border: none;
     padding: 6px 40px;
     font-weight: 500;
+}
+
+.authorAdCard{
+    position: relative;
+}
+
+.ads-status{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.span-bg-red{
+    background-color: #dc2e02;
+    color: white;
+}
+
+.span-bg-green{
+    background-color: #34a45f;
+    color: white;
+}
+
+.span-bg-yellow{
+    background-color: #ffd60a;
+    color: white;
 }
 /* import styles bundle */
 /* @import '~swiper/swiper-bundle.css'; */
