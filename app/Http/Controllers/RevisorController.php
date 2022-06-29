@@ -42,13 +42,17 @@ class RevisorController extends Controller
     
     public function acceptAd(Ad $ad)
     {
+        $id=Auth::user()->id;
         $ad->setAccepted(true);
+        $ad->setRevisedBy($id);
         return redirect(route('revisorDashboard'))->with('message','Annuncio accettato');
     }
 
     public function rejectAd(Ad $ad)
     {
+        $id=Auth::user()->id;
         $ad->setAccepted(false);
+        $ad->setRevisedBy($id);
         return redirect(route('revisorDashboard'))->with('message','Annuncio rifiutato');
     }
 }

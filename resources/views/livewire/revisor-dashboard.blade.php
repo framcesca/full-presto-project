@@ -11,13 +11,13 @@
             <div class="col-12 col-md-3 offset-md-1 revisor-card py-3 my-3">
                 <div class="card-body">
                     <h5 class="card-title">{{__('ui.accet')}}:</h5>
-                    <p class="card-text fs-1 fw-bold text-success">{{App\Models\Ad::AcceptedCount()}}</p>
+                    <p class="card-text fs-1 fw-bold text-success">{{App\Models\Ad::AcceptedByRevisorCount(Auth::user()->id)}}</p>
                 </div>
             </div>
             <div class="col-12 col-md-3 offset-md-1 revisor-card py-3 my-3">
                 <div class="card-body">
                     <h5 class="card-title">{{__('ui.rif')}}:</h5>
-                    <p class="card-text fs-1 fw-bold text-danger">{{App\Models\Ad::notAcceptedCount()}}</p>
+                    <p class="card-text fs-1 fw-bold text-danger">{{App\Models\Ad::notAcceptedByRevisorCount(Auth::user()->id)}}</p>
                 </div>
             </div>
 

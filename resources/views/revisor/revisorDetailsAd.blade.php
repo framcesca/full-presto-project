@@ -124,12 +124,12 @@
                             <p class="fw-normal">{{$ad->description}}</p>
                             <p class='price fw-bolder'>{{$ad->price}}€</p>
                             <div class="d-flex">
-                                <form class="me-3" action="{{route('revisorAcceptAd', $ad)}}" method="POST">
+                                <form class="me-3" action="{{route('revisorAcceptAd', $ad,Auth::user()->id)}}" method="POST">
                                     @csrf
                                     @method('PATCH')
                                     <button type="submit" class="btn-accept rounded-circle bg-white"><i class="fa-solid fa-check"></i></button>
                                 </form>
-                                <form action="{{route('revisorRejectAd', $ad)}}" method="POST">
+                                <form action="{{route('revisorRejectAd', $ad,Auth::user()->id)}}" method="POST">
                                     @csrf
                                     @method('PATCH')
                                     <button type="submit" class="btn-reject rounded-circle bg-white ml-5"><i class="fa-regular fa-trash-can"></i></button>

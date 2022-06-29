@@ -54,6 +54,16 @@ class Ad extends Model
         return Ad::where('is_accepted', 1)->count();
     }
 
+    public static function AcceptedByRevisorCount($id)
+    {
+        return Ad::where('is_accepted', 1)->where('revised_by',$id)->count();
+    }
+
+    public static function notAcceptedByRevisorCount($id)
+    {
+        return Ad::where('is_accepted', 0)->where('revised_by',$id)->count();
+    }
+
     public static function notAcceptedCount()
     {
         return Ad::where('is_accepted', 0)->count();
@@ -62,6 +72,12 @@ class Ad extends Model
     public function setAccepted($bool)
     {
         $this->is_accepted = $bool;
+        $this->save();
+        return true;
+    }
+    public function setRevisedBy($id)
+    {
+        $this->revised_by = $id;
         $this->save();
         return true;
     }

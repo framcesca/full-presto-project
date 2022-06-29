@@ -4,19 +4,22 @@ namespace App\Http\Livewire;
 
 use App\Models\Ad;
 use Livewire\Component;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Session\SessionManager;
 
 class RevisorDashboard extends Component
 {
     public $ads_accepted;
     public $ads_rejected;
+    public $userId;
     protected $listeners = ['refreshComponent' => 'refresh'];
 
     public function mount()
     {
-        $ads_accepted=Ad::where('is_accepted', 1)->latest()->get();
+        $this->userId=Auth::user()->id;
+        $ads_accepted=Ad::where('is_accepted', 1)->where('revised_by',$this->userId)->latest()->get();
         $this->ads_accepted=$ads_accepted;
-        $ads_rejected=Ad::where('is_accepted', 0)->latest()->get();
+        $ads_rejected=Ad::where('is_accepted', 0)->where('revised_by',$this->userId)->latest()->get();
         $this->ads_rejected=$ads_rejected;
 
     }
@@ -30,8 +33,9 @@ class RevisorDashboard extends Component
 
 
     public function refresh(){
-        $this->ads_accepted=Ad::where('is_accepted', 1)->latest()->get();
-        $this->ads_rejected=Ad::where('is_accepted', 0)->latest()->get();
+        $this->ads_accepted=Ad::where('is_accepted', 1)->where('revised_by',$this->userId)->latest()->get();
+        $this->ads_rejected=Ad::where('is_accepted', 0)->where('revised_by',$this->userId)->latest()->get();
+
     }
 
     // public function adsAcceptedAll()
