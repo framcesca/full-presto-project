@@ -157,14 +157,14 @@
             <div class="card-item d-flex justify-content-between" style="height: 27px;">
                 {{-- Ad Title --}}
                 @if (!$this->title)
-                    <small class="adCard-title">Tavola da Surf</small>
+                    <small class="adCard-title"></small>
                 @else
                     <small class="adCard-title">{{$title}}</small>
                 @endif
                 
                 {{-- Ad Price --}}
                 @if (!$this->price)
-                    <small class="adCard-price text-end">267€</small>
+                    <small class="adCard-price text-end"></small>
                 @else
                     <small class="adCard-price text-end">{{$price}}€</small>
                 @endif

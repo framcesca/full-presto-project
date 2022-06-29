@@ -28,34 +28,34 @@
                         <h5>{{$ad->price}}€</h5>
                         {{-- Seconds Check --}}
                         @if ($this->now->diffInSeconds($ad->updated_at) < 60)
-                            <small class="text-muted" class="text-muted">Pubblicato {{$this->now->diffInSeconds($ad->updated_at)}} secondi fa</small>
+                            <small class="text-muted" class="text-muted">{{__('ui.publi')}} {{$this->now->diffInSeconds($ad->updated_at)}} {{__('ui.sfa')}}</small>
                         {{-- Minutes Check --}}
                         @elseif ($this->now->diffInMinutes($ad->updated_at) < 60)
                             @if ($this->now->diffInMinutes($ad->updated_at) == 1)
-                                <small class="text-muted">Pubblicato {{$this->now->diffInMinutes($ad->updated_at)}} minuto fa</small>
+                                <small class="text-muted">{{__('ui.publi')}} {{$this->now->diffInMinutes($ad->updated_at)}} {{__('ui.mfa')}}</small>
                             @else
-                                <small class="text-muted">Pubblicato {{$this->now->diffInMinutes($ad->updated_at)}} minuti fa</small>
+                                <small class="text-muted">{{__('ui.publi')}} {{$this->now->diffInMinutes($ad->updated_at)}} {{__('ui.msfa')}}</small>
                             @endif
                         {{-- Hours Check --}}
                         @elseif ($this->now->diffInHours($ad->updated_at) < 24)
                             @if ($this->now->diffInHours($ad->updated_at) == 1)
-                                <small class="text-muted">Pubblicato {{$this->now->diffInHours($ad->updated_at)}} ora fa</small>
+                                <small class="text-muted">{{__('ui.publi')}} {{$this->now->diffInHours($ad->updated_at)}} {{__('ui.ofa')}}</small>
                             @else
-                                <small class="text-muted">Pubblicato {{$this->now->diffInHours($ad->updated_at)}} ore fa</small>
+                                <small class="text-muted">{{__('ui.publi')}} {{$this->now->diffInHours($ad->updated_at)}} {{__('ui.osfa')}}</small>
                             @endif
                         {{-- Days Check --}}
                         @elseif ($this->now->diffInDays($ad->updated_at) >= 1 && $this->now->diffInYears($ad->updated_at) == 0)
                             @if ($this->now->diffInDays($ad->updated_at) == 1)
-                                <small class="text-muted">Pubblicato {{$this->now->diffInDays($ad->updated_at)}} giorno fa</small>
+                                <small class="text-muted">{{__('ui.publi')}} {{$this->now->diffInDays($ad->updated_at)}} g{{__('ui.dfa')}}</small>
                             @else
-                                <small class="text-muted">Pubblicato {{$this->now->diffInDays($ad->updated_at)}} giorni fa</small>
+                                <small class="text-muted">{{__('ui.publi')}} {{$this->now->diffInDays($ad->updated_at)}} {{__('ui.dsfa')}}</small>
                             @endif
                         {{-- Years Check --}}
                         @elseif ($this->now->diffInYears($ad->updated_at) >= 1)
                             @if ($this->now->diffInYears($ad->updated_at) == 1)
-                                <small class="text-muted">Pubblicato {{$this->now->diffInYears($ad->updated_at)}} anno fa</small>
+                                <small class="text-muted">{{__('ui.publi')}} {{$this->now->diffInYears($ad->updated_at)}} {{__('ui.yfa')}}</small>
                             @else
-                                <small class="text-muted">Pubblicato {{$this->now->diffInYears($ad->updated_at)}} anni fa</small>
+                                <small class="text-muted">{{__('ui.publi')}} {{$this->now->diffInYears($ad->updated_at)}} {{__('ui.ysfa')}}</small>
                             @endif
                         @endif
                     </div>

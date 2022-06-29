@@ -40,12 +40,12 @@
                                             @endif    
                                         </div>
                                         <div class="col-3">
-                                            <small class="fw-bold">Reviosione</small>
-                                            <small class="d-block">Adulti: <span class="{{$img->adult}}"></span> </small>
-                                            <small class="d-block">Satira: <span class="{{$img->spoof}}"></span> </small>
-                                            <small class="d-block">Medicina: <span class="{{$img->medical}}"></span> </small>
-                                            <small class="d-block">Violenza: <span class="{{$img->violence}}"></span> </small>
-                                            <small class="d-block">Hot: <span class="{{$img->racy}}"></span> </small>
+                                            <small class="fw-bold">{{__('ui.revis')}}</small>
+                                            <small class="d-block">{{__('ui.adults')}}<span class="{{$img->adult}}"></span> </small>
+                                            <small class="d-block">{{__('ui.satira')}}<span class="{{$img->spoof}}"></span> </small>
+                                            <small class="d-block">{{__('ui.medic')}}<span class="{{$img->medical}}"></span> </small>
+                                            <small class="d-block">{{__('ui.viole')}} <span class="{{$img->violence}}"></span> </small>
+                                            <small class="d-block">{{__('ui.hot')}} <span class="{{$img->racy}}"></span> </small>
                                         </div>
                                         <div class="col-6">
                                             <img src="{{$img->getUrl(300,300)}}" />

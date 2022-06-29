@@ -91,8 +91,8 @@
             @empty
             @if (Request::url()==route('searchCategoryAds',compact('category')))
             <div class="col-12 d-flex flex-column align-items-center">
-                <h2 class="mt-5">La ricerca non ha prodotto risultati..</h2>
-                <a class="btn btn-newads mt-2 mb-5" href="{{route('categoryAds',compact('category'))}}">Torna a {{$category->category_it}}</a>
+                <h2 class="mt-5">{{__('ui.noresads')}}..</h2>
+                <a class="btn btn-newads mt-2 mb-5" href="{{route('categoryAds',compact('category'))}}">{{__('ui.torna')}} {{$category->category_it}}</a>
                 <img src="/../media/categoryAds.png" alt="..." width="900px" height="700px" >
             </div>
             @else
