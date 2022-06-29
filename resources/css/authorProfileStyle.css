@@ -24,7 +24,8 @@
 }
 
 .authorAdCard{
-    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2); */
+    border: 1px solid rgba(70, 69, 69, 0.425);
     transition: 0.3s;
     text-decoration: none;
     color: var(--black);
@@ -32,7 +33,7 @@
 }
 
 .authorAdCard:hover{
-    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.08);
     transform: scale(1.04);
     color: var(--black);
 }

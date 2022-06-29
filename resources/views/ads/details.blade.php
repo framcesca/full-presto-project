@@ -1,15 +1,15 @@
 <x-layout>
     <x-slot name='title'>{{__('ui.titledet')}}</x-slot>
-    <section class="container-fluid background" style="background: linear-gradient(rgba(255, 255, 255, 0.8),rgba(255, 255, 255, 0.8)), url({{$ad->images()->first()->getUrl(300,300)}}); background-repeat: no-repeat; background-size: cover; height: 120vh;">
-
+    <section class="container-fluid background position-relative" style="background: linear-gradient(rgba(255, 255, 255, 0.8),rgba(255, 255, 255, 0.8)), url({{$ad->images()->first()->getUrl(300,300)}}); background-repeat: no-repeat; background-size: cover; height: 120vh; z-index:0; padding: 0px !important;">
+        <div style="position: absolute; background: linear-gradient(rgba(255, 255, 255, 0.8),rgba(255, 255, 255, 0.8)), url({{$ad->images()->first()->getUrl(300,300)}}); background-repeat: no-repeat; background-size: cover;  filter: blur(25px); -webkit-filter: blur(25px); z-index:1; min-height: 100%; min-width: 100%;"></div>
         {{-- Container Page --}}
-        <div class="container padding-top">
+        <div class="container padding-top" style="z-index:4;">
 
             {{-- Row --}}
             <div class="row justify-content-center">
 
                 {{-- Left Col --}}
-                <div class="col-12 col-sm-8 offset-md-0 col-md-6 col-lg-5 col-xl-4 m-md-0">
+                <div class="col-12 col-sm-8 offset-md-0 col-md-6 col-lg-5 col-xl-4 m-md-0 " style="z-index:4;">
 
                     {{-- Swiper 1 --}}
                     <h2 class='text fw-bolder d-md-none'>{{$ad->title}}</h4>
@@ -67,7 +67,7 @@
                 </div> {{-- End Left Col --}}
 
                 {{-- Right Col --}}
-                <div class="col-12 col-sm-8 offset-md-0 col-md-6 col-lg-5 col-xl-4 d-flex align-items-center mt-5 m-md-0">
+                <div class="col-12 col-sm-8 offset-md-0 col-md-6 col-lg-5 col-xl-4 d-flex align-items-center mt-5 m-md-0" style="z-index:4;">
 
                     <div class="ps-0 ps-md-4 mt-3">
                         <div>
@@ -97,9 +97,9 @@
                                     @break
                                 @endswitch
                             </a>
-                            <h2 class='text fw-bolder d-none d-md-block'>{{$ad->title}}</h4>
-                            <h5 class='text'>{{__('ui.soldby')}}<a href="{{route("authorProfile", $ad->user_id)}}" class="fst-italic fw-bold">{{$ad->user->name}}</a></h5>
-                            <p class='text fw-bold'>{{__('ui.detailart')}}</p>
+                            <h2 class='text mb-0 fw-bolder d-none d-md-block'>{{$ad->title}}</h4>
+                            <h5 class='text'>{{__('ui.soldby')}}<a href="{{route("authorProfile", $ad->user_id)}}" class="fst-italic fw-bold text-decoration-none text-primary">{{$ad->user->name}}</a></h5>
+                            <p class='text fw-bold mb-0 mt-4'>{{__('ui.detailart')}}</p>
                             <p class="fw-normal">{{$ad->description}}</p>
                             <p class='price fw-bolder'>{{$ad->price}}€</p>
                             {{-- <button class="btn btn-warning px-5">Contatta il venditore</button> --}}

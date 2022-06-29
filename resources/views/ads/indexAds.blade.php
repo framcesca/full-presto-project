@@ -20,10 +20,10 @@
         </div>
 
         {{-- da qui va il foreach con dentro questa struttura --}}
-        <div class="row mt-5 ">
+        <div class="row mt-5">
             @forelse ($ads as $ad)
                 <div class="col-12 col-md-3 my-3">
-                    <a href="{{route("detailsAd", $ad)}}" class="card adCard rounded-0">
+                    <a href="{{route("detailsAd", $ad)}}" class="card adCard rounded-0  m-auto">
                         @if (!$ad->images()->first())
                         <img src="https://picsum.photos/180/180" class="card-img rounded-0">
                         @else

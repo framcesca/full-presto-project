@@ -118,9 +118,9 @@
                                     @break
                                 @endswitch
                             </a>
-                            <h2 class='text fw-bolder d-none d-md-block'>{{$ad->title}}</h4>
-                            <h5 class='text'>{{__('ui.soldby')}}<span class="fst-italic fw-bold">{{$ad->user->name}}</span></h5>
-                            <p class='text fw-bold'>{{__('ui.detailart')}}</p>
+                            <h2 class='text mb-0 fw-bolder d-none d-md-block'>{{$ad->title}}</h4>
+                            <h5 class='text'>{{__('ui.soldby')}}<span class="fst-italic fw-bold text-decoration-none text-primary">{{$ad->user->name}}</span></h5>
+                            <p class='text fw-bold mb-0 mt-4'>{{__('ui.detailart')}}</p>
                             <p class="fw-normal">{{$ad->description}}</p>
                             <p class='price fw-bolder'>{{$ad->price}}€</p>
                             <div class="d-flex">
