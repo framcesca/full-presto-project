@@ -83,7 +83,7 @@
 
                         {{-- Title Section --}}
                         <div>
-                            <h2 class="text-center py-2 ">Annunci pubblicati</h2>
+                            <h2 class="text-center pt-4">Annunci pubblicati</h2>
                         </div>
 
                             {{-- Livewie Pagination --}}

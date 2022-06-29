@@ -123,7 +123,14 @@
                                 @endswitch
                             </a>
                             <h2 class='text mb-0 fw-bolder d-none d-md-block'>{{$ad->title}}</h4>
-                            <h5 class='text'>{{__('ui.soldby')}}<span class="fst-italic fw-bold text-decoration-none text-primary">{{$ad->user->name}}</span></h5>
+                            <h5 class='text'>
+                                {{__('ui.soldby')}}
+                                @if(Auth::user()->id != $ad->user_id)
+                                    <a href="{{route("authorProfile", $ad->user_id)}}" class="fst-italic fw-bold text-decoration-none text-primary">{{$ad->user->name}}</a>
+                                @else
+                                    <p class="fst-italic fw-bold text-decoration-none text-primary d-inline">{{$ad->user->name}}</p>
+                                @endif
+                            </h5>
                             <p class='text fw-bold mb-0 mt-4'>{{__('ui.detailart')}}</p>
                             <p class="fw-normal">{{$ad->description}}</p>
                             <p class='price fw-bolder'>{{$ad->price}}€</p>

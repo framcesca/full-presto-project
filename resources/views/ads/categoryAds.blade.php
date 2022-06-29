@@ -49,7 +49,7 @@
         <div class="row mt-5 ">
             @forelse ($ads as $ad)
             {{-- @dd($ad->images()->first()->path) --}}
-            <div class="col-12 col-md-3 my-3">
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3 my-3">
                 <a href="{{route("detailsAd", $ad)}}" class="card adCard rounded-0  mx-auto">
                     @if (!$ad->images()->first())
                     <img src="https://picsum.photos/180/180" class="card-img rounded-0">
@@ -89,6 +89,7 @@
                         <small class="adCard-author">{{$ad->user->name}}</small>                        
                     </div>
                 </a>
+            </div>
             {{-- if no ads --}}
             @empty
             @if (Request::url()==route('searchCategoryAds',compact('category')))

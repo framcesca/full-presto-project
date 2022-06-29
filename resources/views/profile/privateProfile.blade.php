@@ -64,7 +64,10 @@
                             @method("PUT")
                             <div class="row">
                                 <div class="col-12">
-                                    <input class="privateProfile-input-form my-2" type="file" name="avatar_profile">
+                                    <div class="my-2">
+                                        <h6 class="mb-1 fw-bold">Scegli il tuo avatar</h6>
+                                        <input class="privateProfile-input-form" type="file" name="avatar_profile">
+                                    </div>
                                     <input class="privateProfile-input-form my-2" type="text" name="city" placeholder="Città">
                                     <input class="privateProfile-input-form my-2" type="text" name="street" placeholder="Via">
                                     <input class="privateProfile-input-form my-2" type="number" name="cap" placeholder="CAP">
@@ -82,7 +85,10 @@
                                 @csrf
                                 <div class="row">
                                     <div class="col-12">
-                                        <input class="privateProfile-input-form my-2" type="file" name="avatar_profile">
+                                        <div class="my-2">
+                                            <h6 class="mb-1 fw-bold">Scegli il tuo avatar</h6>
+                                            <input class="privateProfile-input-form" type="file" name="avatar_profile">
+                                        </div>
                                         <input class="privateProfile-input-form my-2" type="text" value="{{$user->profile->city}}" name="city" placeholder="Città">
                                         <input class="privateProfile-input-form my-2" type="text" value="{{$user->profile->street}}" name="street" placeholder="Via">
                                         <input class="privateProfile-input-form my-2" type="number" value="{{$user->profile->cap}}" name="cap" placeholder="CAP">
@@ -106,7 +112,7 @@
 
                         {{-- Title Section --}}
                         <div>
-                            <h2 class="text-center py-2 ">I tuoi annunci</h2>
+                            <h2 class="text-center pt-4 pb-1">I tuoi annunci</h2>
                         </div>
 
                             {{-- Livewire Component --}}

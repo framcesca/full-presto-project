@@ -1,4 +1,4 @@
-<div class="container mt-lg-5 mt-xl-0">
+<div class="container mt-lg-0 mt-xl-0">
 
     {{-- Main Row --}}
     <div class="row">
@@ -7,7 +7,7 @@
         @foreach ($ads as $ad)
 
             {{-- Ad Col --}}
-            <div class="col-12 col-lg-6">
+            <div class="col-12 col-xl-6">
 
                 {{-- Ad Card --}}
                 <a href="{{route("detailsAd", compact("ad"))}}" class="authorAdCard d-flex my-3">
@@ -17,14 +17,14 @@
                     </div>
 
                     <div class="d-flex flex-column justify-content-center">
-                        <h5 class="fw-bold fs-5 authorAd-link d-block d-md-none d-lg-block d-xl-block d-xxl-none">
+                        <h5 class="fw-bold fs-6 authorAd-link d-block d-md-none d-xl-block d-xxl-none">
                             @if (strlen($ad->title) > 10)
-                                {{substr($ad->title, 0, 10)}}...
+                                {{substr($ad->title, 0, 10)}}<span class="text-secondary">...</span>
                             @else
                                 {{$ad->title}}
                             @endif
                         </h5>
-                        <h5 class="fw-bold fs-6 authorAd-link d-none d-md-block d-lg-none d-xxl-block">{{$ad->title}}</h5>
+                        <h5 class="fw-bold fs-6 authorAd-link d-none d-md-block d-xl-none d-xxl-block">{{$ad->title}}</h5>
                         <h5>{{$ad->price}}€</h5>
                         {{-- Seconds Check --}}
                         @if ($this->now->diffInSeconds($ad->updated_at) < 60)

@@ -1,7 +1,7 @@
-<div class="container mt-lg-5 mt-xl-0 d-flex flex-column justify-content-center h-100">
+<div class="container d-flex flex-column justify-content-center h-100">
 
     {{-- Main Row --}}
-    <div class="row">
+    <div class="row mb-1">
 
         {{-- Board Population --}}
         @foreach ($ads as $ad)

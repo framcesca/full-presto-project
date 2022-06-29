@@ -23,9 +23,13 @@ class ProfileController extends Controller
     }
 
     public function toAuthorProfile($id) {
-        $author = User::find($id);
-        // $ads = Ad::where("user_id", $id)->get();
-        return view("profile/authorProfile", compact("author"));
+        if(Auth::user()->id != $id) {
+            $author = User::find($id);
+            return view("profile/authorProfile", compact("author"));
+        } else {
+            $user = Auth::user();
+            return view("profile/privateProfile", compact("user"));
+        }
     }
 
     public function editBasics(User $user, EditBasicsProfileRequest $request) {
