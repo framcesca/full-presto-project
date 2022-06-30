@@ -88,7 +88,7 @@
     </div>
 </nav>
 
-{{-- NAVBAR MOBILE --}}
+{{-- NAVBAR MOBILE BOTTOM --}}
 
 <nav class="navbar navbar-expand @if(Request::url()==route('revisorDashboard')) presto-nav-yellow @else presto-nav @endif mobile-nav navbar-light fixed-bottom">
     <div class="container">
@@ -130,9 +130,9 @@
                     </a>                 
                     @endif
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        {{-- <li><a class="dropdown-item" href="#">{{__('ui.profile')}}</a></li>
+                        <li><a class="dropdown-item" href="{{route('privateProfile')}}">{{__('ui.profile')}}</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">{{__('ui.miei')}}</a></li>
+                        {{-- <li><a class="dropdown-item" href="#">{{__('ui.miei')}}</a></li>
                         <li><hr class="dropdown-divider"></li> --}}
                         @if (Auth::user()->is_revisor)                           
                         <li><a class="dropdown-item position-relative" href="{{route('revisorDashboard')}}">{{__('ui.revisoring')}}
@@ -177,3 +177,16 @@
         </div>
     </div>
 </nav>
+
+
+{{-- NAVBAR MOBILE TOP --}}
+<nav class="navbar @if(Request::url()==route('revisorDashboard')) presto-nav-yellow @else presto-nav @endif mobile-nav navbar-light fixed-top">
+    <div class="container justify-content-center">
+      <a class="navbar-brand" href="#">
+        <img src="/../media/logo.svg" alt="" width="80">
+      </a>
+    </div>
+  </nav>
+
+
+

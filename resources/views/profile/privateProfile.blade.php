@@ -11,7 +11,7 @@
                 <div class="col-12 col-lg-4">
                     
                     {{-- Basic Profile Settings --}}
-                    <section class="privateProfile-boxModel px-4 py-4">
+                    <section class="revisor-card px-4 py-4">
 
                         {{-- Basic Settings Form --}}
                         <form method="POST" action="{{route("editBasicSettings", $user)}}">
@@ -57,7 +57,7 @@
                     </section> {{-- End Basic Profile Settings --}}
 
                     {{-- Extra Profile Settings --}}
-                    <section class="privateProfile-boxModel px-4 py-4 mt-4">
+                    <section class="revisor-card px-4 py-4 mt-4">
                         @if ($user->profile == null)
                         <form method="POST" action="{{route("addExtraSettings", $user)}}" enctype="multipart/form-data">
                             @csrf

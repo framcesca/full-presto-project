@@ -11655,7 +11655,7 @@ textarea.form-control-lg {
 
 @media screen and (max-width: 576px) {
     .padding-top{
-        padding-top: 5vh;
+        padding-top: 11vh;
     }
 }
 :root{
@@ -11751,7 +11751,7 @@ textarea.form-control-lg {
 }
 
 .padding{
-    padding-top: 11vh;
+    padding-top: 20vh;
 }
 .card{
     position: relative;
@@ -11796,7 +11796,7 @@ textarea.form-control-lg {
 
 @media screen and (max-width: 576px) {
     .padding{
-        padding-top: 6vh;
+        padding-top: 11vh;
     }
 }
 
@@ -11899,7 +11899,7 @@ textarea.form-control-lg {
 
 @media screen and (max-width: 576px) {
     .container-ad-form {
-        padding-top: 6vh;
+        padding-top: 11vh;
     }
 }
 
@@ -13603,8 +13603,8 @@ textarea.form-control-lg {
 }
 
 .revisor-informations-box{
-    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.20);
-    border-radius: 15px;
+    box-shadow: var(--shadow);
+    border-radius: var(--radius);
     margin: 20px 0px;
     padding: 50px;
 }

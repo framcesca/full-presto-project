@@ -25,7 +25,7 @@
 }
 
 .padding{
-    padding-top: 11vh;
+    padding-top: 20vh;
 }
 .card{
     position: relative;
@@ -70,7 +70,7 @@
 
 @media screen and (max-width: 576px) {
     .padding{
-        padding-top: 6vh;
+        padding-top: 11vh;
     }
 }
 

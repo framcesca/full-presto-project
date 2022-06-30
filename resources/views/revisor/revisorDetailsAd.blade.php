@@ -10,9 +10,9 @@
             {{-- Main Row --}}
             <div class="row">
 
-                <h1 class="text-center m-0">Dettagli annuncio</h1>
+                <h1 class="text-center mt-5 my-md-0 pb-2">Dettagli annuncio</h1>
 
-                <div class="revisor-informations-box d-flex flex-column align-items-center">
+                <div class="revisor-card my-3  p-5 d-flex flex-column align-items-center">
                     <a class='text a-details btn rounded-pill' href='{{route('categoryAds', $ad->category)}}'>
                         <i class="fa-solid fa-tag"></i>
                         @switch(Lang::locale())
@@ -68,7 +68,7 @@
                 </div>
 
                 @foreach ($ad->images()->get() as $img)
-                    <div class="col-12 revisor-informations-box">
+                    <div class="col-12 revisor-card p-5 my-3">
 
                         <div class="row">
 

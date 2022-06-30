@@ -14,7 +14,7 @@
                 <div class="col-12 col-lg-4">
 
                     {{-- Section Basic Informations --}}
-                    <section class="row authorProfile-boxModel d-flex px-4 py-3 m-0">
+                    <section class="row revisor-card d-flex px-4 py-3 m-0">
                         <div class="col-12 col-xl-4 d-flex justify-content-center">
                             @if($author->profile != null && $author->profile->avatar_profile)
                                 <img class="avatarAuthorProfile" src="/storage/{{$author->profile->avatar_profile}}">
