@@ -42,7 +42,6 @@
 }
 
 .form-control, .form-select{
-    /* border: 1px solid black; */
     border: 1px solid var(--white); 
     border-radius: var(--radius);
 }
@@ -54,11 +53,12 @@
 
 .bg-container-fluid{
     background-image: url("/../media/bgCreaAnnuncio.png");
-    height: 100vh;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     top: auto;
+    min-height: 100vh;
+    height: max-content;
 }
 
 .floatingDescription{
@@ -69,11 +69,7 @@
     z-index: 999;
 }
 
-@media screen and (max-width: 768px) {
-    .bg-container-fluid{
-        height: max-content;
-    }
-
+@media screen and (max-width: 576px) {
     .container-ad-form {
         padding-top: 6vh;
     }

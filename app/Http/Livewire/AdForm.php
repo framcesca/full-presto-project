@@ -120,7 +120,7 @@ class AdForm extends Component
             return redirect('createAd')->with('message','Grazie, il tuo annuncio sarà sottoposto a revisione.');
         }else
         {
-            session()->flash('alert','Inserire almeno un immagine');
+            session()->flash('alert','Inserire almeno un\'immagine');
         }
     }
     public function formCleaner() {

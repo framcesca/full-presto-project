@@ -67,8 +67,33 @@
     box-shadow: none;
 }
 
+
 @media screen and (max-width: 576px) {
     .padding{
         padding-top: 6vh;
     }
 }
+
+/* Media query empty */
+@media screen and (min-width: 768px){
+    .img-responsive{
+       height: 600px !important;
+       width: 800px !important;
+    }
+ }
+ @media screen and (max-width: 768px){
+    .img-responsive{
+       height: 500px !important;
+       width: 600px !important;
+    }
+ }
+ @media screen and (max-width: 480px){
+    .img-responsive{
+       height: 200px !important;
+       width: 270px !important;
+    }
+
+    .noAdsTitle{
+        text-align: center;
+    }
+ }

@@ -1,6 +1,6 @@
 <div class="row">
     {{-- Left Col --}}
-    <div class="form-box col-12 col-md-6 col-lg-5 col-xl-4 ms-auto">
+    <div class="form-box col-12 col-md-6 col-lg-5 col-xl-4 ms-auto mb-5">
         <div class="w-100">
             <div>
                 {{-- Alert --}}
@@ -21,7 +21,7 @@
                     <div class="form-floating mb-4">
                         <input wire:change="restartCarousel" type="text" class="form-control" id="floatingInput" placeholder=" " wire:model="title">
                         <label for="floatingInput">{{__('ui.tit')}}</label>
-                        @error('title') <span class="error">{{$message}}</span> @enderror
+                        @error('title') <span class="error text-danger">{{$message}}</span> @enderror
                     </div>
                     {{-- Input Details --}}
                     <h6 class="input-title">{{__('ui.det')}}</h6>
@@ -29,7 +29,7 @@
                         <input wire:change="restartCarousel" type="text" class="form-control" id="floatingDescription" placeholder=" " wire:model="description">
                         <label for="floatingDescription">{{__('ui.desc')}}</label>
                         <small class="text-primary ps-1 d-block">* {{__('ui.descg')}}</small>
-                        @error('description') <span class="error">{{$message}}</span> @enderror
+                        @error('description') <span class="error text-danger">{{$message}}</span> @enderror
                     </div>
                     {{-- Input Category --}}
                     <h6 class="input-title">{{__('ui.cate')}}</h6>
@@ -64,14 +64,14 @@
                             @endforeach
                         </select>
                         <label for="floatingCategories">{{__('ui.cate')}}</label>
-                        @error('category') <span class="error">{{$message}}</span> @enderror
+                        @error('category') <span class="error text-danger">{{$message}}</span> @enderror
                     </div>
                     {{-- Input Image --}}
                     <h6 class="input-title">{{__('ui.insim')}}</h6>
                     <div class="mb-4">
                         <input wire:change="restartCarousel" wire:model="temporary_images" name="images" multiple class="form-control form-control-lg @error('temporary_images.*') is-invalid @enderror" id="formFile" type="file">
                         @error('temporary_images.*')
-                            <span class="error">{{$message}}</span>
+                            <span class="error text-danger">{{$message}}</span>
                         @enderror
                     </div>
                     {{-- Input Price --}}
@@ -79,7 +79,7 @@
                     <div class="form-floating mb-4">
                         <input wire:change="restartCarousel" type="text" class="form-control" id="floatingPrice" placeholder=" " wire:model="price">
                         <label for="floatingPrice">{{__('ui.pri')}}</label>
-                        @error('price') <span class="error">{{$message}}</span> @enderror
+                        @error('price') <span class="error text-danger">{{$message}}</span> @enderror
                     </div>
                     {{-- Submit Form Button --}}
                     <div>

@@ -94,16 +94,20 @@
             @empty
             @if (Request::url()==route('searchCategoryAds',compact('category')))
             <div class="col-12 d-flex flex-column align-items-center">
-                <h2 class="mt-5">{{__('ui.noresads')}}..</h2>
+                <h2 class="mt-5 noAdsTitle">{{__('ui.noresads')}}..</h2>
                 <a class="btn btn-newads mt-2 mb-5" href="{{route('categoryAds',compact('category'))}}">{{__('ui.torna')}} {{$category->category_it}}</a>
-                <img src="/../media/categoryAds.png" alt="..." width="900px" height="700px" >
+                <div >
+                    <img src="/../media/categoryAds.png" alt="..." class="img-responsive" >
+                </div>
             </div>
             @else
             {{-- if no ads in category --}}
             <div class="col-12 d-flex flex-column align-items-center">
-                <h2 class="mt-5">{{__('ui.catadsno')}}</h2>
+                <h2 class="mt-5 noAdsTitle">{{__('ui.catadsno')}}</h2>
                 <a class="btn btn-newads mt-2 mb-5" href="{{route('createAd')}}">{{__('ui.catadsnew')}}</a>
-                <img src="/../media/categoryAds.png" alt="..." width="900px" height="700px" >
+                <div >
+                    <img src="/../media/categoryAds.png" alt="..." class="img-responsive" >
+                </div>
             </div>
             @endif
             @endforelse

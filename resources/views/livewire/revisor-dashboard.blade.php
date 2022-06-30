@@ -2,19 +2,19 @@
     <div class="container">
 
         <div class="row margin-up justify-content-center text-center">
-            <div class="col-12 col-md-3 revisor-card py-3 my-3">
+            <div class="col-7 col-md-3 revisor-card revisor-count py-3 my-3 mx-auto">
                 <div class="card-body">
                     <h5 class="card-title">{{__('ui.anre')}}:</h5>
                     <p class="card-text fs-1 fw-bold">{{App\Models\Ad::toBeRevisionedCount()}}</p>
                 </div>
             </div>
-            <div class="col-12 col-md-3 offset-md-1 revisor-card py-3 my-3">
+            <div class="col-7 col-md-3 offset-md-1 revisor-card revisor-count py-3 my-3 mx-auto">
                 <div class="card-body">
                     <h5 class="card-title">{{__('ui.accet')}}:</h5>
                     <p class="card-text fs-1 fw-bold text-success">{{App\Models\Ad::AcceptedByRevisorCount(Auth::user()->id)}}</p>
                 </div>
             </div>
-            <div class="col-12 col-md-3 offset-md-1 revisor-card py-3 my-3">
+            <div class="col-7 col-md-3 offset-md-1 revisor-card revisor-count py-3 my-3 mx-auto">
                 <div class="card-body">
                     <h5 class="card-title">{{__('ui.rif')}}:</h5>
                     <p class="card-text fs-1 fw-bold text-danger">{{App\Models\Ad::notAcceptedByRevisorCount(Auth::user()->id)}}</p>
@@ -23,7 +23,7 @@
 
         {{-- tabella da revisionare --}}
         <div class="row my-4">
-            <div class="col-10 offset-md-1 table-responsive revisor-card my-5 py-3">
+            <div class="col-11 col-md-10 mx-auto table-responsive revisor-card my-5 py-3">
                 <div class="card-body">
                     <table class="table margin-up">
                         @if (App\Models\Ad::toBeRevisionedCount()>0)
@@ -52,7 +52,7 @@
                             </tr>
                             <tr>
                                 @empty
-                                <div class="col-10 offset-md-1 mt-3 text-center">
+                                <div class="col-11 col-md-10 mx-auto mt-3 text-center">
                                     <h2 class="text-center">{{__('ui.nhadr')}}</h2>
                                 </div>
                                 @endforelse
@@ -65,7 +65,7 @@
     </div>
     {{-- tabella annunci rifiutati --}}
         <div class="row my-4">
-            <div class="col-10 offset-md-1 table-responsive revisor-card py-3 my-5">
+            <div class="col-11 col-md-10 mx-auto table-responsive revisor-card py-3 my-5">
                 <div class="card-body">
 
                     <table class="table margin-up">
@@ -109,7 +109,7 @@
         </div>
     {{-- tabella annunci accettati --}}
         <div class="row my-4 ">
-            <div class="col-10 offset-md-1 table-responsive revisor-card py-3 my-5 m-bottom">
+            <div class="col-11 col-md-10 mx-auto table-responsive revisor-card py-3 my-5 m-bottom">
                 <div class="card-body">
                     <table class="table margin-up">
                         <h2 class="text-center">{{__('ui.accet')}}</h2>

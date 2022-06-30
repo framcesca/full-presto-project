@@ -226,6 +226,12 @@
     .btn-mobile{
         display: block;
     }
+    /* revisor dashboard counter */
+    .revisor-count{
+        min-height: 162px;
+        display: flex;
+        align-items: center;
+    }
 }
 @media screen and (min-width:576px) {
     .btn-web{
@@ -234,6 +240,7 @@
     .btn-mobile{
         display: none;
     }
+
 }
 
 /* MEDIA QUERIES NAVBAR */

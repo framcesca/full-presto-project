@@ -11511,6 +11511,12 @@ textarea.form-control-lg {
     .btn-mobile{
         display: block;
     }
+    /* revisor dashboard counter */
+    .revisor-count{
+        min-height: 162px;
+        display: flex;
+        align-items: center;
+    }
 }
 @media screen and (min-width:576px) {
     .btn-web{
@@ -11519,6 +11525,7 @@ textarea.form-control-lg {
     .btn-mobile{
         display: none;
     }
+
 }
 
 /* MEDIA QUERIES NAVBAR */
@@ -11786,11 +11793,36 @@ textarea.form-control-lg {
     box-shadow: none;
 }
 
+
 @media screen and (max-width: 576px) {
     .padding{
         padding-top: 6vh;
     }
 }
+
+/* Media query empty */
+@media screen and (min-width: 768px){
+    .img-responsive{
+       height: 600px !important;
+       width: 800px !important;
+    }
+ }
+ @media screen and (max-width: 768px){
+    .img-responsive{
+       height: 500px !important;
+       width: 600px !important;
+    }
+ }
+ @media screen and (max-width: 480px){
+    .img-responsive{
+       height: 200px !important;
+       width: 270px !important;
+    }
+
+    .noAdsTitle{
+        text-align: center;
+    }
+ }
 :root{
     --primaryColor: rgb(249, 212, 1);
     --black: rgb(31, 31, 31);
@@ -11836,7 +11868,6 @@ textarea.form-control-lg {
 }
 
 .form-control, .form-select{
-    /* border: 1px solid black; */
     border: 1px solid var(--white); 
     border-radius: var(--radius);
 }
@@ -11848,11 +11879,14 @@ textarea.form-control-lg {
 
 .bg-container-fluid{
     background-image: url("/../media/bgCreaAnnuncio.png");
-    height: 100vh;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     top: auto;
+    min-height: 100vh;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
 }
 
 .floatingDescription{
@@ -11863,13 +11897,7 @@ textarea.form-control-lg {
     z-index: 999;
 }
 
-@media screen and (max-width: 768px) {
-    .bg-container-fluid{
-        height: -webkit-max-content;
-        height: -moz-max-content;
-        height: max-content;
-    }
-
+@media screen and (max-width: 576px) {
     .container-ad-form {
         padding-top: 6vh;
     }
@@ -13688,7 +13716,7 @@ textarea.form-control-lg {
     top: 7px;
     color: var(--white);
     text-decoration: none;
-    /* text-shadow: 4px 4px 6px black; */
+    text-shadow: 4px 4px 6px black;
 }
 
 .adCard .adCard-title, .adCard .adCard-price, .adCard .adCard-author, .adCard1 .adCard-title, .adCard1 .adCard-price, .adCard1 .adCard-author{
