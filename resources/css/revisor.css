@@ -86,8 +86,30 @@
     width: 600px;
 }
 
+.revisor-informations-box{
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.20);
+    border-radius: 15px;
+    margin: 20px 0px;
+    padding: 50px;
+}
+
+.detailsRevisor-padding-top{
+    padding-top: 120px;
+}
+
+.box-dash{
+    border: 1px solid black;
+}
+
+.accordion-button:focus{
+    box-shadow: none;
+}
+
 @media screen and (max-width: 576px) {
     .m-bottom{
         margin-bottom: 10vh !important;
+    }
+    .detailsRevisor-padding-top{
+        padding-top: 50px;
     }
 }

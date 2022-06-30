@@ -83,7 +83,7 @@
                         <tbody wire:key="{{ $loop->index }}">
                             <tr>
                                 <td>
-                                    <a href="{{route('revisorDetailAd',compact('ad'))}}">{{$ad->title}}</a>
+                                    <p>{{$ad->title}}</p>
                                 </td>
                                 <td>
                                     <p>{{$ad->user->name}}</p>
@@ -126,7 +126,7 @@
                         <tbody wire:key="{{ $loop->index }}">
                             <tr>
                                 <td>
-                                    <a href="{{route('revisorDetailAd',compact('ad'))}}">{{$ad->title}}</a>
+                                    <p>{{$ad->title}}</p>
                                 </td>
                                 <td>
                                     <p>{{$ad->user->name}}</p>

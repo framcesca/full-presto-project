@@ -46,7 +46,7 @@
                                 </div>
 
                                 {{-- Form Button --}}
-                                <div class="col-12 d-flex justify-content-center pt-4">
+                                <div class="col-12 d-flex justify-content-center pt-3">
                                     <button class="privateProfile-button-form" type="submit">{{__('ui.salimp')}}</button>
                                 </div>
 
