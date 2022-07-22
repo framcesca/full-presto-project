@@ -102,11 +102,11 @@ class AdForm extends Component
                     // $ad->images()->create(['path'=>$image->store('images','public')]);
                     $newFileName = "ads/{$ad->id}";
                     $newImage = $ad->images()->create(['path'=>$image->store($newFileName,'public')]);
-                    RemoveFaces::withChain([
-                        new AddWaterMarkLogo($newImage->id),
+                    AddWaterMarkLogo::withChain([
+                        // new AddWaterMarkLogo($newImage->id),
                         new ResizeImage($newImage->path,300,300),
-                        new GoogleVisionSafeSearch($newImage->id),
-                        new GoogleVisionLabelImage($newImage->id),
+                        // new GoogleVisionSafeSearch($newImage->id),
+                        // new GoogleVisionLabelImage($newImage->id),
 
                     ])->dispatch($newImage->id);
 
